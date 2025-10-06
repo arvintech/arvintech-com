@@ -111,20 +111,20 @@ export default function SplashScreen() {
           <div className={`transition-all duration-1000 delay-400 ${isLoaded ? "animate-fade-in-up" : "opacity-0"}`}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300">
-                <h3 className="text-sm font-semibold text-white mb-1">IA Books</h3>
+                <h3 className="text-sm font-semibold text-white mb-1">Amplified Classics  </h3>
                 <p className="text-xs text-slate-300">Intelligent Literature</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300">
-                <h3 className="text-sm font-semibold text-white mb-1">Reimagined Cliff Notes</h3>
-                <p className="text-xs text-slate-300">Study Smarter</p>
+                <h3 className="text-sm font-semibold text-white mb-1">IA Ideas</h3>
+                <p className="text-xs text-slate-300">Abundant Intelligence</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300">
                 <h3 className="text-sm font-semibold text-white mb-1">Amplified Lottery</h3>
                 <p className="text-xs text-slate-300">AI-Powered Apps</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300">
-                <h3 className="text-sm font-semibold text-white mb-1">Amplified Author</h3>
-                <p className="text-xs text-slate-300">Creator Program</p>
+                <h3 className="text-sm font-semibold text-white mb-1">Amplified Almanac</h3>
+                <p className="text-xs text-slate-300">Working Class Guide</p>
               </div>
             </div>
           </div>
