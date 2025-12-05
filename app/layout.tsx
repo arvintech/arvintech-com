@@ -1,22 +1,34 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Poppins } from "next/font/google"
+import { Sora, Space_Grotesk, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-sora",
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space",
+})
+
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "ArvinTech - Building Tomorrow's Solutions",
+  description: "An innovative approach to AI—Collaboration, not replacement. Building intelligent solutions that amplify human potential.",
+  generator: "Next.js",
+  keywords: ["AI", "technology", "consulting", "digital transformation", "intelligence amplification"],
 }
 
 export default function RootLayout({
@@ -26,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-poppins ${GeistSans.variable} ${GeistMono.variable} ${poppins.variable}`}>
+      <body className={`${sora.variable} ${spaceGrotesk.variable} ${poppins.variable} ${GeistMono.variable} font-sans`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
