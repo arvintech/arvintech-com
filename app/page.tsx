@@ -317,7 +317,7 @@ export default function HomePage() {
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 text-slate-900">Amplified Review</h3>
+                    <h3 className="text-2xl font-bold mb-3 text-slate-900">The Amplified Review</h3>
                     <p className="text-slate-600 mb-6">
                       A newsletter for members of Amplified Classics. Get curated insights, literary analysis, 
                       and AI-enhanced perspectives on classic works delivered to your inbox.
