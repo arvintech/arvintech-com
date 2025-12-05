@@ -4,85 +4,82 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette to match ArvinTech brand */
-  --background: oklch(1 0 0); /* White background */
-  --foreground: oklch(0.3 0 0); /* Dark gray text */
-  --card: oklch(0.96 0.02 180); /* Light teal card background */
-  --card-foreground: oklch(0.3 0 0);
+  /* ArvinTech Building Blocks Brand Palette */
+  --brand-green: #00A94F;
+  --brand-red: #E31937;
+  --brand-yellow: #FFC107;
+  --brand-blue: #0066B3;
+  
+  /* Light theme - clean and modern */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.2 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.3 0 0);
-  --primary: oklch(0.45 0.15 180); /* Teal primary color */
+  --popover-foreground: oklch(0.2 0 0);
+  --primary: oklch(0.55 0.2 145); /* Green */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.6 0.2 195); /* Bright cyan accent */
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.6 0.2 195); /* Bright cyan accent */
+  --secondary: oklch(0.95 0.01 90);
+  --secondary-foreground: oklch(0.2 0 0);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.55 0.18 250); /* Blue */
   --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.85 0.02 180);
-  --input: oklch(1 0 0);
-  --ring: oklch(0.6 0.2 195);
-  --chart-1: oklch(0.45 0.15 180);
-  --chart-2: oklch(0.6 0.2 195);
-  --chart-3: oklch(0.3 0 0);
-  --chart-4: oklch(0.96 0.02 180);
-  --chart-5: oklch(0.97 0 0);
-  --radius: 0.5rem;
-  --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.3 0 0);
-  --sidebar-primary: oklch(0.45 0.15 180);
+  --destructive: oklch(0.55 0.22 25); /* Red */
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0 0);
+  --input: oklch(0.96 0 0);
+  --ring: oklch(0.55 0.2 145);
+  --chart-1: #00A94F;
+  --chart-2: #0066B3;
+  --chart-3: #FFC107;
+  --chart-4: #E31937;
+  --chart-5: oklch(0.6 0.15 300);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.98 0 0);
+  --sidebar-foreground: oklch(0.2 0 0);
+  --sidebar-primary: oklch(0.55 0.2 145);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.6 0.2 195);
+  --sidebar-accent: oklch(0.55 0.18 250);
   --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.85 0.02 180);
-  --sidebar-ring: oklch(0.6 0.2 195);
-  /* Added Poppins font variable */
-  --font-poppins: var(--font-poppins);
+  --sidebar-border: oklch(0.92 0 0);
+  --sidebar-ring: oklch(0.55 0.2 145);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.2 0.02 180);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.6 0.2 195);
-  --primary-foreground: oklch(0.145 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.45 0.15 180);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --background: oklch(0.12 0.01 250);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.16 0.01 250);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.14 0.01 250);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.65 0.2 145);
+  --primary-foreground: oklch(0.1 0 0);
+  --secondary: oklch(0.22 0.01 250);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.22 0.01 250);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.6 0.18 250);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.25 0.01 250);
+  --input: oklch(0.22 0.01 250);
+  --ring: oklch(0.65 0.2 145);
+  --sidebar: oklch(0.14 0.01 250);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.65 0.2 145);
+  --sidebar-primary-foreground: oklch(0.1 0 0);
+  --sidebar-accent: oklch(0.22 0.01 250);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.25 0.01 250);
+  --sidebar-ring: oklch(0.65 0.2 145);
 }
 
 @theme inline {
-  /* Updated default sans font to use Poppins instead of Geist Sans */
-  --font-sans: var(--font-poppins);
-  --font-mono: var(--font-geist-mono);
-  /* Added Poppins font variable */
-  --font-poppins: var(--font-poppins);
+  --font-sans: var(--font-sora), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-poppins: var(--font-poppins), system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -119,6 +116,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Brand colors as custom properties */
+  --color-brand-green: #00A94F;
+  --color-brand-red: #E31937;
+  --color-brand-yellow: #FFC107;
+  --color-brand-blue: #0066B3;
 }
 
 @layer base {
@@ -126,35 +129,42 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+  h1 {
+    font-family: var(--font-poppins), system-ui, sans-serif;
   }
 }
 
-/* Added custom animations for splash screen */
+/* Poppins font utility */
+.font-poppins {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+/* Brand color utilities */
+.text-brand-green { color: #00A94F; }
+.text-brand-red { color: #E31937; }
+.text-brand-yellow { color: #FFC107; }
+.text-brand-blue { color: #0066B3; }
+.bg-brand-green { background-color: #00A94F; }
+.bg-brand-red { background-color: #E31937; }
+.bg-brand-yellow { background-color: #FFC107; }
+.bg-brand-blue { background-color: #0066B3; }
+.border-brand-green { border-color: #00A94F; }
+.border-brand-red { border-color: #E31937; }
+.border-brand-yellow { border-color: #FFC107; }
+.border-brand-blue { border-color: #0066B3; }
+
+/* Animations */
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(0, 188, 212, 0.6);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
 }
 
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -162,93 +172,436 @@
   }
 }
 
-/* Added enhanced glow animation for improved logo */
-@keyframes enhanced-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), 0 0 60px rgba(20, 184, 166, 0.3), 0 0 90px rgba(16, 185, 129, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 50px rgba(59, 130, 246, 0.6), 0 0 100px rgba(20, 184, 166, 0.5), 0 0 150px rgba(16, 185, 129, 0.4);
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Updated slow cube rotation to include drop down from top movement */
-@keyframes slow-rotate {
-  0% {
-    transform: translateY(-100px) rotateZ(0deg);
-  }
-  25% {
-    transform: translateY(0px) rotateZ(45deg);
-  }
-  50% {
-    transform: translateY(0px) rotateZ(180deg);
-  }
-  75% {
-    transform: translateY(0px) rotateZ(135deg);
-  }
-  100% {
-    transform: translateY(0px) rotateZ(0deg);
-  }
-}
-
-/* Added slow spin animation for logo border */
-@keyframes spin-slow {
+@keyframes scale-in {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: scale(0.9);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-/* Added fade-in animation for text logo that appears after cube animation */
-@keyframes fade-in-text {
-  0% {
+@keyframes slide-in-left {
+  from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(-30px);
   }
-  100% {
-    opacity: 0.9;
-    transform: translateY(0);
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-/* Added enhanced glow animation class */
-.animate-enhanced-glow {
-  animation: enhanced-glow 3s ease-in-out infinite;
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Added slow spin animation class */
-.animate-spin-slow {
-  animation: spin-slow 8s linear infinite;
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
-/* Added slow cube rotation class that runs once for 11 seconds */
-.animate-slow-rotate {
-  animation: slow-rotate 11s ease-in-out forwards;
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-/* Added animation class for text logo that appears after cube animation completes */
-.animate-fade-in-text {
-  animation: fade-in-text 2s ease-out 11s forwards;
-  opacity: 0;
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-/* Added small caps utility class */
-.font-variant-small-caps {
-  font-variant: small-caps;
+/* Animation utilities */
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
+.animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+.animate-scale-in { animation: scale-in 0.5s ease-out forwards; }
+.animate-slide-in-left { animation: slide-in-left 0.6s ease-out forwards; }
+.animate-slide-in-right { animation: slide-in-right 0.6s ease-out forwards; }
+.animate-bounce-subtle { animation: bounce-subtle 2s ease-in-out infinite; }
+.animate-rotate-slow { animation: rotate-slow 20s linear infinite; }
+.animate-pulse-scale { animation: pulse-scale 3s ease-in-out infinite; }
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* Gradient backgrounds */
+.gradient-brand {
+  background: linear-gradient(135deg, #00A94F 0%, #0066B3 50%, #E31937 100%);
 }
 
-/* Added global lowercase styling for ArvinTech brand name */
+.gradient-brand-animated {
+  background: linear-gradient(270deg, #00A94F, #0066B3, #FFC107, #E31937, #00A94F);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.gradient-hero {
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(0, 169, 79, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(0, 102, 179, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 193, 7, 0.08) 0%, transparent 50%);
+}
+
+.gradient-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%);
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Building blocks pattern background */
+.blocks-pattern {
+  background-image: 
+    linear-gradient(45deg, rgba(0, 169, 79, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0, 102, 179, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 193, 7, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(227, 25, 55, 0.03) 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+}
+
+/* LEGO San Francisco Skyline Background */
+.lego-sf-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.lego-sf-skyline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lego-sf-skyline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  background: 
+    /* Golden Gate Bridge - Left tower */
+    linear-gradient(to bottom, #E31937 0%, #C41230 100%) no-repeat 3% 100% / 28px 180px,
+    /* Golden Gate Bridge - Right tower */
+    linear-gradient(to bottom, #E31937 0%, #C41230 100%) no-repeat 12% 100% / 28px 180px,
+    /* Bridge deck */
+    linear-gradient(to bottom, #E31937 0%, #E31937 100%) no-repeat 3% calc(100% - 80px) / 160px 12px,
+    /* Bridge cables - curved effect with multiple segments */
+    linear-gradient(to bottom, #E31937 0%, #E31937 100%) no-repeat 5% calc(100% - 120px) / 8px 45px,
+    linear-gradient(to bottom, #E31937 0%, #E31937 100%) no-repeat 7% calc(100% - 140px) / 8px 65px,
+    linear-gradient(to bottom, #E31937 0%, #E31937 100%) no-repeat 9% calc(100% - 150px) / 8px 75px,
+    linear-gradient(to bottom, #E31937 0%, #E31937 100%) no-repeat 11% calc(100% - 140px) / 8px 65px,
+    
+    /* Transamerica Pyramid - iconic triangular shape */
+    linear-gradient(to bottom, #00A94F 0%, #008040 100%) no-repeat 28% 100% / 8px 200px,
+    linear-gradient(to bottom, #00A94F 0%, #008040 100%) no-repeat 27% 100% / 20px 160px,
+    linear-gradient(to bottom, #00A94F 0%, #008040 100%) no-repeat 26% 100% / 32px 120px,
+    linear-gradient(to bottom, #00A94F 0%, #008040 100%) no-repeat 25% 100% / 44px 80px,
+    
+    /* Salesforce Tower - tallest building */
+    linear-gradient(to bottom, #0066B3 0%, #004d8a 100%) no-repeat 42% 100% / 50px 240px,
+    linear-gradient(to bottom, #0066B3 0%, #0066B3 100%) no-repeat 42% calc(100% - 240px) / 35px 25px,
+    
+    /* 555 California (Bank of America) */
+    linear-gradient(to bottom, #FFC107 0%, #e5ac00 100%) no-repeat 52% 100% / 45px 180px,
+    
+    /* Millennium Tower */
+    linear-gradient(to bottom, #0066B3 0%, #004d8a 100%) no-repeat 60% 100% / 35px 160px,
+    
+    /* One Rincon Hill */
+    linear-gradient(to bottom, #00A94F 0%, #008040 100%) no-repeat 68% 100% / 40px 140px,
+    
+    /* 181 Fremont */
+    linear-gradient(to bottom, #E31937 0%, #C41230 100%) no-repeat 76% 100% / 32px 170px,
+    
+    /* Embarcadero Center buildings */
+    linear-gradient(to bottom, #FFC107 0%, #e5ac00 100%) no-repeat 84% 100% / 38px 110px,
+    linear-gradient(to bottom, #0066B3 0%, #004d8a 100%) no-repeat 90% 100% / 42px 130px,
+    
+    /* Ferry Building clock tower */
+    linear-gradient(to bottom, #FFC107 0%, #e5ac00 100%) no-repeat 96% 100% / 20px 90px,
+    linear-gradient(to bottom, #FFC107 0%, #FFC107 100%) no-repeat 96% calc(100% - 85px) / 12px 20px,
+    
+    /* Small foreground buildings */
+    linear-gradient(to bottom, #00A94F 0%, #008040 100%) no-repeat 18% 100% / 25px 70px,
+    linear-gradient(to bottom, #E31937 0%, #C41230 100%) no-repeat 21% 100% / 22px 55px,
+    linear-gradient(to bottom, #0066B3 0%, #004d8a 100%) no-repeat 35% 100% / 28px 85px,
+    linear-gradient(to bottom, #FFC107 0%, #e5ac00 100%) no-repeat 38% 100% / 24px 65px,
+    
+    /* Ground/Bay water */
+    linear-gradient(to bottom, rgba(0, 102, 179, 0.2) 0%, rgba(0, 102, 179, 0.3) 100%) no-repeat 0% 100% / 100% 25px;
+  opacity: 0.5;
+}
+
+/* LEGO studs overlay effect */
+.lego-sf-skyline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  background-image: 
+    radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 25%, transparent 25%);
+  background-size: 14px 14px;
+  background-position: 3px 3px;
+  opacity: 0.2;
+}
+
+/* Brand text */
 .arvintech-brand {
-  text-transform: lowercase;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00A94F, #0066B3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Creative H1 color styles - all use Poppins font */
+.h1-rainbow {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  background: linear-gradient(90deg, #00A94F 0%, #0066B3 25%, #FFC107 50%, #E31937 75%, #00A94F 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow-shift 6s linear infinite;
+}
+
+.h1-blocks {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  background: linear-gradient(90deg, #00A94F, #00A94F 25%, #0066B3 25%, #0066B3 50%, #FFC107 50%, #FFC107 75%, #E31937 75%, #E31937);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.h1-split-green-blue {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  background: linear-gradient(90deg, #00A94F 50%, #0066B3 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.h1-fire {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  background: linear-gradient(135deg, #FFC107 0%, #E31937 50%, #FFC107 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fire-pulse 3s ease-in-out infinite;
+}
+
+.h1-ocean {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  background: linear-gradient(135deg, #00A94F 0%, #0066B3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.h1-sunset {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  background: linear-gradient(135deg, #E31937 0%, #FFC107 50%, #00A94F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.h1-neon {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  background: linear-gradient(90deg, #00A94F, #0066B3, #00A94F);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: neon-glow 2s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(0, 169, 79, 0.3);
+}
+
+.h1-candy {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  background: linear-gradient(90deg, #E31937 0%, #FFC107 33%, #0066B3 66%, #00A94F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes rainbow-shift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fire-pulse {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+@keyframes neon-glow {
+  0%, 100% { 
+    background-position: 0% center;
+    filter: brightness(1);
+  }
+  50% { 
+    background-position: 100% center;
+    filter: brightness(1.2);
+  }
+}
+
+/* Button styles */
+.btn-brand {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-brand:active {
+  transform: scale(0.95);
+}
+
+.btn-green {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #00A94F;
+  color: white;
+}
+
+.btn-green:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 169, 79, 0.3);
+}
+
+.btn-green:active {
+  transform: scale(0.95);
+}
+
+.btn-blue {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #0066B3;
+  color: white;
+}
+
+.btn-blue:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 102, 179, 0.3);
+}
+
+.btn-blue:active {
+  transform: scale(0.95);
+}
+
+.btn-outline {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #00A94F;
+  color: #00A94F;
+}
+
+.btn-outline:hover {
+  transform: scale(1.05);
+  background-color: #00A94F;
+  color: white;
+}
+
+.btn-outline:active {
+  transform: scale(0.95);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Decorative blocks */
+.block-green {
+  width: 1rem;
+  height: 1rem;
+  background-color: #00A94F;
+  border-radius: 0.125rem;
+}
+.block-red {
+  width: 1rem;
+  height: 1rem;
+  background-color: #E31937;
+  border-radius: 0.125rem;
+}
+.block-yellow {
+  width: 1rem;
+  height: 1rem;
+  background-color: #FFC107;
+  border-radius: 0.125rem;
+}
+.block-blue {
+  width: 1rem;
+  height: 1rem;
+  background-color: #0066B3;
+  border-radius: 0.125rem;
 }

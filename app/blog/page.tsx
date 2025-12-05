@@ -7,6 +7,7 @@ import Footer from "@/components/Footer"
 
 export default function BlogPage() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState("All")
 
   useEffect(() => {
     setIsLoaded(true)
@@ -84,78 +85,100 @@ export default function BlogPage() {
   ]
 
   const categories = ["All", "AI & Technology", "Cloud Computing", "Digital Strategy", "Security", "Web Development"]
-  const [selectedCategory, setSelectedCategory] = useState("All")
 
-  const filteredPosts =
-    selectedCategory === "All" ? blogPosts : blogPosts.filter((post) => post.category === selectedCategory)
+  const categoryColors: Record<string, string> = {
+    "AI & Technology": "brand-green",
+    "Cloud Computing": "brand-blue",
+    "Digital Strategy": "brand-yellow",
+    "Security": "brand-red",
+    "Web Development": "brand-blue",
+  }
+
+  const filteredPosts = selectedCategory === "All" 
+    ? blogPosts 
+    : blogPosts.filter((post) => post.category === selectedCategory)
 
   const featuredPost = blogPosts.find((post) => post.featured)
-  const regularPosts = blogPosts.filter((post) => !post.featured)
+  const regularPosts = selectedCategory === "All" 
+    ? blogPosts.filter((post) => !post.featured)
+    : filteredPosts.filter((post) => !post.featured)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(16,185,129,0.1),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(6,182,212,0.1),transparent_50%)]" />
-
+    <div className="min-h-screen bg-background blocks-pattern">
       {/* Navigation */}
-      <nav className="relative z-20 w-full px-8 py-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/arvintech-cube-logo.png"
-              alt="ArvinTech Logo"
-              width={120}
-              height={40}
-              className="h-24 w-auto"
-            />
-          </Link>
-          <div className="flex space-x-8">
-            <Link href="/support" className="text-slate-300 hover:text-white transition-colors">
-              Support
+      <nav className="fixed top-0 left-0 right-0 z-50 glass">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/arvintech-blocks-logo.png"
+                alt="ArvinTech"
+                width={48}
+                height={48}
+                className="w-12 h-12"
+                priority
+              />
+              <span className="text-2xl font-bold arvintech-brand">arvintech</span>
             </Link>
-            <Link href="/about" className="text-slate-300 hover:text-white transition-colors">
-              About
-            </Link>
-            <Link href="/news" className="text-slate-300 hover:text-white transition-colors">
-              News
-            </Link>
-            <Link href="/blog" className="text-white font-medium">
-              Blog
-            </Link>
-            <Link href="/work-with-us" className="text-slate-300 hover:text-white transition-colors">
-              Work with Us
-            </Link>
+            <div className="hidden md:flex items-center gap-8">
+              <Link href="/about" className="text-foreground/70 hover:text-brand-green transition-colors font-medium">
+                About
+              </Link>
+              <Link href="/support" className="text-foreground/70 hover:text-brand-green transition-colors font-medium">
+                Support
+              </Link>
+              <Link href="/news" className="text-foreground/70 hover:text-brand-green transition-colors font-medium">
+                News
+              </Link>
+              <Link href="/blog" className="text-brand-green font-semibold">
+                Blog
+              </Link>
+              <Link href="/work-with-us" className="btn-green text-sm">
+                Work With Us
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative z-10 text-center py-20 px-8">
-        <div className={`transition-all duration-1000 ${isLoaded ? "animate-fade-in-up" : "opacity-0"}`}>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance font-poppins">
-            <span className="arvintech-brand">ArvinTech</span> Blog
-          </h1>
-          <p className="text-2xl text-emerald-400 mb-8 font-light">Insights, Innovation, and Intelligence</p>
-          <p className="text-lg text-slate-300 max-w-4xl mx-auto text-pretty">
-            Stay ahead of the curve with expert insights on AI, technology trends, and digital transformation strategies
-            from our team of industry professionals.
-          </p>
+      <section className="pt-32 pb-16 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 gradient-hero" />
+        <div className="absolute top-32 right-10 w-24 h-24 bg-brand-blue/10 rounded-2xl rotate-12 animate-float" />
+        <div className="absolute bottom-10 left-10 w-20 h-20 bg-brand-yellow/10 rounded-xl -rotate-12 animate-float delay-200" />
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className={`transition-all duration-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="block-green" />
+              <div className="block-blue" />
+              <div className="block-yellow" />
+              <div className="block-red" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+              <span className="h1-candy">arvintech</span>
+              <span className="text-foreground"> Blog</span>
+            </h1>
+            <p className="text-2xl text-brand-green mb-4 font-medium">Insights, Innovation, and Intelligence</p>
+            <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+              Stay ahead of the curve with expert insights on AI, technology trends, and digital transformation strategies.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="relative z-10 px-8 mb-16">
+      <section className="py-8 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className={`flex flex-wrap justify-center gap-4 transition-all duration-700 delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-600/25"
-                    : "bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white backdrop-blur-sm"
+                    ? "bg-brand-green text-white shadow-lg"
+                    : "bg-card text-foreground/70 hover:bg-secondary border border-border"
                 }`}
               >
                 {category}
@@ -167,51 +190,46 @@ export default function BlogPage() {
 
       {/* Featured Post */}
       {featuredPost && selectedCategory === "All" && (
-        <section className="relative z-10 px-8 mb-20">
+        <section className="py-8 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Article</h2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 group">
+            <h2 className="text-2xl font-bold mb-8 text-center">Featured Article</h2>
+            <div className={`bg-card rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-700 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <div className="md:flex">
-                <div className="md:w-1/2">
-                  <div className="relative h-64 md:h-full">
-                    <Image
-                      src={featuredPost.image || "/placeholder.svg"}
-                      alt={featuredPost.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Featured
-                      </span>
-                    </div>
+                <div className="md:w-1/2 relative h-64 md:h-auto min-h-[300px]">
+                  <Image
+                    src={featuredPost.image}
+                    alt={featuredPost.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-brand-green text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Featured
+                    </span>
                   </div>
                 </div>
                 <div className="md:w-1/2 p-8">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="text-emerald-400 text-sm font-medium">{featuredPost.category}</span>
-                    <span className="text-slate-400 text-sm">{featuredPost.readTime}</span>
+                    <span className="text-brand-green text-sm font-medium">{featuredPost.category}</span>
+                    <span className="text-foreground/50 text-sm">{featuredPost.readTime}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-2xl font-bold mb-4 hover:text-brand-green transition-colors cursor-pointer">
                     {featuredPost.title}
                   </h3>
-                  <p className="text-slate-300 mb-6 text-pretty">{featuredPost.excerpt}</p>
+                  <p className="text-foreground/70 mb-6">{featuredPost.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center">
                         <span className="text-white font-medium text-sm">
-                          {featuredPost.author
-                            .split(" ")
-                            .map((n) => n[0])
-                            .join("")}
+                          {featuredPost.author.split(" ").map((n) => n[0]).join("")}
                         </span>
                       </div>
                       <div>
-                        <p className="text-white font-medium">{featuredPost.author}</p>
-                        <p className="text-slate-400 text-sm">{featuredPost.date}</p>
+                        <p className="font-medium text-sm">{featuredPost.author}</p>
+                        <p className="text-foreground/50 text-xs">{featuredPost.date}</p>
                       </div>
                     </div>
-                    <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg transition-colors">
+                    <button className="btn-green text-sm">
                       Read More
                     </button>
                   </div>
@@ -223,56 +241,51 @@ export default function BlogPage() {
       )}
 
       {/* Blog Posts Grid */}
-      <section className="relative z-10 px-8 pb-20">
+      <section className="py-8 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+          <h2 className="text-2xl font-bold mb-8 text-center">
             {selectedCategory === "All" ? "Latest Articles" : `${selectedCategory} Articles`}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(selectedCategory === "All" ? regularPosts : filteredPosts).map((post, index) => (
+            {regularPosts.map((post, index) => (
               <article
                 key={post.id}
-                className={`bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 hover:scale-105 transition-all duration-300 group ${
-                  isLoaded ? "animate-fade-in-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`bg-card rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ animationDelay: `${400 + index * 100}ms` }}
               >
                 <div className="relative h-48">
                   <Image
-                    src={post.image || "/placeholder.svg"}
+                    src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                    <span className={`bg-${categoryColors[post.category] || "brand-green"} text-white px-3 py-1 rounded-full text-sm`}>
                       {post.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3">
-                    <span className="text-slate-400 text-sm">{post.readTime}</span>
-                    <span className="text-slate-400 text-sm">{post.date}</span>
+                    <span className="text-foreground/50 text-sm">{post.readTime}</span>
+                    <span className="text-foreground/50 text-sm">{post.date}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-xl font-bold mb-3 hover:text-brand-green transition-colors cursor-pointer">
                     {post.title}
                   </h3>
-                  <p className="text-slate-300 mb-4 text-sm text-pretty">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
+                  <p className="text-foreground/60 mb-4 text-sm">{post.excerpt}</p>
+                  <div className="flex items-center justify-between pt-4 border-t border-border">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center">
                         <span className="text-white font-medium text-xs">
-                          {post.author
-                            .split(" ")
-                            .map((n) => n[0])
-                            .join("")}
+                          {post.author.split(" ").map((n) => n[0]).join("")}
                         </span>
                       </div>
-                      <span className="text-slate-400 text-sm">{post.author}</span>
+                      <span className="text-foreground/60 text-sm">{post.author}</span>
                     </div>
-                    <button className="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors">
-                      Read More →
+                    <button className="text-brand-green hover:underline text-sm font-medium">
+                      Read →
                     </button>
                   </div>
                 </div>
@@ -283,20 +296,23 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="relative z-10 px-8 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl border border-emerald-500/20 p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
-            <p className="text-slate-300 mb-8 text-pretty">
+      <section className="py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-blue via-brand-green to-brand-blue bg-[length:200%_100%] animate-[gradient-shift_8s_ease_infinite] p-12 text-center text-white transition-all duration-700 delay-600 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-lg rotate-12" />
+            <div className="absolute bottom-4 left-4 w-10 h-10 bg-white/20 rounded-xl -rotate-12" />
+            
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 relative z-10">Stay Updated</h3>
+            <p className="text-white/90 mb-8 relative z-10">
               Subscribe to our newsletter and never miss the latest insights on AI, technology, and digital innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto relative z-10">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="flex-1 px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
               />
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+              <button className="bg-white text-brand-blue px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105">
                 Subscribe
               </button>
             </div>
