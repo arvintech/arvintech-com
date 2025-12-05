@@ -548,6 +548,27 @@ export default function BusinessClarityPage() {
       </section>
 
       {/* ============================================
+          SECTION 4.5: THE PHILOSOPHY
+          ============================================ */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <p className="text-2xl md:text-3xl text-slate-700 leading-relaxed font-light">
+            "This isn't a <span className="font-semibold text-slate-900">silver bullet</span>. 
+            It's a <span className="font-semibold text-brand-green">partnership</span>.<br className="hidden md:block" />
+            We build together—you bring the expertise, we bring the systems."
+          </p>
+          <p className="text-xl text-brand-green font-semibold mt-6">
+            That's how we amplify your business.
+          </p>
+        </div>
+      </section>
+
+      {/* ============================================
           SECTION 5: THE CTA (Final Push)
           ============================================ */}
       <section className="py-20 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
