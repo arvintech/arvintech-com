@@ -97,6 +97,30 @@ export default function Footer() {
             <div className="w-3 h-3 bg-[#E31937] rounded-sm" />
           </div>
         </div>
+
+        {/* Intelligence Amplifier Trademark Section */}
+        <div className="pt-8 mt-8 border-t border-slate-800">
+          <div className="flex flex-col items-center gap-6">
+            <Image
+              src="/intelligenceamplifier.png"
+              alt="Intelligence Amplifier"
+              width={120}
+              height={80}
+              className="opacity-80"
+            />
+            <div className="text-center space-y-4 max-w-4xl">
+              <p className="text-slate-400 text-xs">
+                Intelligence Amplifier™ and Amplified Classics™ are proprietary trademarks of Arvin Lioanag.
+              </p>
+              <p className="text-slate-500 text-xs leading-relaxed">
+                <span className="text-slate-400 font-medium">Copyright Protection:</span> All original content, analyses, discussion questions, pedagogical frameworks, and methodology are protected by U.S. and international copyright law. Unauthorized reproduction, distribution, web scraping, or use for AI training is strictly prohibited. See our Copyright Notice for details.
+              </p>
+              <p className="text-slate-500 text-xs leading-relaxed">
+                The information provided on this website is for general informational and educational purposes only and does not constitute professional, legal, financial, or technical advice. While we strive to ensure the accuracy and relevance of the content, we make no warranties or representations regarding completeness, reliability, or suitability. Any reliance you place on such information is strictly at your own risk. We are not liable for any losses or damages arising from the use of this site or its content. By using this site, you agree to these terms.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   )
