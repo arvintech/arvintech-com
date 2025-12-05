@@ -25,10 +25,15 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "ArvinTech - Building Tomorrow's Solutions",
+  title: "ArvinTech - Amplify Your Mind",
   description: "An innovative approach to AI—Collaboration, not replacement. Building intelligent solutions that amplify human potential.",
   generator: "Next.js",
   keywords: ["AI", "technology", "consulting", "digital transformation", "intelligence amplification"],
+  icons: {
+    icon: "/arvintech-blocks-logo.png",
+    shortcut: "/arvintech-blocks-logo.png",
+    apple: "/arvintech-blocks-logo.png",
+  },
 }
 
 export default function RootLayout({

@@ -55,23 +55,19 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute inset-0 gradient-hero" />
-        <div className="absolute top-20 left-10 w-32 h-32 bg-brand-green/10 rounded-3xl rotate-12 animate-float" />
-        <div className="absolute top-40 right-20 w-24 h-24 bg-brand-blue/10 rounded-2xl -rotate-12 animate-float delay-200" />
-        
-        {/* LEGO San Francisco Skyline Background Image */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* Bay Area Night Background */}
+        <div className="absolute inset-0">
           <Image
-            src="/sfdesign.png"
-            alt="LEGO San Francisco Skyline"
+            src="/transamerica.JPG"
+            alt="San Francisco Skyline at Night"
             fill
-            className="object-cover object-bottom opacity-25"
+            className="object-cover"
             priority
           />
-          {/* Gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         </div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-brand-green/20 rounded-3xl rotate-12 animate-float" />
+        <div className="absolute top-40 right-20 w-24 h-24 bg-brand-blue/20 rounded-2xl -rotate-12 animate-float delay-200" />
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
           {/* Logo animation */}
@@ -88,20 +84,21 @@ export default function HomePage() {
 
           {/* Main headline */}
           <h1 
-            className={`text-5xl md:text-7xl font-extrabold mb-6 transition-all duration-1000 delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`text-7xl md:text-9xl font-extrabold mb-6 transition-all duration-1000 delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <span className="h1-rainbow">Building Tomorrow's</span>
+            <span className="h1-rainbow">Amplify</span>
             <br />
-            <span className="h1-rainbow">Solutions</span>
+            <span className="h1-rainbow">Your Mind</span>
           </h1>
 
           {/* Tagline */}
           <p 
-            className={`text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto mb-8 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             An innovative attitude to AI—
             <span className="text-brand-green font-semibold">Collaboration</span>, not replacement.
-            Amplify your potential with intelligent solutions.
+            <br className="hidden md:block" />
+            The future demands <span className="text-brand-yellow font-semibold">100x growth</span>. Let's build it together.
           </p>
 
           {/* CTA Buttons */}
@@ -120,7 +117,7 @@ export default function HomePage() {
           <div 
             className={`mt-16 transition-all duration-1000 delay-500 ${isLoaded ? "opacity-100" : "opacity-0"}`}
           >
-            <div className="flex flex-col items-center gap-2 text-foreground/40">
+            <div className="flex flex-col items-center gap-2 text-white/60">
               <span className="text-sm font-medium">Scroll to explore</span>
               <svg className="w-6 h-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
