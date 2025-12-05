@@ -139,112 +139,149 @@ export default function AboutPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
+              {/* Amplified Operations */}
               <div className="group bg-card rounded-2xl p-8 shadow-lg card-hover border-l-4 border-brand-green">
                 <div className="w-14 h-14 bg-brand-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Technology Consulting & Support</h3>
+                <h3 className="text-xl font-bold mb-4">Amplified Operations</h3>
                 <ul className="space-y-3 text-foreground/70">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-green mt-1">▸</span>
-                    AI Model infrastructure strategic design
+                    AI-powered workflow automation
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-green mt-1">▸</span>
-                    Remote troubleshooting and systems administration
+                    Business process optimization
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-green mt-1">▸</span>
-                    Strategic technology roadmapping for SMBs
+                    On-time Accounts Receivable management
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-green mt-1">▸</span>
-                    Managed support and ongoing optimization
+                    Decision-support dashboards and analytics
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-green mt-1">▸</span>
+                    QuickBooks Online and billing integrations
                   </li>
                 </ul>
+                <Link href="/amplified-operations" className="inline-flex items-center gap-2 text-brand-green font-semibold mt-6 hover:gap-3 transition-all">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
 
+              {/* Amplified Customer Communications */}
               <div className="group bg-card rounded-2xl p-8 shadow-lg card-hover border-l-4 border-brand-blue">
                 <div className="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4">AI Intelligence Amplification</h3>
+                <h3 className="text-xl font-bold mb-4">Amplified Customer Communications</h3>
                 <ul className="space-y-3 text-foreground/70">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-blue mt-1">▸</span>
-                    Custom AI integrations and workflow automations
+                    Product value and transparency
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-blue mt-1">▸</span>
-                    WordPress and Next.js AI-powered plugins
+                    Intelligence Amplified Customer Service Incident Manager
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-blue mt-1">▸</span>
-                    Business productivity amplifiers
+                    Client portal and secure document sharing
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-blue mt-1">▸</span>
-                    Decision-support dashboards and analytics
+                    Automated client follow-ups and reminders
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-blue mt-1">▸</span>
+                    Consistent, fast support delivery
                   </li>
                 </ul>
+                <Link href="/amplified-customer-communications" className="inline-flex items-center gap-2 text-brand-blue font-semibold mt-6 hover:gap-3 transition-all">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
 
+              {/* IT Infrastructure Support */}
               <div className="group bg-card rounded-2xl p-8 shadow-lg card-hover border-l-4 border-brand-yellow">
                 <div className="w-14 h-14 bg-brand-yellow/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7 text-brand-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Digital Publishing & IP Development</h3>
+                <h3 className="text-xl font-bold mb-4">IT Infrastructure Support</h3>
                 <ul className="space-y-3 text-foreground/70">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-yellow mt-1">▸</span>
-                    Author support tools and manuscript preparation
+                    AI Readiness planning
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-yellow mt-1">▸</span>
-                    Amazon KDP strategies and distribution
+                    AI implementation strategies
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-yellow mt-1">▸</span>
-                    Joint venture and IP buyout programs
+                    Mobile working solutions
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-yellow mt-1">▸</span>
-                    Interactive books and educational modules
+                    AI Model infrastructure strategic design
                   </li>
                 </ul>
+                <Link href="/it-infrastructure-support" className="inline-flex items-center gap-2 text-brand-yellow font-semibold mt-6 hover:gap-3 transition-all">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
 
+              {/* Mission Web */}
               <div className="group bg-card rounded-2xl p-8 shadow-lg card-hover border-l-4 border-brand-red">
                 <div className="w-14 h-14 bg-brand-red/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Branding & Web Development</h3>
+                <h3 className="text-xl font-bold mb-4">Mission Web</h3>
                 <ul className="space-y-3 text-foreground/70">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-red mt-1">▸</span>
-                    Custom Next.js and WordPress websites
+                    Full-service Next.js web development
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-red mt-1">▸</span>
-                    Brand assets: logos, animations, pitch decks
+                    Optimized web search and visibility
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-red mt-1">▸</span>
-                    AI-powered user engagement features
+                    Payment gateway strategies
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-red mt-1">▸</span>
-                    Landing pages optimized for conversion
+                    Company portal implementation
                   </li>
                 </ul>
+                <Link href="/mission-web-studio" className="inline-flex items-center gap-2 text-brand-red font-semibold mt-6 hover:gap-3 transition-all">
+                  Learn More
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

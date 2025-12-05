@@ -236,3 +236,6 @@ This case study pattern applies to:
 
 *Ready to find your clarity? [Book a Discovery Call]*
 
+
+
+
