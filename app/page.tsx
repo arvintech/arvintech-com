@@ -533,73 +533,78 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Core Offerings Section */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">What We Build</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Offerings</h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-              From technology consulting to digital publishing, we help you amplify your potential
+              Four powerful solutions to amplify your business in the AI age
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
+            {/* Amplified Operations */}
             <div className="group bg-gradient-to-br from-brand-green/5 to-brand-blue/5 rounded-2xl p-8 border border-brand-green/20 hover:border-brand-green/40 transition-all">
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 bg-brand-green rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Technology Consulting</h3>
-                  <p className="text-foreground/60 mb-4">AI model infrastructure, remote troubleshooting, strategic technology roadmapping, and managed support.</p>
-                  <Link href="/about" className="text-brand-green font-semibold hover:underline">Learn more →</Link>
+                  <h3 className="text-2xl font-bold mb-2">Amplified Operations</h3>
+                  <p className="text-foreground/60 mb-4">AI-powered workflow automation, business process optimization, on-time AR management, and QuickBooks integrations.</p>
+                  <Link href="/amplified-operations" className="text-brand-green font-semibold hover:underline">Learn more →</Link>
                 </div>
               </div>
             </div>
 
+            {/* Amplified Customer Communications */}
             <div className="group bg-gradient-to-br from-brand-blue/5 to-brand-yellow/5 rounded-2xl p-8 border border-brand-blue/20 hover:border-brand-blue/40 transition-all">
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 bg-brand-blue rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">AI Intelligence Amplification</h3>
-                  <p className="text-foreground/60 mb-4">Custom AI integrations, workflow automations, business productivity amplifiers, and decision-support dashboards.</p>
-                  <Link href="/about" className="text-brand-blue font-semibold hover:underline">Learn more →</Link>
+                  <h3 className="text-2xl font-bold mb-2">Amplified Customer Communications</h3>
+                  <p className="text-foreground/60 mb-4">Product transparency, AI-powered incident management, client portals, and automated follow-ups that create more customers.</p>
+                  <Link href="/amplified-customer-communications" className="text-brand-blue font-semibold hover:underline">Learn more →</Link>
                 </div>
               </div>
             </div>
 
+            {/* IT Infrastructure Support */}
             <div className="group bg-gradient-to-br from-brand-yellow/5 to-brand-red/5 rounded-2xl p-8 border border-brand-yellow/20 hover:border-brand-yellow/40 transition-all">
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 bg-brand-yellow rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Digital Publishing</h3>
-                  <p className="text-foreground/60 mb-4">Author support tools, Amazon KDP strategies, joint venture programs, and interactive educational modules.</p>
-                  <Link href="/about" className="text-brand-yellow font-semibold hover:underline">Learn more →</Link>
+                  <h3 className="text-2xl font-bold mb-2">IT Infrastructure Support</h3>
+                  <p className="text-foreground/60 mb-4">AI readiness planning, implementation strategies, mobile working solutions, and AI tools selection for maximum growth.</p>
+                  <Link href="/it-infrastructure-support" className="text-brand-yellow font-semibold hover:underline">Learn more →</Link>
                 </div>
               </div>
             </div>
 
+            {/* Mission Web */}
             <div className="group bg-gradient-to-br from-brand-red/5 to-brand-green/5 rounded-2xl p-8 border border-brand-red/20 hover:border-brand-red/40 transition-all">
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 bg-brand-red rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Branding & Web Development</h3>
-                  <p className="text-foreground/60 mb-4">Custom Next.js and WordPress sites, brand assets, AI-powered engagement features, and conversion-optimized landing pages.</p>
-                  <Link href="/about" className="text-brand-red font-semibold hover:underline">Learn more →</Link>
+                  <h3 className="text-2xl font-bold mb-2">Mission Web</h3>
+                  <p className="text-foreground/60 mb-4">Full-service Next.js development, optimized web search and visibility, payment gateways, and company portal implementation.</p>
+                  <Link href="/mission-web-studio" className="text-brand-red font-semibold hover:underline">Learn more →</Link>
                 </div>
               </div>
             </div>
