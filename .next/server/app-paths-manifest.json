@@ -1,5 +1,6 @@
 {
+  "/clients/page": "app/clients/page.js",
+  "/page": "app/page.js",
   "/support/page": "app/support/page.js",
-  "/business-clarity/page": "app/business-clarity/page.js",
-  "/page": "app/page.js"
+  "/business-clarity/page": "app/business-clarity/page.js"
 }
