@@ -425,11 +425,20 @@ export default function HomePage() {
                       Technology consulting that brings your current business to AI readiness. Your basic 
                       roadmap for the here and now—not the coming AI age. Amplify your business.
                     </p>
-                    <div className="flex flex-wrap items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2 mb-4">
                       <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">AI Readiness</span>
                       <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">Roadmap</span>
                       <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">Consulting</span>
                     </div>
+                    <Link 
+                      href="/business-clarity" 
+                      className="inline-flex items-center gap-2 text-brand-green font-semibold hover:gap-3 transition-all"
+                    >
+                      Learn More
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </div>

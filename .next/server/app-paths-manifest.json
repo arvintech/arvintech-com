@@ -1,4 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/business-clarity/page": "app/business-clarity/page.js"
+  "/support/page": "app/support/page.js",
+  "/business-clarity/page": "app/business-clarity/page.js",
+  "/page": "app/page.js"
 }
