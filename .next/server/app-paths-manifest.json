@@ -1,7 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/clients/[slug]/page": "app/clients/[slug]/page.js",
-  "/clients/page": "app/clients/page.js",
-  "/mission-web-studio/page": "app/mission-web-studio/page.js",
-  "/about/page": "app/about/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/business-clarity/page": "app/business-clarity/page.js"
 }
