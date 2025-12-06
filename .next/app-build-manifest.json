@@ -1,9 +1,14 @@
 {
   "pages": {
-    "/page": [
+    "/mission-web-studio/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/mission-web-studio/page.js"
+    ],
+    "/mission-web-studio/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mission-web-studio/layout.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,45 +16,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/about/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
-    ],
-    "/business-clarity/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/business-clarity/page.js"
-    ],
-    "/amplified-operations/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/amplified-operations/page.js"
-    ],
-    "/amplified-customer-communications/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/amplified-customer-communications/page.js"
-    ],
-    "/mission-web-studio/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/mission-web-studio/page.js"
-    ],
-    "/it-infrastructure-support/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/it-infrastructure-support/page.js"
-    ],
-    "/support/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/support/page.js"
-    ],
-    "/mission-web-studio/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/mission-web-studio/layout.js"
+      "static/chunks/app/page.js"
     ]
   }
 }

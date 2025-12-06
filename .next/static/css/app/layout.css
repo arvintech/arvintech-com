@@ -444,7 +444,6 @@ font-weight: 100 900;
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-green-700: oklch(52.7% 0.154 150.069);
     --color-emerald-50: oklch(97.9% 0.021 166.113);
-    --color-emerald-100: oklch(95% 0.052 163.051);
     --color-emerald-400: oklch(76.5% 0.177 163.223);
     --color-emerald-500: oklch(69.6% 0.17 162.48);
     --color-emerald-600: oklch(59.6% 0.145 163.225);
@@ -751,9 +750,6 @@ font-weight: 100 900;
   .top-1\/4 {
     top: calc(1/4 * 100%);
   }
-  .top-2 {
-    top: calc(var(--spacing) * 2);
-  }
   .top-2\/3 {
     top: calc(2/3 * 100%);
   }
@@ -903,9 +899,6 @@ font-weight: 100 900;
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
-  }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
   }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
@@ -1338,6 +1331,13 @@ font-weight: 100 900;
       margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-x-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 6) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -1459,9 +1459,6 @@ font-weight: 100 900;
   .border-cyan-500 {
     border-color: var(--color-cyan-500);
   }
-  .border-emerald-500 {
-    border-color: var(--color-emerald-500);
-  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
@@ -1539,18 +1536,6 @@ font-weight: 100 900;
   }
   .border-yellow-500 {
     border-color: var(--color-yellow-500);
-  }
-  .bg-\[\#00A94F\] {
-    background-color: #00A94F;
-  }
-  .bg-\[\#0066B3\] {
-    background-color: #0066B3;
-  }
-  .bg-\[\#E31937\] {
-    background-color: #E31937;
-  }
-  .bg-\[\#FFC107\] {
-    background-color: #FFC107;
   }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
@@ -1635,9 +1620,6 @@ font-weight: 100 900;
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-cyan-500) 20%, transparent);
     }
-  }
-  .bg-emerald-100 {
-    background-color: var(--color-emerald-100);
   }
   .bg-emerald-500\/20 {
     background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 20%, transparent);
@@ -1734,9 +1716,6 @@ font-weight: 100 900;
   }
   .bg-slate-700 {
     background-color: var(--color-slate-700);
-  }
-  .bg-slate-800 {
-    background-color: var(--color-slate-800);
   }
   .bg-slate-800\/50 {
     background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 50%, transparent);
@@ -2317,9 +2296,6 @@ font-weight: 100 900;
   .whitespace-nowrap {
     white-space: nowrap;
   }
-  .text-\[\#00A94F\] {
-    color: #00A94F;
-  }
   .text-amber-400 {
     color: var(--color-amber-400);
   }
@@ -2536,9 +2512,6 @@ font-weight: 100 900;
   }
   .opacity-75 {
     opacity: 75%;
-  }
-  .opacity-80 {
-    opacity: 80%;
   }
   .opacity-100 {
     opacity: 100%;
@@ -4132,6 +4105,11 @@ font-weight: 100 900;
   inherits: false;
   initial-value: 0;
 }
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -4385,6 +4363,7 @@ font-weight: 100 900;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
+      --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
