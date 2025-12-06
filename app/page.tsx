@@ -343,7 +343,7 @@ export default function HomePage() {
 
             {/* Row 3 - Two Medium Blocks */}
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Mission Web Studio */}
+              {/* Mission Pages Studio */}
               <div className="group relative">
                 <div className="absolute inset-0 bg-brand-yellow rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
                 <div className="relative h-full bg-white rounded-2xl p-8 border-4 border-brand-yellow shadow-xl overflow-hidden">
@@ -372,7 +372,7 @@ export default function HomePage() {
                       <div className="w-2 h-1 bg-white/70 mt-0.5" />
                       <div className="w-4 h-0.5 bg-white/70" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 text-slate-900">Mission Web Studio</h3>
+                    <h3 className="text-2xl font-bold mb-3 text-slate-900">Mission Pages Studio</h3>
                     <p className="text-slate-600 mb-4">
                       Full-service web development written purely on Next.js. Amplified functions and features 
                       for enhanced forward-facing clients—SEO, client support automation, subscriptions, and more.
