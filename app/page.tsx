@@ -710,7 +710,7 @@ export default function HomePage() {
               <div className="space-y-3 text-slate-400 text-sm">
                 <div>
                   <p className="text-white font-medium">San Francisco & Bay Area</p>
-                  <p>785 Oak Grove Rd, Concord CA 94518</p>
+                  <p>785 Oak Grove Rd. Suite E2, Concord CA 94518</p>
                 </div>
                 <div>
                   <p className="text-white font-medium">Portland & Pacific Northwest</p>
