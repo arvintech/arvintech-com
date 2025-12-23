@@ -71,6 +71,52 @@ export default function MissionWebStudioPage() {
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
+          {/* Marketing Strategy Overview */}
+          <div className="mb-16 grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <span className="inline-block px-4 py-1 mb-4 rounded-full bg-brand-green/10 text-brand-green text-sm font-semibold">
+                Marketing Strategy
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                A Clear Plan for Growth, Not Guesswork
+              </h2>
+              <p className="text-slate-600 text-lg mb-4">
+                Mission Pages Studio doesn&apos;t just launch a website—we build a marketing system that connects
+                your story, your traffic, and your offers into one measurable strategy.
+              </p>
+              <p className="text-slate-600">
+                We start with your revenue targets and work backwards: ideal customers, channels, offers, and
+                follow-up. You see what we&apos;re building, why it matters, and how it will be measured.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What It Includes</h3>
+              <ul className="space-y-2 text-sm text-slate-700 mb-4">
+                <li>• Traffic plan (SEO, search ads, and social ads)</li>
+                <li>• Conversion paths (landing pages, forms, and offers)</li>
+                <li>• Follow-up system (email/SMS nurture and remarketing)</li>
+                <li>• Simple scorecard so owners can see what&apos;s working</li>
+              </ul>
+              <h4 className="text-sm font-semibold text-slate-500 mb-1">Typical Investment</h4>
+              <p className="text-sm text-slate-600">
+                Strategy & launch projects often begin around <span className="font-semibold text-slate-900">$8k–$15k</span>,
+                with ongoing marketing management from <span className="font-semibold text-slate-900">$2k–$4k per month</span>
+                plus ad spend—always scoped to your stage and goals.
+              </p>
+              <div className="mt-5">
+                <Link
+                  href="/clear-plan"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-brand-green text-white rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                >
+                  Learn more
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Who We Build For</h2>
             <p className="text-xl text-slate-600">Specialized solutions for organizations that make a difference</p>
@@ -228,6 +274,113 @@ export default function MissionWebStudioPage() {
                 <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Accountants</span>
                 <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Engineers</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comprehensive Marketing Strategy */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-brand-green/10 text-brand-green rounded-full text-sm font-semibold mb-4">
+              Growth Playbook
+            </span>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Comprehensive Marketing Strategy</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Business owners get a clear plan that connects brand, content, and ads to revenue goals—with transparent
+              investment options.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Goals We Target</h3>
+              <ul className="space-y-3 text-slate-700">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-brand-green rounded-full mt-2" />
+                  <div>
+                    <p className="font-semibold text-slate-900">Consistent lead flow</p>
+                    <p className="text-sm text-slate-600">SEO + paid search to capture high-intent prospects.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-brand-green rounded-full mt-2" />
+                  <div>
+                    <p className="font-semibold text-slate-900">Brand authority</p>
+                    <p className="text-sm text-slate-600">Content, case studies, and social proof to win trust.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-brand-green rounded-full mt-2" />
+                  <div>
+                    <p className="font-semibold text-slate-900">Customer lifetime value</p>
+                    <p className="text-sm text-slate-600">Email/SMS nurture and retargeting to grow repeat revenue.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Strategy Snapshot</h3>
+              <div className="space-y-3 text-slate-700">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2" />
+                  <div>
+                    <p className="font-semibold text-slate-900">3-6 month roadmap</p>
+                    <p className="text-sm text-slate-600">Prioritized sprints across web, content, SEO, and ads.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2" />
+                  <div>
+                    <p className="font-semibold text-slate-900">Channel mix</p>
+                    <p className="text-sm text-slate-600">SEO, Google/Meta ads, email/SMS, and conversion-focused landing pages.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2" />
+                  <div>
+                    <p className="font-semibold text-slate-900">Measurement</p>
+                    <p className="text-sm text-slate-600">Dashboards that track CAC, CPL, ROAS, and lead-to-close rates.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gradient-to-br from-brand-blue/10 to-white rounded-2xl p-6 border border-brand-blue/20">
+              <h4 className="text-xl font-bold text-slate-900 mb-2">Essentials Plan</h4>
+              <p className="text-sm text-slate-600 mb-4">Foundational marketing for early-stage or local businesses.</p>
+              <ul className="space-y-2 text-sm text-slate-700 mb-4">
+                <li>• SEO setup, on-page fixes</li>
+                <li>• One campaign (Google or Meta)</li>
+                <li>• Monthly reporting</li>
+              </ul>
+              <p className="text-lg font-semibold text-brand-blue">Starting at $2k/mo + ad spend</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-brand-green/10 to-white rounded-2xl p-6 border border-brand-green/20 shadow-md">
+              <h4 className="text-xl font-bold text-slate-900 mb-2">Growth Plan</h4>
+              <p className="text-sm text-slate-600 mb-4">Multi-channel growth for teams ready to scale lead volume.</p>
+              <ul className="space-y-2 text-sm text-slate-700 mb-4">
+                <li>• SEO + Google + Meta ads</li>
+                <li>• Landing page CRO testing</li>
+                <li>• Email/SMS nurture & retargeting</li>
+              </ul>
+              <p className="text-lg font-semibold text-brand-green">Starting at $4k/mo + ad spend</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-brand-yellow/10 to-white rounded-2xl p-6 border border-brand-yellow/30">
+              <h4 className="text-xl font-bold text-slate-900 mb-2">Performance Partner</h4>
+              <p className="text-sm text-slate-600 mb-4">Conversion-led programs with shared upside.</p>
+              <ul className="space-y-2 text-sm text-slate-700 mb-4">
+                <li>• Full-funnel ownership</li>
+                <li>• Creative + media + analytics</li>
+                <li>• Hybrid retainer + performance incentives</li>
+              </ul>
+              <p className="text-lg font-semibold text-brand-yellow">Custom pricing based on goals</p>
             </div>
           </div>
         </div>
