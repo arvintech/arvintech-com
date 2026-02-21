@@ -53,7 +53,7 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - Relaunch */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         {/* Bay Area Night Background */}
         <div className="absolute inset-0">
@@ -64,52 +64,95 @@ export default function HomePage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         </div>
         <div className="absolute top-20 left-10 w-32 h-32 bg-brand-green/20 rounded-3xl rotate-12 animate-float" />
         <div className="absolute top-40 right-20 w-24 h-24 bg-brand-blue/20 rounded-2xl -rotate-12 animate-float delay-200" />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           {/* Logo animation */}
           <div className={`mb-8 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <Image
               src="/arvintech-blocks-logo.png"
               alt="ArvinTech Building Blocks"
-              width={180}
-              height={180}
-              className="mx-auto animate-bounce-subtle"
+              width={120}
+              height={120}
+              className="mx-auto"
               priority
             />
           </div>
 
+          {/* Relaunch Badge */}
+          <div 
+            className={`inline-flex items-center gap-2 px-6 py-3 bg-brand-green/20 border-2 border-brand-green rounded-full mb-6 transition-all duration-1000 delay-100 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
+            <div className="w-3 h-3 bg-brand-green rounded-full animate-pulse" />
+            <span className="text-brand-green font-bold text-sm uppercase tracking-wider">Relaunched for the AI Era</span>
+          </div>
+
           {/* Main headline */}
           <h1 
-            className={`text-7xl md:text-9xl font-extrabold mb-6 transition-all duration-1000 delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 transition-all duration-1000 delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <span className="h1-rainbow">Amplify</span>
+            <span className="text-white">Managed IT and</span>
             <br />
-            <span className="h1-rainbow">Your Mind</span>
+            <span className="h1-rainbow">AI Automation</span>
+            <br />
+            <span className="text-white">Services Since 2000</span>
           </h1>
 
           {/* Tagline */}
           <p 
-            className={`text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-10 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            An innovative attitude to AI—
-            <span className="text-brand-green font-semibold">Collaboration</span>, not replacement.
-            <br className="hidden md:block" />
-            The future demands <span className="text-brand-yellow font-semibold">100x growth</span>. Let's build it together.
+            Secure, manage, and modernize your business infrastructure with expert IT support and AI-powered automation.
           </p>
+
+          {/* Value Props */}
+          <div 
+            className={`grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10 transition-all duration-1000 delay-350 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
+              <div className="w-12 h-12 bg-brand-green rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-white font-bold text-lg mb-2">25 Years Experience</h3>
+              <p className="text-white/70 text-sm">Legacy IT expertise you can trust</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
+              <div className="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-white font-bold text-lg mb-2">AI Integration</h3>
+              <p className="text-white/70 text-sm">Modern automation capability</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
+              <div className="w-12 h-12 bg-brand-yellow rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+              </div>
+              <h3 className="text-white font-bold text-lg mb-2">Infrastructure + Intelligence</h3>
+              <p className="text-white/70 text-sm">Complete technology solution</p>
+            </div>
+          </div>
 
           {/* CTA Buttons */}
           <div 
             className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-400 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <Link href="/about" className="btn-green text-lg px-8 py-4">
-              Discover More
+            <Link href="#services" className="btn-green text-lg px-8 py-4">
+              View Services
             </Link>
-            <Link href="/support" className="btn-outline text-lg px-8 py-4">
-              Get Support
+            <Link href="#consultation" className="btn-outline text-lg px-8 py-4">
+              Schedule Consultation
+            </Link>
+            <Link href="/support" className="inline-flex items-center justify-center gap-2 bg-brand-blue text-white rounded-xl font-semibold hover:bg-blue-600 transition-colors shadow-lg text-lg px-8 py-4">
+              Support
             </Link>
           </div>
 
@@ -163,7 +206,526 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Our Building Blocks Section */}
+      {/* Core Services Section */}
+      <section id="services" className="py-24 px-6 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-green/10 rounded-full mb-4">
+              <span className="text-brand-green font-bold text-sm uppercase tracking-wider">Core Services</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-4 text-slate-900">
+              Infrastructure + Intelligence
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              ArvinTech helps businesses modernize their IT infrastructure and deploy AI systems that improve efficiency, security, and operational performance.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Service 1: Managed IT Support */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-brand-green rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
+              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 hover:border-brand-green transition-all shadow-lg">
+                <div className="w-16 h-14 bg-brand-green rounded-lg flex items-center justify-center mb-6 shadow-lg relative overflow-visible">
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
+                    <div className="w-3 h-3 bg-green-400 rounded-full shadow-inner border-2 border-green-500" />
+                    <div className="w-3 h-3 bg-green-400 rounded-full shadow-inner border-2 border-green-500" />
+                  </div>
+                  <svg className="w-8 h-8 text-white mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Managed IT Support</h3>
+                <p className="text-slate-600 mb-6">
+                  Remote IT support, security monitoring, backups, and system maintenance. Your technology infrastructure, professionally managed.
+                </p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>24/7 Remote Support</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Security Monitoring</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Automated Backups</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>System Updates</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Service 2: AI Readiness */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-brand-blue rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
+              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 hover:border-brand-blue transition-all shadow-lg">
+                <div className="w-16 h-14 bg-brand-blue rounded-lg flex items-center justify-center mb-6 shadow-lg relative overflow-visible">
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
+                    <div className="w-3 h-3 bg-blue-400 rounded-full shadow-inner border-2 border-blue-500" />
+                    <div className="w-3 h-3 bg-blue-400 rounded-full shadow-inner border-2 border-blue-500" />
+                  </div>
+                  <svg className="w-8 h-8 text-white mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">AI Readiness with Intelligence Amplifier</h3>
+                <p className="text-slate-600 mb-6">
+                  Prepare your business for the AI era with Intelligence Amplifier assessment, strategy, and implementation planning.
+                </p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>AI Readiness Assessment</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>IA Platform Deployment</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Custom AI Strategy</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Team Training & Onboarding</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Service 3: AI Automation */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-brand-yellow rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
+              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 hover:border-brand-yellow transition-all shadow-lg">
+                <div className="w-16 h-14 bg-brand-yellow rounded-lg flex items-center justify-center mb-6 shadow-lg relative overflow-visible">
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
+                    <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner border-2 border-yellow-400" />
+                    <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner border-2 border-yellow-400" />
+                  </div>
+                  <svg className="w-8 h-8 text-white mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">AI Automation & Integration</h3>
+                <p className="text-slate-600 mb-6">
+                  Deploy intelligent automation systems that reduce manual work and improve operational efficiency with modern AI tools.
+                </p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Workflow Automation</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>AI Assistant Deployment</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Custom Integration</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-slate-700">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Process Optimization</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Packages Section */}
+      <section className="py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-green/20 border border-brand-green/30 rounded-full mb-6">
+              <span className="text-brand-green font-bold text-xs uppercase tracking-wider">Pricing Plans</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 text-white leading-tight">
+              Simple, Predictable Pricing
+            </h2>
+            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Choose the managed service package that fits your business. All plans include expert support and ongoing maintenance.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-10 items-center pt-8">
+            {/* Starter Package */}
+            <div className="relative bg-white rounded-3xl p-6 md:p-8 border-4 border-slate-200 shadow-2xl hover:shadow-3xl hover:border-brand-green/30 transition-all duration-300 flex flex-col h-full">
+              <div className="absolute top-0 left-0 right-0 h-6 bg-brand-green flex items-center justify-center gap-4 rounded-t-[1.25rem]">
+                <div className="w-3 h-3 bg-green-300 rounded-full shadow-inner" />
+                <div className="w-3 h-3 bg-green-300 rounded-full shadow-inner" />
+              </div>
+              <div className="pt-6 flex flex-col flex-grow">
+                <div className="mb-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Starter</h3>
+                  <p className="text-slate-600 text-sm mb-4">For small businesses (1–5 users)</p>
+                  <div className="flex items-baseline gap-1.5 mb-6">
+                    <span className="text-4xl md:text-5xl font-extrabold text-brand-green">$500</span>
+                    <span className="text-slate-600 font-medium text-lg">/month</span>
+                  </div>
+                </div>
+                <ul className="space-y-3.5 mb-8 flex-grow">
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Remote IT support</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Security monitoring</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Automated backups</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">System updates</span>
+                  </li>
+                </ul>
+                <Link href="#consultation" className="block w-full text-center px-6 py-4 bg-brand-green text-white rounded-xl font-bold text-base hover:bg-green-600 hover:shadow-xl transition-all duration-200 shadow-lg">
+                  Get Started
+                </Link>
+              </div>
+            </div>
+
+            {/* Professional Package - Featured */}
+            <div className="relative bg-white rounded-3xl p-6 md:p-8 border-4 border-brand-blue shadow-2xl transform md:scale-[1.08] flex flex-col h-full mt-10">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2.5 bg-gradient-to-r from-brand-blue to-blue-600 text-white rounded-full text-xs font-bold uppercase shadow-lg border-2 border-white whitespace-nowrap z-10">
+                Most Popular
+              </div>
+              <div className="absolute top-0 left-0 right-0 h-6 bg-brand-blue flex items-center justify-center gap-4 rounded-t-[1.25rem]">
+                <div className="w-3 h-3 bg-blue-300 rounded-full shadow-inner" />
+                <div className="w-3 h-3 bg-blue-300 rounded-full shadow-inner" />
+                <div className="w-3 h-3 bg-blue-300 rounded-full shadow-inner" />
+              </div>
+              <div className="pt-6 flex flex-col flex-grow">
+                <div className="mb-7">
+                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Professional</h3>
+                  <p className="text-slate-600 text-sm mb-4">For growing businesses (5–15 users)</p>
+                  <div className="flex items-baseline gap-1.5 mb-6">
+                    <span className="text-5xl md:text-6xl font-extrabold text-brand-blue">$1,200</span>
+                    <span className="text-slate-600 font-medium text-lg">/month</span>
+                  </div>
+                </div>
+                <ul className="space-y-3.5 mb-8 flex-grow">
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">All Starter features</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Managed IT support</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Advanced cybersecurity</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">AI assistant deployment</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Priority support</span>
+                  </li>
+                </ul>
+                <Link href="#consultation" className="block w-full text-center px-6 py-4 bg-brand-blue text-white rounded-xl font-bold text-base hover:bg-blue-600 hover:shadow-xl transition-all duration-200 shadow-lg">
+                  Get Started
+                </Link>
+              </div>
+            </div>
+
+            {/* Business Package */}
+            <div className="relative bg-white rounded-3xl p-6 md:p-8 border-4 border-slate-200 shadow-2xl hover:shadow-3xl hover:border-brand-yellow/30 transition-all duration-300 flex flex-col h-full">
+              <div className="absolute top-0 left-0 right-0 h-6 bg-brand-yellow flex items-center justify-center gap-4 rounded-t-[1.25rem]">
+                <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner" />
+                <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner" />
+                <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner" />
+                <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner" />
+              </div>
+              <div className="pt-6 flex flex-col flex-grow">
+                <div className="mb-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Business</h3>
+                  <p className="text-slate-600 text-sm mb-4">For established businesses (15+ users)</p>
+                  <div className="flex items-baseline gap-1.5 mb-6">
+                    <span className="text-4xl md:text-5xl font-extrabold text-brand-yellow">$2,500</span>
+                    <span className="text-slate-600 font-medium text-lg">/month</span>
+                  </div>
+                </div>
+                <ul className="space-y-3.5 mb-8 flex-grow">
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">All Professional features</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Custom automation systems</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Dedicated priority support</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Strategic IT consulting</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">Account manager</span>
+                  </li>
+                </ul>
+                <Link href="#consultation" className="block w-full text-center px-6 py-4 bg-brand-yellow text-white rounded-xl font-bold text-base hover:bg-yellow-500 hover:shadow-xl transition-all duration-200 shadow-lg">
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12 pt-6 border-t border-white/10">
+            <p className="text-white/80 text-base md:text-lg leading-relaxed">
+              All prices are monthly recurring. Custom enterprise solutions available.{" "}
+              <Link href="#consultation" className="text-brand-green font-bold hover:text-green-400 hover:underline transition-colors">
+                Contact us for details →
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation CTA Section */}
+      <section id="consultation" className="py-24 px-6 bg-white relative overflow-hidden">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-blue/10 rounded-full mb-6">
+            <span className="text-brand-blue font-bold text-xs uppercase tracking-wider">The AI Shift is Here</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-slate-900 leading-tight">
+            Ready to Modernize Your Business?
+          </h2>
+          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Schedule a free consultation to discuss your IT needs and discover how ArvinTech can help secure, manage, and modernize your technology infrastructure.
+          </p>
+          
+          <div className="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 md:p-12 border-2 border-slate-200 shadow-xl max-w-2xl mx-auto">
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="text-left">
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors"
+                    placeholder="John Smith"
+                    required
+                  />
+                </div>
+                <div className="text-left">
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">Company Name</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors"
+                    placeholder="Your Company"
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="text-left">
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+                  <input 
+                    type="email" 
+                    className="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors"
+                    placeholder="john@company.com"
+                    required
+                  />
+                </div>
+                <div className="text-left">
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">Phone</label>
+                  <input 
+                    type="tel" 
+                    className="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors"
+                    placeholder="(555) 123-4567"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="text-left">
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Number of Users</label>
+                <select className="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors">
+                  <option>1-5 users</option>
+                  <option>5-15 users</option>
+                  <option>15-50 users</option>
+                  <option>50+ users</option>
+                </select>
+              </div>
+
+              <div className="text-left">
+                <label className="block text-sm font-semibold text-slate-700 mb-2">What are you interested in?</label>
+                <textarea 
+                  className="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors resize-none"
+                  rows={4}
+                  placeholder="Tell us about your IT needs, challenges, or goals..."
+                  required
+                />
+              </div>
+
+              <button 
+                type="submit"
+                className="w-full px-8 py-4 bg-brand-green text-white rounded-xl font-bold text-lg hover:bg-green-600 transition-colors shadow-lg"
+              >
+                Schedule Free Consultation
+              </button>
+
+              <p className="text-sm text-slate-500">
+                We'll respond within 24 hours. No commitment required.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Target Industries Section */}
+      <section className="py-24 px-6 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-blue/10 rounded-full mb-4">
+              <span className="text-brand-blue font-bold text-sm uppercase tracking-wider">Who We Serve</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-4 text-slate-900">
+              Trusted by Professional Firms
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              We specialize in providing reliable IT and AI solutions for professional service firms that value security, efficiency, and uptime.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Law Firms */}
+            <div className="bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-brand-green transition-all shadow-lg group">
+              <div className="w-14 h-14 bg-brand-green/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-green/20 transition-colors">
+                <svg className="w-7 h-7 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Law Firms</h3>
+              <p className="text-slate-600 text-sm">
+                Secure document management, case automation, and compliance-focused IT infrastructure.
+              </p>
+            </div>
+
+            {/* Accounting Firms */}
+            <div className="bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-brand-blue transition-all shadow-lg group">
+              <div className="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-blue/20 transition-colors">
+                <svg className="w-7 h-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Accounting Firms</h3>
+              <p className="text-slate-600 text-sm">
+                Protected financial data, automated workflows, and seamless software integration.
+              </p>
+            </div>
+
+            {/* Medical Offices */}
+            <div className="bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-brand-yellow transition-all shadow-lg group">
+              <div className="w-14 h-14 bg-brand-yellow/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-yellow/20 transition-colors">
+                <svg className="w-7 h-7 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Medical Offices</h3>
+              <p className="text-slate-600 text-sm">
+                HIPAA-compliant systems, patient data security, and practice management automation.
+              </p>
+            </div>
+
+            {/* Real Estate */}
+            <div className="bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-brand-red transition-all shadow-lg group">
+              <div className="w-14 h-14 bg-brand-red/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-red/20 transition-colors">
+                <svg className="w-7 h-7 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Real Estate</h3>
+              <p className="text-slate-600 text-sm">
+                CRM automation, listing management tools, and mobile-ready infrastructure.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-slate-600 mb-4">
+              Not in these industries?{" "}
+              <Link href="#consultation" className="text-brand-green font-semibold hover:underline">
+                We work with businesses of all types.
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Technology Platforms Section */}
       <section className="py-24 px-6 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -181,11 +743,11 @@ export default function HomePage() {
               <div className="w-8 h-8 bg-brand-green rounded-lg animate-bounce" style={{animationDelay: '400ms'}} />
             </div>
             <h2 className="text-4xl md:text-6xl font-extrabold mb-4">
-              <span className="h1-blocks">Our Building Blocks</span>
+              <span className="h1-blocks">Our Technology Platforms</span>
             </h2>
             <p className="text-xl text-foreground/60 max-w-3xl mx-auto">
-              Five powerful platforms that stack together to amplify your potential. 
-              Each block is essential. Together, they build something extraordinary.
+              Beyond managed services, we've built powerful platforms that integrate AI into your workflow. 
+              These tools are available as add-ons to any service package.
             </p>
           </div>
 
@@ -232,16 +794,100 @@ export default function HomePage() {
                         <span className="text-brand-green text-sm font-semibold">FLAGSHIP</span>
                       </div>
                     </div>
-                    <h3 className="text-4xl font-bold text-white mb-4">Intelligence Amplifier</h3>
-                    <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-                      Our core AI platform that enhances human decision-making without replacing human judgment. 
-                      Think of it as a supercharged extension of your mind—analyzing data, surfacing insights, 
-                      and amplifying your natural intelligence.
+                    <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Intelligence Amplifier™</h3>
+                    
+                    <div className="bg-white/5 rounded-xl p-4 mb-6 border border-white/10">
+                      <p className="text-slate-200 text-base leading-relaxed">
+                        The Intelligence Amplifier (IA) is not merely an invention — it is an <strong className="text-brand-green">evolution in how we learn, create, and perceive</strong>.
+                      </p>
+                    </div>
+
+                    <p className="text-slate-300 text-lg mb-5 leading-relaxed">
+                      Where Artificial Intelligence (AI) aims to <span className="text-red-400 line-through">replace</span> human effort, 
+                      Intelligence Amplification seeks to <strong className="text-brand-green">expand it</strong>.
                     </p>
-                    <div className="flex flex-wrap gap-3">
-                      <span className="px-4 py-2 bg-white/10 rounded-lg text-sm text-slate-300">AI-Powered Analysis</span>
-                      <span className="px-4 py-2 bg-white/10 rounded-lg text-sm text-slate-300">Decision Support</span>
-                      <span className="px-4 py-2 bg-white/10 rounded-lg text-sm text-slate-300">Human-Centric</span>
+                    
+                    <div className="bg-gradient-to-r from-brand-green/20 to-brand-blue/20 rounded-xl p-5 mb-6 border-l-4 border-brand-green">
+                      <p className="text-white text-xl font-semibold italic">
+                        "What happens when intelligence is not substituted, but multiplied?"
+                      </p>
+                    </div>
+
+                    <h4 className="text-white text-lg font-bold mb-4">Five Methods of Amplification</h4>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
+                        <div className="w-6 h-6 bg-brand-green rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-white text-xs font-bold">1</span>
+                        </div>
+                        <div>
+                          <p className="text-white font-bold text-sm mb-1">Direct Amplification</p>
+                          <p className="text-slate-400 text-xs">The act of co-creation — writing, thinking, or designing with an AI partner in real time. Rapid feedback loops where human intuition meets machine precision.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
+                        <div className="w-6 h-6 bg-brand-blue rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-white text-xs font-bold">2</span>
+                        </div>
+                        <div>
+                          <p className="text-white font-bold text-sm mb-1">Selective Amplification</p>
+                          <p className="text-slate-400 text-xs">Curation and discernment. Not every generated idea deserves preservation — amplification demands judgment. <em>Amplification is not abundance — it is refinement.</em></p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
+                        <div className="w-6 h-6 bg-brand-yellow rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-white text-xs font-bold">3</span>
+                        </div>
+                        <div>
+                          <p className="text-white font-bold text-sm mb-1">Shaped Amplification</p>
+                          <p className="text-slate-400 text-xs">Contextual framing — applying ethical, emotional, or aesthetic boundaries that shape how intelligence operates. Where human values sculpt machine outputs.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
+                        <div className="w-6 h-6 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-white text-xs font-bold">4</span>
+                        </div>
+                        <div>
+                          <p className="text-white font-bold text-sm mb-1">Reflective Amplification</p>
+                          <p className="text-slate-400 text-xs">Every amplified act must lead to reflection — a feedback mirror that teaches the human as much as it instructs the machine. <em>Amplification without reflection is automation.</em></p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
+                        <div className="w-6 h-6 bg-teal-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-white text-xs font-bold">5</span>
+                        </div>
+                        <div>
+                          <p className="text-white font-bold text-sm mb-1">Collective Amplification</p>
+                          <p className="text-slate-400 text-xs">Connects many minds into one learning field. The social dimension where communities contribute to shared growth. <em>Intelligence shared is intelligence multiplied.</em></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white/5 rounded-xl p-4 mb-6 border border-white/10">
+                      <p className="text-slate-300 text-sm italic">
+                        "You were never meant to be replaced. You were meant to be amplified — to see farther, feel deeper, and understand faster."
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-4">
+                      <a 
+                        href="https://intelligenceamplifier.ai" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-brand-green text-white rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                      >
+                        Visit Site
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                      <Link 
+                        href="/support"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                      >
+                        IA Support
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                      </Link>
                     </div>
                   </div>
                   <div className="relative">
@@ -270,211 +916,302 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Row 2 - Two Medium Blocks */}
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Amplified Classics */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-brand-blue rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
-                <div className="relative h-full bg-white rounded-2xl p-8 border-4 border-brand-blue shadow-xl overflow-hidden">
-                  {/* LEGO studs */}
-                  <div className="absolute top-0 left-0 right-0 h-6 bg-brand-blue flex items-center justify-center gap-8">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full" />
-                    <div className="w-3 h-3 bg-blue-400 rounded-full" />
-                    <div className="w-3 h-3 bg-blue-400 rounded-full" />
-                    <div className="w-3 h-3 bg-blue-400 rounded-full" />
-                  </div>
-                  
-                  <div className="pt-4">
-                    {/* LEGO Brick Icon - Book/Literature */}
-                    <div className="w-16 h-14 bg-brand-blue rounded-lg flex flex-col items-center justify-end mb-4 group-hover:scale-110 transition-transform shadow-lg relative overflow-visible">
-                      {/* Studs on top */}
-                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 flex gap-1">
-                        <div className="w-3 h-3 bg-blue-400 rounded-full shadow-inner border border-blue-500" />
-                        <div className="w-3 h-3 bg-blue-400 rounded-full shadow-inner border border-blue-500" />
-                      </div>
-                      {/* Book lines on brick */}
-                      <div className="flex flex-col gap-1 pb-2">
-                        <div className="w-8 h-1 bg-white/80 rounded-full" />
-                        <div className="w-6 h-1 bg-white/60 rounded-full" />
-                        <div className="w-7 h-1 bg-white/40 rounded-full" />
-                      </div>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-3 text-slate-900">Amplified Classics</h3>
-                    <p className="text-slate-600 mb-6">
-                      Classic literature reimagined with AI-powered insights. Experience timeless works through 
-                      interactive annotations, contextual analysis, and personalized learning paths.
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-brand-blue rounded-full" />
-                        <span className="text-sm text-brand-blue font-semibold">Literary Intelligence</span>
-                      </div>
-                      <a 
-                        href="https://amplifiedclassics.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-sm text-brand-blue font-semibold hover:underline flex items-center gap-1"
-                      >
-                        Visit Site
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
+            {/* IA Atomic Section */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-slate-900 rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity" />
+              <div className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-3xl p-10 border border-slate-600/50 overflow-hidden shadow-2xl">
+                {/* Decorative Elements */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-brand-blue/20 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
+                
+                {/* LEGO studs decoration */}
+                <div className="absolute top-4 left-4 flex gap-3">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full shadow-lg" />
+                  <div className="w-4 h-4 bg-brand-blue rounded-full shadow-lg" />
                 </div>
-              </div>
-
-              {/* Amplified Review */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-brand-red rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
-                <div className="relative h-full bg-white rounded-2xl p-8 border-4 border-brand-red shadow-xl overflow-hidden">
-                  {/* LEGO studs */}
-                  <div className="absolute top-0 left-0 right-0 h-6 bg-brand-red flex items-center justify-center gap-8">
-                    <div className="w-3 h-3 bg-red-300 rounded-full" />
-                    <div className="w-3 h-3 bg-red-300 rounded-full" />
-                    <div className="w-3 h-3 bg-red-300 rounded-full" />
-                    <div className="w-3 h-3 bg-red-300 rounded-full" />
+                <div className="absolute top-4 right-4 flex gap-3">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full shadow-lg" />
+                  <div className="w-4 h-4 bg-brand-blue rounded-full shadow-lg" />
+                  <div className="w-4 h-4 bg-purple-500 rounded-full shadow-lg" />
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="text-center mb-8">
+                    <div className="flex items-center justify-center gap-3 mb-4">
+                      <div className="w-16 h-14 bg-purple-600 rounded-xl flex flex-col items-center justify-center shadow-lg relative overflow-visible">
+                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
+                          <div className="w-3 h-3 bg-purple-400 rounded-full shadow-inner border-2 border-purple-500" />
+                          <div className="w-3 h-3 bg-purple-400 rounded-full shadow-inner border-2 border-purple-500" />
+                        </div>
+                        <div className="mt-2">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="px-4 py-1 bg-purple-500/20 rounded-full">
+                        <span className="text-purple-300 text-sm font-semibold">ENTERPRISE APPLIANCE</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-5xl font-bold text-white mb-3">IA Atomic</h3>
+                    <p className="text-2xl text-slate-300 font-semibold mb-8">The Intelligence Amplifier Appliance</p>
                   </div>
-                  
-                  <div className="pt-4">
-                    {/* LEGO Brick Icon - Star/Review */}
-                    <div className="w-16 h-14 bg-brand-red rounded-lg flex flex-col items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg relative overflow-visible">
-                      {/* Studs on top */}
-                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 flex gap-1">
-                        <div className="w-3 h-3 bg-red-300 rounded-full shadow-inner border border-red-400" />
-                        <div className="w-3 h-3 bg-red-300 rounded-full shadow-inner border border-red-400" />
-                      </div>
-                      {/* Star shape */}
-                      <svg className="w-7 h-7 text-white mt-1" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-3 text-slate-900">The Amplified Review</h3>
-                    <p className="text-slate-600 mb-6">
-                      A newsletter for members of Amplified Classics. Get curated insights, literary analysis, 
-                      and AI-enhanced perspectives on classic works delivered to your inbox.
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-brand-red rounded-full" />
-                        <span className="text-sm text-brand-red font-semibold">Newsletter</span>
-                      </div>
-                      <a 
-                        href="https://theamplifiedreview.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-sm text-brand-red font-semibold hover:underline flex items-center gap-1"
-                      >
-                        Subscribe
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+
+                  <p className="text-slate-200 text-lg text-center mb-8 leading-relaxed max-w-4xl mx-auto">
+                    A self-contained, pre-configured AI deployment that arrives ready to power your organization — 
+                    plug it in, train it on your documents, and start amplifying your team's intelligence on day one.
+                  </p>
+
+                  {/* Features Grid */}
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                    {/* Your Data Never Leaves */}
+                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
+                      <div className="w-12 h-12 bg-brand-blue/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                         </svg>
-                      </a>
+                      </div>
+                      <h4 className="text-white font-bold text-base mb-2">Your Data Never Leaves</h4>
+                      <p className="text-slate-400 text-sm">
+                        IA Atomic runs entirely on-premise. Your documents, queries, and AI's knowledge stay within your physical control — no cloud dependency, no external API calls, no data transmission.
+                      </p>
                     </div>
+
+                    {/* Deploy in Days */}
+                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
+                      <div className="w-12 h-12 bg-brand-green/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg className="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-white font-bold text-base mb-2">Deploy in Days, Not Months</h4>
+                      <p className="text-slate-400 text-sm">
+                        Pre-loaded with IntelligenceAmplifier.AI, the LLM inference engine, vector database, and document ingestion pipeline. Connect to your network, feed it your documents, and the system is operational.
+                      </p>
+                    </div>
+
+                    {/* Enterprise AI Compact */}
+                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
+                      <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                        </svg>
+                      </div>
+                      <h4 className="text-white font-bold text-base mb-2">Enterprise AI, Compact Form</h4>
+                      <p className="text-slate-400 text-sm">
+                        GPU-accelerated hardware running the same architecture deployed in healthcare, government, and finance case studies — packaged into an appliance that fits in a standard server rack.
+                      </p>
+                    </div>
+
+                    {/* Trained on Your Knowledge */}
+                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
+                      <div className="w-12 h-12 bg-brand-yellow/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg className="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-white font-bold text-base mb-2">Trained on Your Knowledge</h4>
+                      <p className="text-slate-400 text-sm">
+                        Feed it your policies, procedures, research, client documents, and operational manuals. The AI learns exclusively from your organization's own institutional knowledge — not the internet.
+                      </p>
+                    </div>
+
+                    {/* Every Industry */}
+                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
+                      <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                      </div>
+                      <h4 className="text-white font-bold text-base mb-2">Every Industry, Every Size</h4>
+                      <p className="text-slate-400 text-sm">
+                        Healthcare, government, finance, legal, manufacturing, education — IA Atomic adapts to any industry. Configurations available for organizations from 50 to 5,000+ employees.
+                      </p>
+                    </div>
+
+                    {/* Managed by arvintech */}
+                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
+                      <div className="w-12 h-12 bg-brand-green/20 rounded-lg flex items-center justify-center mb-4">
+                        <span className="text-brand-green font-bold arvintech-brand text-sm">AT</span>
+                      </div>
+                      <h4 className="text-white font-bold text-base mb-2">Managed by <span className="arvintech-brand">arvintech</span></h4>
+                      <p className="text-slate-400 text-sm">
+                        Every IA Atomic includes deployment, configuration, document preparation, training, and ongoing support from arvintech — managed IT and AI services since 2000.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* CTA Buttons */}
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <a 
+                      href="https://intelligenceamplifier.ai" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white rounded-xl font-bold text-lg hover:bg-purple-700 transition-colors shadow-xl"
+                    >
+                      Learn About IA Atomic
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                    <Link 
+                      href="/support-pro"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white border-2 border-white/30 rounded-xl font-bold text-lg hover:bg-white/20 transition-colors"
+                    >
+                      Get Enterprise Support
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Row 3 - Two Medium Blocks */}
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Mission Pages Studio */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-brand-yellow rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
-                <div className="relative h-full bg-white rounded-2xl p-8 border-4 border-brand-yellow shadow-xl overflow-hidden">
-                  {/* LEGO studs */}
-                  <div className="absolute top-0 left-0 right-0 h-6 bg-brand-yellow flex items-center justify-center gap-8">
-                    <div className="w-3 h-3 bg-yellow-300 rounded-full" />
-                    <div className="w-3 h-3 bg-yellow-300 rounded-full" />
-                    <div className="w-3 h-3 bg-yellow-300 rounded-full" />
-                    <div className="w-3 h-3 bg-yellow-300 rounded-full" />
-                  </div>
-                  
-                  <div className="pt-4">
-                    {/* LEGO Brick Icon - Monitor/Web */}
-                    <div className="w-16 h-14 bg-brand-yellow rounded-lg flex flex-col items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg relative overflow-visible">
-                      {/* Studs on top */}
-                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 flex gap-1">
-                        <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner border border-yellow-500" />
-                        <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner border border-yellow-500" />
+            {/* Publishing Transformation Section */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-red/20 rounded-3xl blur-2xl opacity-30" />
+              <div className="relative bg-gradient-to-br from-white via-slate-50 to-white rounded-3xl p-10 border-4 border-slate-200 shadow-2xl overflow-hidden">
+                {/* LEGO studs decoration */}
+                <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-r from-brand-blue to-brand-red flex items-center justify-center gap-6">
+                  <div className="w-4 h-4 bg-blue-300 rounded-full" />
+                  <div className="w-4 h-4 bg-purple-300 rounded-full" />
+                  <div className="w-4 h-4 bg-red-300 rounded-full" />
+                  <div className="w-4 h-4 bg-orange-300 rounded-full" />
+                  <div className="w-4 h-4 bg-yellow-300 rounded-full" />
+                </div>
+                
+                <div className="pt-6">
+                  {/* Section Header */}
+                  <div className="text-center mb-10">
+                    <div className="inline-flex items-center gap-3 mb-4">
+                      <div className="w-20 h-16 bg-gradient-to-br from-brand-blue to-brand-red rounded-xl flex items-center justify-center shadow-lg relative overflow-visible">
+                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
+                          <div className="w-4 h-4 bg-blue-300 rounded-full shadow-inner border-2 border-blue-400" />
+                          <div className="w-4 h-4 bg-red-300 rounded-full shadow-inner border-2 border-red-400" />
+                        </div>
+                        <svg className="w-10 h-10 text-white mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
                       </div>
-                      {/* Monitor shape */}
-                      <div className="w-9 h-5 bg-white/90 rounded-sm mt-1 relative">
-                        <div className="absolute inset-0.5 bg-amber-100 rounded-sm flex items-center justify-center">
-                          <div className="w-1 h-1 bg-brand-yellow rounded-full" />
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+                      Transformations of the Publishing Business
+                    </h3>
+                    <p className="text-lg text-slate-600 font-semibold mb-2">IA in Action</p>
+                    <p className="text-slate-600 max-w-3xl mx-auto">
+                      Intelligence Amplification transforms how we engage with literature—from deep exploration to daily practice
+                    </p>
+                  </div>
+
+                  {/* Two Products Grid */}
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {/* Amplified Classics */}
+                    <div className="bg-white rounded-2xl p-6 border-2 border-brand-blue/20 hover:border-brand-blue/50 transition-all shadow-lg">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center shadow-md">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-bold text-slate-900">Amplified Classics</h4>
+                          <p className="text-xs text-brand-blue font-semibold">Deep Literary Exploration</p>
                         </div>
                       </div>
-                      <div className="w-2 h-1 bg-white/70 mt-0.5" />
-                      <div className="w-4 h-0.5 bg-white/70" />
+                      <p className="text-slate-600 text-sm mb-4 leading-relaxed">
+                        Experience timeless literature through Intelligence Amplification—enriched with dynamic annotations, contextual essays, and reflective dialogues.
+                      </p>
+                      <div className="space-y-2 mb-5">
+                        <div className="flex items-start gap-2">
+                          <svg className="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <p className="text-slate-600 text-xs">105+ free books with audio narration</p>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <svg className="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <p className="text-slate-600 text-xs">Dynamic annotations & character analysis</p>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <svg className="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <p className="text-slate-600 text-xs">For educators, students & aficionados</p>
+                        </div>
+                      </div>
+                      <a 
+                        href="https://amplifiedclassics.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-blue text-white rounded-lg font-semibold hover:bg-blue-600 transition-colors text-sm shadow-md"
+                      >
+                        Explore Library
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 text-slate-900">Mission Pages Studio</h3>
-                    <p className="text-slate-600 mb-4">
-                      Full-service web development written purely on Next.js. Amplified functions and features 
-                      for enhanced forward-facing clients—SEO, client support automation, subscriptions, and more.
-                    </p>
-                    <div className="flex flex-wrap items-center gap-2 mb-4">
-                      <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded">Next.js</span>
-                      <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded">SEO</span>
-                      <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded">Automation</span>
-                    </div>
-                    <Link href="/mission-web-studio" className="inline-flex items-center gap-2 text-brand-yellow hover:text-yellow-600 font-medium transition-colors group/link">
-                      Learn More
-                      <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </div>
 
-              {/* Business Clarity */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-brand-green rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
-                <div className="relative h-full bg-white rounded-2xl p-8 border-4 border-brand-green shadow-xl overflow-hidden">
-                  {/* LEGO studs */}
-                  <div className="absolute top-0 left-0 right-0 h-6 bg-brand-green flex items-center justify-center gap-8">
-                    <div className="w-3 h-3 bg-green-300 rounded-full" />
-                    <div className="w-3 h-3 bg-green-300 rounded-full" />
-                    <div className="w-3 h-3 bg-green-300 rounded-full" />
-                    <div className="w-3 h-3 bg-green-300 rounded-full" />
-                  </div>
-                  
-                  <div className="pt-4">
-                    {/* LEGO Brick Icon - Chart/Analytics */}
-                    <div className="w-16 h-14 bg-brand-green rounded-lg flex flex-col items-center justify-end mb-4 group-hover:scale-110 transition-transform shadow-lg relative overflow-visible">
-                      {/* Studs on top */}
-                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 flex gap-1">
-                        <div className="w-3 h-3 bg-green-300 rounded-full shadow-inner border border-green-400" />
-                        <div className="w-3 h-3 bg-green-300 rounded-full shadow-inner border border-green-400" />
+                    {/* One Classic Daily */}
+                    <div className="bg-white rounded-2xl p-6 border-2 border-brand-red/20 hover:border-brand-red/50 transition-all shadow-lg">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-brand-red rounded-lg flex items-center justify-center shadow-md">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <h4 className="text-xl font-bold text-slate-900">One Classic Daily</h4>
+                            <span className="px-2 py-0.5 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">LIVE</span>
+                          </div>
+                          <p className="text-xs text-brand-red font-semibold">Daily Literary Practice</p>
+                        </div>
                       </div>
-                      {/* Bar chart */}
-                      <div className="flex items-end gap-1 pb-2">
-                        <div className="w-2 h-3 bg-white/60 rounded-t-sm" />
-                        <div className="w-2 h-5 bg-white/80 rounded-t-sm" />
-                        <div className="w-2 h-4 bg-white/70 rounded-t-sm" />
-                        <div className="w-2 h-6 bg-white rounded-t-sm" />
+                      <p className="text-slate-600 text-sm mb-4 leading-relaxed">
+                        One chapter a day from the greatest books ever written—amplified with context, insights, and practical skills that land in your life.
+                      </p>
+                      <div className="space-y-2 mb-4">
+                        <div className="flex items-start gap-2">
+                          <div className="w-5 h-5 bg-brand-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-brand-red font-bold text-xs">1</span>
+                          </div>
+                          <p className="text-slate-600 text-xs"><strong>One chapter a day</strong> — Build a reading habit</p>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <div className="w-5 h-5 bg-brand-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-brand-red font-bold text-xs">2</span>
+                          </div>
+                          <p className="text-slate-600 text-xs"><strong>Amplified context</strong> — Character maps & insights</p>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <div className="w-5 h-5 bg-brand-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-brand-red font-bold text-xs">3</span>
+                          </div>
+                          <p className="text-slate-600 text-xs"><strong>Practical skills</strong> — Literature as a tool</p>
+                        </div>
                       </div>
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Communication</span>
+                        <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Emotional Intelligence</span>
+                        <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Decision Making</span>
+                      </div>
+                      <a 
+                        href="https://oneclassicdaily.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-red text-white rounded-lg font-semibold hover:bg-red-600 transition-colors text-sm shadow-md"
+                      >
+                        Read Today
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 text-slate-900">Business Clarity</h3>
-                    <p className="text-slate-600 mb-6">
-                      Technology consulting that brings your current business to AI readiness. Your basic 
-                      roadmap for the here and now—not the coming AI age. Amplify your business.
-                    </p>
-                    <div className="flex flex-wrap items-center gap-2 mb-4">
-                      <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">AI Readiness</span>
-                      <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">Roadmap</span>
-                      <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">Consulting</span>
-                    </div>
-                    <Link 
-                      href="/business-clarity" 
-                      className="inline-flex items-center gap-2 text-brand-green font-semibold hover:gap-3 transition-all"
-                    >
-                      Learn More
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
                   </div>
                 </div>
               </div>

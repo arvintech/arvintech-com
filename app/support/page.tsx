@@ -118,6 +118,160 @@ export default function SupportPage() {
         </div>
       </section>
 
+      {/* Intelligence Amplifier Support - Featured Section */}
+      <section className="py-12 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 md:p-12 shadow-2xl border border-slate-700/50">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-green/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-blue/20 rounded-full blur-3xl" />
+            
+            <div className="relative z-10">
+              {/* Header */}
+              <div className="text-center mb-10">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <div className="w-3 h-3 bg-brand-green rounded-full animate-pulse" />
+                  <span className="px-4 py-1 bg-brand-green/20 text-brand-green rounded-full text-sm font-semibold">
+                    FLAGSHIP SUPPORT
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                  Intelligent Support
+                </h2>
+                <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+                  Get help with our AI-powered Intelligence Amplifier platform. From setup to advanced features, 
+                  we're here to ensure you get the most out of your AI tools.
+                </p>
+              </div>
+
+              {/* Support Options Grid */}
+              <div className="grid md:grid-cols-3 gap-6">
+                {/* Documentation */}
+                <div className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
+                  <div className="w-12 h-12 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Documentation</h3>
+                  <p className="text-slate-400 text-sm mb-4">
+                    Comprehensive guides, tutorials, and API references for Intelligence Amplifier.
+                  </p>
+                  <a 
+                    href="https://intelligenceamplifier.ai/docs" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-brand-blue font-semibold hover:underline text-sm"
+                  >
+                    View Docs
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+
+                {/* PC Remote Support */}
+                <div className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
+                  <div className="w-12 h-12 bg-brand-green/20 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">PC Remote Support</h3>
+                  <p className="text-slate-400 text-sm mb-4">
+                    Secure remote access for real-time technical support and troubleshooting.
+                  </p>
+                  <a 
+                    href="https://secure.logmein.com/pullinstall_go.asp?page=addacomputer3_pull&lang=en&c=twk9htfslmi85dguy6rtdobpimhzsqkv1tomysuf&bnf=undefined" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-brand-green font-semibold hover:underline text-sm"
+                  >
+                    Connect Remote
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                  </a>
+                </div>
+
+                {/* Direct Support */}
+                <div className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
+                  <div className="w-12 h-12 bg-brand-yellow/20 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Direct Support</h3>
+                  <p className="text-slate-400 text-sm mb-4">
+                    Need personalized help? Our IA support team is ready to assist you.
+                  </p>
+                  <a 
+                    href="mailto:support@intelligenceamplifier.ai" 
+                    className="inline-flex items-center gap-2 text-brand-yellow font-semibold hover:underline text-sm"
+                  >
+                    Email Support
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <a 
+                    href="https://intelligenceamplifier.ai/getting-started" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-white text-sm"
+                  >
+                    <svg className="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Getting Started Guide
+                  </a>
+                  <a 
+                    href="https://intelligenceamplifier.ai/tutorials" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-white text-sm"
+                  >
+                    <svg className="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    Video Tutorials
+                  </a>
+                  <a 
+                    href="https://intelligenceamplifier.ai/troubleshooting" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-white text-sm"
+                  >
+                    <svg className="w-4 h-4 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Troubleshooting
+                  </a>
+                  <a 
+                    href="https://intelligenceamplifier.ai" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-3 bg-brand-green rounded-lg hover:bg-green-600 transition-colors text-white text-sm font-semibold"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    Visit IA Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Remote Support Section */}
       <section className="py-8 px-6">
         <div className="max-w-4xl mx-auto">
@@ -179,17 +333,15 @@ export default function SupportPage() {
                   Get step-by-step instructions, ask follow-up questions, and explain errors in plain English.
                 </p>
               </div>
-              <a
-                href="https://chat.openai.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/support-pro"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-600 font-bold rounded-full hover:bg-emerald-50 transition-colors shadow-lg flex-shrink-0"
               >
-                Try ChatGPT
+                IA Support Pro
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 
