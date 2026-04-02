@@ -319,23 +319,23 @@ export default function SupportPage() {
           </div>
 
           {/* ChatGPT Tip - Featured Callout */}
-          <div className="mb-10 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl p-6 md:p-8 shadow-xl">
+          <div className="mb-10 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-6 md:p-8 shadow-xl">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0">
+                <svg className="w-9 h-9 text-orange-500" viewBox="0 0 24 24" fill="currentColor" aria-label="Claude icon">
+                  <path d="M12 2.75c.38 0 .7.3.72.68l.22 3.29a.75.75 0 0 0 1.21.54l2.62-2.02a.72.72 0 0 1 1.03.14c.2.28.17.67-.08.92l-2.17 2.5a.75.75 0 0 0 .36 1.22l3.2.94c.36.1.58.47.5.84a.72.72 0 0 1-.79.57l-3.33-.27a.75.75 0 0 0-.76 1.02l1.2 3.11a.74.74 0 0 1-.36.94.72.72 0 0 1-.94-.27l-1.86-2.77a.75.75 0 0 0-1.27 0l-1.86 2.77a.72.72 0 0 1-.94.27.74.74 0 0 1-.36-.94l1.2-3.11a.75.75 0 0 0-.76-1.02l-3.33.27a.72.72 0 0 1-.79-.57.74.74 0 0 1 .5-.84l3.2-.94a.75.75 0 0 0 .36-1.22l-2.17-2.5a.73.73 0 0 1-.08-.92.72.72 0 0 1 1.03-.14l2.62 2.02a.75.75 0 0 0 1.21-.54l.22-3.29a.72.72 0 0 1 .72-.68z" />
                 </svg>
               </div>
               <div className="text-center md:text-left flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">💡 Pro Tip: Use ChatGPT for Tech Questions</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">💡 Pro Tip: Use Claude by Anthropic for Tech Questions</h3>
                 <p className="text-white/90 text-base md:text-lg">
-                  Skip the endless Google searches. Ask ChatGPT—it gives you direct answers, not 10 blue links. 
+                  Skip the endless Google searches. Ask Claude - it gives you direct answers, not 10 blue links. 
                   Get step-by-step instructions, ask follow-up questions, and explain errors in plain English.
                 </p>
               </div>
               <Link
                 href="/support-pro"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-600 font-bold rounded-full hover:bg-emerald-50 transition-colors shadow-lg flex-shrink-0"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-orange-600 font-bold rounded-full hover:bg-orange-50 transition-colors shadow-lg flex-shrink-0"
               >
                 IA Support Pro
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -346,6 +346,24 @@ export default function SupportPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Intel or AMD */}
+            <div id="intel-or-amd" className="hidden bg-white rounded-2xl p-6 shadow-lg border-l-4 border-sky-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Intel or AMD</h3>
+              <p className="text-slate-600 text-sm mb-3">
+                Picking a CPU depends on your workload, budget, and upgrade plans. Both brands are solid options today.
+              </p>
+              <ul className="text-sm text-slate-500 space-y-1">
+                <li>• Intel: strong single-core performance</li>
+                <li>• AMD: great multi-core value</li>
+                <li>• Match CPU choice to your actual use</li>
+              </ul>
+            </div>
+
             {/* 1. Learn to Use AI - Most relevant today */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-violet-500 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
@@ -362,6 +380,11 @@ export default function SupportPage() {
                 <li>• <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:underline">Gemini</a> – Google's AI assistant</li>
                 <li>• <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:underline">Claude</a> – Thoughtful & detailed answers</li>
               </ul>
+              <div className="mt-4 pt-4 border-t border-slate-200">
+                <Link href="/blog/start-learning-ai" className="text-violet-600 hover:underline text-sm font-semibold">
+                  Read guide →
+                </Link>
+              </div>
             </div>
 
             {/* 2. Windows 10 End of Support - URGENT */}
@@ -381,6 +404,11 @@ export default function SupportPage() {
                 <li>• Backup before upgrading</li>
                 <li>• Plan your migration now</li>
               </ul>
+              <div className="mt-4 pt-4 border-t border-slate-200">
+                <Link href="/blog/windows-10-end-of-support" className="text-orange-600 hover:underline text-sm font-semibold">
+                  Read guide →
+                </Link>
+              </div>
               <a
                 href="https://secure.logmein.com/pullinstall_go.asp?page=addacomputer3_pull&lang=en&c=twk9htfslmi85dguy6rtdobpimhzsqkv1tomysuf&bnf=undefined"
                 target="_blank"

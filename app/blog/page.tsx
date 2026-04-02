@@ -8,6 +8,7 @@ import Footer from "@/components/Footer"
 export default function BlogPage() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("All")
+  const [sortOrder, setSortOrder] = useState<"latest" | "oldest">("latest")
 
   useEffect(() => {
     setIsLoaded(true)
@@ -31,7 +32,7 @@ export default function BlogPage() {
       title: "Building Scalable Cloud Infrastructure",
       excerpt: "Best practices for designing and implementing cloud solutions that grow with your business needs.",
       author: "Michael Rodriguez",
-      date: "December 12, 2024",
+      date: "Mar 3, 2026",
       category: "Cloud Computing",
       readTime: "6 min read",
       image: "/cloud-infrastructure-servers.jpg",
@@ -42,7 +43,7 @@ export default function BlogPage() {
       title: "Digital Transformation Success Stories",
       excerpt: "Real-world case studies of companies that successfully navigated their digital transformation journey.",
       author: "Jennifer Park",
-      date: "December 10, 2024",
+      date: "Feb 22, 2026",
       category: "Digital Strategy",
       readTime: "10 min read",
       image: "/digital-transformation-office.jpg",
@@ -82,6 +83,18 @@ export default function BlogPage() {
       image: "/web-development-coding.png",
       featured: false,
     },
+    {
+      id: 7,
+      title: "Intel or AMD",
+      excerpt:
+        "A practical guide to choosing the right CPU for your next PC build based on performance, budget, and real-world workloads.",
+      author: "ArvinTech Editorial",
+      date: "April 2, 2026",
+      category: "AI & Technology",
+      readTime: "6 min read",
+      image: "/cloud-infrastructure-servers.jpg",
+      featured: false,
+    },
   ]
 
   const categories = ["All", "AI & Technology", "Cloud Computing", "Digital Strategy", "Security", "Web Development"]
@@ -94,14 +107,26 @@ export default function BlogPage() {
     "Web Development": "brand-blue",
   }
 
-  const filteredPosts = selectedCategory === "All" 
-    ? blogPosts 
+  const sortPostsByDate = (posts: typeof blogPosts) => {
+    return [...posts].sort((a, b) => {
+      const aTime = new Date(a.date).getTime()
+      const bTime = new Date(b.date).getTime()
+      return sortOrder === "latest" ? bTime - aTime : aTime - bTime
+    })
+  }
+
+  const filteredPosts = selectedCategory === "All"
+    ? blogPosts
     : blogPosts.filter((post) => post.category === selectedCategory)
 
   const featuredPost = blogPosts.find((post) => post.featured)
-  const regularPosts = selectedCategory === "All" 
-    ? blogPosts.filter((post) => !post.featured)
+  const regularPosts = selectedCategory === "All"
+    ? sortPostsByDate(blogPosts.filter((post) => !post.featured))
     : filteredPosts.filter((post) => !post.featured)
+
+  const sortedRegularPosts = selectedCategory === "All"
+    ? regularPosts
+    : sortPostsByDate(regularPosts)
 
   return (
     <div className="min-h-screen bg-background blocks-pattern">
@@ -185,6 +210,29 @@ export default function BlogPage() {
               </button>
             ))}
           </div>
+          <div className={`mt-6 flex items-center justify-center gap-3 transition-all duration-700 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <span className="text-sm text-foreground/60">Sort:</span>
+            <button
+              onClick={() => setSortOrder("latest")}
+              className={`px-4 py-2 rounded-full text-sm transition-all ${
+                sortOrder === "latest"
+                  ? "bg-brand-green text-white shadow-md"
+                  : "bg-card text-foreground/70 border border-border hover:bg-secondary"
+              }`}
+            >
+              Latest
+            </button>
+            <button
+              onClick={() => setSortOrder("oldest")}
+              className={`px-4 py-2 rounded-full text-sm transition-all ${
+                sortOrder === "oldest"
+                  ? "bg-brand-green text-white shadow-md"
+                  : "bg-card text-foreground/70 border border-border hover:bg-secondary"
+              }`}
+            >
+              Oldest
+            </button>
+          </div>
         </div>
       </section>
 
@@ -217,18 +265,7 @@ export default function BlogPage() {
                     {featuredPost.title}
                   </h3>
                   <p className="text-foreground/70 mb-6">{featuredPost.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center">
-                        <span className="text-white font-medium text-sm">
-                          {featuredPost.author.split(" ").map((n) => n[0]).join("")}
-                        </span>
-                      </div>
-                      <div>
-                        <p className="font-medium text-sm">{featuredPost.author}</p>
-                        <p className="text-foreground/50 text-xs">{featuredPost.date}</p>
-                      </div>
-                    </div>
+                  <div className="flex items-center justify-end">
                     <button className="btn-green text-sm">
                       Read More
                     </button>
@@ -247,7 +284,7 @@ export default function BlogPage() {
             {selectedCategory === "All" ? "Latest Articles" : `${selectedCategory} Articles`}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post, index) => (
+            {sortedRegularPosts.map((post, index) => (
               <article
                 key={post.id}
                 className={`bg-card rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
@@ -275,15 +312,7 @@ export default function BlogPage() {
                     {post.title}
                   </h3>
                   <p className="text-foreground/60 mb-4 text-sm">{post.excerpt}</p>
-                  <div className="flex items-center justify-between pt-4 border-t border-border">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center">
-                        <span className="text-white font-medium text-xs">
-                          {post.author.split(" ").map((n) => n[0]).join("")}
-                        </span>
-                      </div>
-                      <span className="text-foreground/60 text-sm">{post.author}</span>
-                    </div>
+                  <div className="flex items-center justify-end pt-4 border-t border-border">
                     <button className="text-brand-green hover:underline text-sm font-medium">
                       Read →
                     </button>
