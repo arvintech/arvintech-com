@@ -1,8 +1,6 @@
 {
+  "/support-pro/page": "app/support-pro/page.js",
+  "/api/chat/route": "app/api/chat/route.js",
   "/support/page": "app/support/page.js",
-  "/blog/windows-10-end-of-support/page": "app/blog/windows-10-end-of-support/page.js",
-  "/page": "app/page.js",
-  "/blog/start-learning-ai/page": "app/blog/start-learning-ai/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/support-pro/page": "app/support-pro/page.js"
+  "/page": "app/page.js"
 }
