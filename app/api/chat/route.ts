@@ -1,8 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk"
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
+export const runtime = "nodejs"
+export const maxDuration = 60
 
 const SYSTEM_PROMPT = `You are IA Support Pro, a friendly and knowledgeable AI support assistant for ArvinTech. Your expertise covers:
 
@@ -14,6 +13,9 @@ const SYSTEM_PROMPT = `You are IA Support Pro, a friendly and knowledgeable AI s
 Keep responses concise, helpful, and professional. Use short paragraphs. If you don't know something, say so honestly and suggest the user contact the team at support@intelligenceamplifier.ai for specialized help.`
 
 export async function POST(req: Request) {
+  const anthropic = new Anthropic({
+    apiKey: process.env.ANTHROPIC_API_KEY,
+  })
   const { messages } = await req.json()
 
   const stream = anthropic.messages.stream({
