@@ -1,34 +1,111 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Footer from "@/components/Footer"
 
+type Message = {
+  role: "user" | "assistant"
+  text: string
+}
+
 export default function SupportProPage() {
   const [showChatbox, setShowChatbox] = useState(false)
   const [chatInput, setChatInput] = useState("")
-  const [messages, setMessages] = useState([
-    { role: "assistant", text: "Hi! Tell us what you need help with and we will get you started." },
+  const [isLoading, setIsLoading] = useState(false)
+  const [messages, setMessages] = useState<Message[]>([
+    { role: "assistant", text: "Hi! I'm your IA Support Pro assistant powered by Claude. How can I help you today?" },
   ])
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
-  const handleSendMessage = () => {
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [messages])
+
+  const handleSendMessage = async () => {
     const trimmed = chatInput.trim()
-    if (!trimmed) return
+    if (!trimmed || isLoading) return
 
-    setMessages((prev) => [
-      ...prev,
-      { role: "user", text: trimmed },
-      { role: "assistant", text: "Thanks - we received your request. Our team will follow up shortly." },
-    ])
+    const userMessage: Message = { role: "user", text: trimmed }
+    const updatedMessages = [...messages, userMessage]
+    setMessages(updatedMessages)
     setChatInput("")
+    setIsLoading(true)
+
+    const assistantMessage: Message = { role: "assistant", text: "" }
+    setMessages((prev) => [...prev, assistantMessage])
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: updatedMessages }),
+      })
+
+      if (!res.ok) {
+        throw new Error(`Request failed with status ${res.status}`)
+      }
+
+      const reader = res.body?.getReader()
+      const decoder = new TextDecoder()
+
+      if (!reader) throw new Error("No response stream")
+
+      let accumulated = ""
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+
+        const chunk = decoder.decode(value, { stream: true })
+        const lines = chunk.split("\n")
+
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            const data = line.slice(6)
+            if (data === "[DONE]") break
+
+            try {
+              const parsed = JSON.parse(data)
+              if (parsed.error) {
+                accumulated = `Sorry, something went wrong: ${parsed.error}`
+              } else if (parsed.text) {
+                accumulated += parsed.text
+              }
+              setMessages((prev) => {
+                const updated = [...prev]
+                updated[updated.length - 1] = { role: "assistant", text: accumulated }
+                return updated
+              })
+            } catch {
+              // skip malformed SSE chunks
+            }
+          }
+        }
+      }
+    } catch {
+      setMessages((prev) => {
+        const updated = [...prev]
+        updated[updated.length - 1] = {
+          role: "assistant",
+          text: "Sorry, I couldn't reach the server. Please try again or email support@intelligenceamplifier.ai.",
+        }
+        return updated
+      })
+    } finally {
+      setIsLoading(false)
+      inputRef.current?.focus()
+    }
   }
 
   const handleOpenChatbox = () => {
     setShowChatbox(true)
     setTimeout(() => {
       document.getElementById("support-pro-chatbox")?.scrollIntoView({ behavior: "smooth", block: "start" })
-    }, 0)
+      inputRef.current?.focus()
+    }, 100)
   }
 
   return (
@@ -114,7 +191,13 @@ export default function SupportProPage() {
           {showChatbox && (
             <div id="support-pro-chatbox" className="mt-8 bg-card rounded-2xl p-6 shadow-xl border border-border">
               <div className="flex items-center justify-between gap-3 mb-4">
-                <h2 className="text-xl font-bold">IA Support Pro Chatbox</h2>
+                <div className="flex items-center gap-2">
+                  <h2 className="text-xl font-bold">IA Support Pro</h2>
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    Powered by Claude
+                  </span>
+                </div>
                 <a
                   href="mailto:support@intelligenceamplifier.ai?subject=IA%20Support%20Pro%20Request"
                   className="text-sm text-emerald-600 hover:underline"
@@ -123,36 +206,47 @@ export default function SupportProPage() {
                 </a>
               </div>
 
-              <div className="h-72 overflow-y-auto rounded-xl bg-secondary/40 p-4 space-y-3">
+              <div className="h-96 overflow-y-auto rounded-xl bg-secondary/40 p-4 space-y-3">
                 {messages.map((message, index) => (
                   <div
                     key={`${message.role}-${index}`}
-                    className={`max-w-[85%] rounded-xl px-4 py-2 text-sm ${
+                    className={`max-w-[85%] rounded-xl px-4 py-3 text-sm whitespace-pre-wrap ${
                       message.role === "user"
                         ? "ml-auto bg-emerald-600 text-white"
                         : "bg-white border border-border text-foreground"
                     }`}
                   >
                     {message.text}
+                    {isLoading && index === messages.length - 1 && message.role === "assistant" && !message.text && (
+                      <span className="inline-flex gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 animate-bounce" style={{ animationDelay: "0ms" }} />
+                        <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 animate-bounce" style={{ animationDelay: "150ms" }} />
+                        <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 animate-bounce" style={{ animationDelay: "300ms" }} />
+                      </span>
+                    )}
                   </div>
                 ))}
+                <div ref={messagesEndRef} />
               </div>
 
               <div className="mt-4 flex gap-3">
                 <input
+                  ref={inputRef}
                   value={chatInput}
                   onChange={(e) => setChatInput(e.target.value)}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter") handleSendMessage()
+                    if (e.key === "Enter" && !e.shiftKey) handleSendMessage()
                   }}
-                  placeholder="Describe your issue..."
-                  className="flex-1 rounded-xl border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  placeholder={isLoading ? "Waiting for response..." : "Ask anything about AI tools, prompts, workflows..."}
+                  disabled={isLoading}
+                  className="flex-1 rounded-xl border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50"
                 />
                 <button
                   onClick={handleSendMessage}
-                  className="px-5 py-3 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition-colors"
+                  disabled={isLoading || !chatInput.trim()}
+                  className="px-5 py-3 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send
+                  {isLoading ? "..." : "Send"}
                 </button>
               </div>
             </div>
