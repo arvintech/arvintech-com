@@ -170,42 +170,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Mission Pages Studio Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-brand-blue/10 via-white to-brand-green/10 relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 w-16 h-16 bg-brand-blue/20 rounded-xl rotate-12 animate-float" />
-        <div className="absolute top-40 right-20 w-12 h-12 bg-brand-green/20 rounded-lg -rotate-6 animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-20 left-1/4 w-10 h-10 bg-brand-yellow/20 rounded-md rotate-45 animate-float" style={{ animationDelay: '2s' }} />
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          {/* Logo/Icon */}
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-brand-blue to-brand-green rounded-2xl shadow-2xl mb-8 animate-float">
-            <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          
-          <h2 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-brand-blue via-brand-green to-brand-blue bg-clip-text text-transparent">
-              Mission Pages Studio
-            </span>
-          </h2>
-          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Full-service web development that amplifies your mission. 
-            Built on modern technology with powerful features for growth.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <span className="px-4 py-2 bg-brand-blue/10 text-brand-blue rounded-full text-sm font-medium">Next.js</span>
-            <span className="px-4 py-2 bg-brand-green/10 text-brand-green rounded-full text-sm font-medium">SEO Optimized</span>
-            <span className="px-4 py-2 bg-brand-yellow/10 text-yellow-700 rounded-full text-sm font-medium">Automation</span>
-            <span className="px-4 py-2 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium">Customer Portal</span>
-          </div>
-          <Link href="/mission-web-studio" className="btn-green text-lg px-8 py-4 inline-block">
-            Explore Mission Pages Studio
-          </Link>
-        </div>
-      </section>
-
       {/* Core Services Section */}
       <section id="services" className="py-24 px-6 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -223,9 +187,12 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Service 1: Managed IT Support */}
-            <div className="group relative">
+            <Link
+              href="/managed-it-support"
+              className="group relative block rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
+            >
               <div className="absolute inset-0 bg-brand-green rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
-              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 hover:border-brand-green transition-all shadow-lg">
+              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 group-hover:border-brand-green transition-all shadow-lg">
                 <div className="w-16 h-14 bg-brand-green rounded-lg flex items-center justify-center mb-6 shadow-lg relative overflow-visible">
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
                     <div className="w-3 h-3 bg-green-400 rounded-full shadow-inner border-2 border-green-500" />
@@ -265,13 +232,22 @@ export default function HomePage() {
                     <span>System Updates</span>
                   </li>
                 </ul>
+                <span className="inline-flex items-center gap-1 text-brand-green font-semibold text-sm">
+                  Learn more
+                  <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </div>
-            </div>
+            </Link>
 
             {/* Service 2: AI Readiness */}
-            <div className="group relative">
+            <Link
+              href="/ai-readiness"
+              className="group relative block rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
+            >
               <div className="absolute inset-0 bg-brand-blue rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
-              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 hover:border-brand-blue transition-all shadow-lg">
+              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 group-hover:border-brand-blue transition-all shadow-lg">
                 <div className="w-16 h-14 bg-brand-blue rounded-lg flex items-center justify-center mb-6 shadow-lg relative overflow-visible">
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
                     <div className="w-3 h-3 bg-blue-400 rounded-full shadow-inner border-2 border-blue-500" />
@@ -311,13 +287,22 @@ export default function HomePage() {
                     <span>Team Training & Onboarding</span>
                   </li>
                 </ul>
+                <span className="inline-flex items-center gap-1 text-brand-blue font-semibold text-sm">
+                  Learn more
+                  <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </div>
-            </div>
+            </Link>
 
             {/* Service 3: AI Automation */}
-            <div className="group relative">
+            <Link
+              href="/ai-automation"
+              className="group relative block rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2"
+            >
               <div className="absolute inset-0 bg-brand-yellow rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity" />
-              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 hover:border-brand-yellow transition-all shadow-lg">
+              <div className="relative h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-200 group-hover:border-brand-yellow transition-all shadow-lg">
                 <div className="w-16 h-14 bg-brand-yellow rounded-lg flex items-center justify-center mb-6 shadow-lg relative overflow-visible">
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
                     <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner border-2 border-yellow-400" />
@@ -357,9 +342,51 @@ export default function HomePage() {
                     <span>Process Optimization</span>
                   </li>
                 </ul>
+                <span className="inline-flex items-center gap-1 text-brand-yellow font-semibold text-sm">
+                  Learn more
+                  <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </div>
-            </div>
+            </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Mission Pages Studio Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-brand-blue/10 via-white to-brand-green/10 relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-10 w-16 h-16 bg-brand-blue/20 rounded-xl rotate-12 animate-float" />
+        <div className="absolute top-40 right-20 w-12 h-12 bg-brand-green/20 rounded-lg -rotate-6 animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-20 left-1/4 w-10 h-10 bg-brand-yellow/20 rounded-md rotate-45 animate-float" style={{ animationDelay: '2s' }} />
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          {/* Logo/Icon */}
+          <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-brand-blue to-brand-green rounded-2xl shadow-2xl mb-8 animate-float">
+            <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          
+          <h2 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-brand-blue via-brand-green to-brand-blue bg-clip-text text-transparent">
+              Mission Pages Studio
+            </span>
+          </h2>
+          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
+            Full-service web development that amplifies your mission. 
+            Built on modern technology with powerful features for growth.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <span className="px-4 py-2 bg-brand-blue/10 text-brand-blue rounded-full text-sm font-medium">Next.js</span>
+            <span className="px-4 py-2 bg-brand-green/10 text-brand-green rounded-full text-sm font-medium">SEO Optimized</span>
+            <span className="px-4 py-2 bg-brand-yellow/10 text-yellow-700 rounded-full text-sm font-medium">Automation</span>
+            <span className="px-4 py-2 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium">Customer Portal</span>
+          </div>
+          <Link href="/mission-web-studio" className="btn-green text-lg px-8 py-4 inline-block">
+            Explore Mission Pages Studio
+          </Link>
         </div>
       </section>
 

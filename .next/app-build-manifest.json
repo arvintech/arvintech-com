@@ -11,15 +11,25 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/managed-it-support/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/managed-it-support/page.js"
+    ],
+    "/managed-it-support/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/managed-it-support/layout.js"
+    ],
     "/support/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/support/page.js"
     ],
-    "/support-pro/page": [
+    "/it-infrastructure-support/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/support-pro/page.js"
+      "static/chunks/app/it-infrastructure-support/page.js"
     ]
   }
 }
