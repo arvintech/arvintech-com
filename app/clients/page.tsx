@@ -25,16 +25,6 @@ const clients = [
     color: "brand-green"
   },
   {
-    id: "adonais-mercy-house",
-    name: "Adonais Mercy House",
-    industry: "Non-Profit",
-    description: "Providing life-saving care and dignity to impoverished children with cancer in the Philippines.",
-    logo: "/clients/adonais-mercy-house-logo.png",
-    hasLogo: true,
-    color: "brand-yellow",
-    website: "https://v0-adonais-mercy-house.vercel.app"
-  },
-  {
     id: "hallanna-management",
     name: "Hallanna Management Corporation",
     industry: "Property Management",
@@ -92,6 +82,16 @@ const clients = [
     logo: "/clients/contra-costa-firefighters-logo.webp",
     hasLogo: true,
     color: "brand-red"
+  },
+  {
+    id: "adonais-mercy-house",
+    name: "Adonais Mercy House",
+    industry: "Non-Profit",
+    description: "Providing life-saving care and dignity to impoverished children with cancer in the Philippines.",
+    logo: "/clients/adonais-mercy-house-logo.png",
+    hasLogo: true,
+    color: "brand-yellow",
+    website: "https://v0-adonais-mercy-house.vercel.app"
   }
 ]
 

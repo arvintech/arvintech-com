@@ -307,6 +307,146 @@ export default function SupportPage() {
         </div>
       </section>
 
+      {/* Support tools for download */}
+      <section className="py-12 px-6 bg-white border-t border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-2 bg-brand-green/10 text-brand-green rounded-full text-sm font-semibold mb-4">
+              DOWNLOADS
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Support tools for download</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Install the remote support client before your session so we can connect securely. Call first to schedule
+              support—we&apos;ll tell you when to run the installer.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+            <div className="bg-slate-50 rounded-2xl border-2 border-slate-200 p-8 flex flex-col h-full hover:border-brand-green/40 transition-colors">
+              <div className="w-14 h-14 bg-brand-green/15 rounded-xl flex items-center justify-center mb-5">
+                <svg className="w-7 h-7 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Remote support client</h3>
+              <p className="text-slate-600 text-sm mb-6 flex-1">
+                LogMeIn Rescue session launcher. Download and run the installer when directed by an ArvinTech technician
+                so we can share your screen and resolve issues in real time.
+              </p>
+              <a
+                href="https://secure.logmein.com/pullinstall_go.asp?page=addacomputer3_pull&lang=en&c=twk9htfslmi85dguy6rtdobpimhzsqkv1tomysuf&bnf=undefined"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-brand-green text-white font-semibold rounded-xl hover:bg-green-600 transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download remote client
+              </a>
+              <p className="text-xs text-slate-500 mt-4">Windows and macOS • Administrator rights may be required</p>
+            </div>
+
+            <div className="bg-slate-50 rounded-2xl border-2 border-slate-200 p-8 flex flex-col h-full hover:border-brand-blue/40 transition-colors">
+              <div className="w-14 h-14 bg-brand-blue/15 rounded-xl flex items-center justify-center mb-5">
+                <svg className="w-7 h-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Microsoft Support and Recovery Assistant</h3>
+              <p className="text-slate-600 text-sm mb-6 flex-1">
+                Microsoft&apos;s SaRA tool can diagnose and fix Office, Outlook, and Windows issues. Download and run it
+                locally when troubleshooting Microsoft 365 or desktop apps before or during a support session.
+              </p>
+              <a
+                href="https://aka.ms/SaRA-Setup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-brand-blue text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download SaRA
+              </a>
+              <p className="text-xs text-slate-500 mt-4">Windows • Provided by Microsoft</p>
+            </div>
+          </div>
+
+          {/* ArvinTech Windows optimizers bundle */}
+          <div className="mt-12 lg:mt-14 rounded-2xl border-2 border-slate-200 bg-gradient-to-br from-slate-50 to-white overflow-hidden shadow-sm">
+            <div className="p-6 md:p-8 lg:p-10">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-yellow/15 text-brand-yellow">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">ArvinTech</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Windows optimization bundle</h3>
+                  <p className="text-slate-600 max-w-3xl">
+                    Download <code className="text-sm bg-slate-200/80 px-1.5 py-0.5 rounded">optimizers.zip</code> for a
+                    curated set of Windows tweaks—performance, latency, privacy-oriented services, and cleanup. Review
+                    the table below before running; administrator access may be required.
+                  </p>
+                </div>
+                <a
+                  href="/downloads/optimizers.zip"
+                  download="optimizers.zip"
+                  className="inline-flex items-center justify-center gap-2 shrink-0 px-8 py-4 bg-brand-yellow text-slate-900 font-semibold rounded-xl hover:bg-yellow-400 transition-colors shadow-md"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Download optimizers.zip
+                </a>
+              </div>
+
+              <p className="text-sm text-amber-900 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6">
+                <strong>Safety:</strong> Create a restore point before any changes. Use only on systems you own or are
+                authorized to modify. When in doubt, contact ArvinTech support first.
+              </p>
+
+              <div className="overflow-x-auto rounded-xl border border-slate-200">
+                <table className="w-full text-sm text-left min-w-[640px]">
+                  <thead>
+                    <tr className="bg-slate-100 text-slate-700 border-b border-slate-200">
+                      <th className="px-4 py-3 font-semibold w-12">#</th>
+                      <th className="px-4 py-3 font-semibold">Optimization</th>
+                      <th className="px-4 py-3 font-semibold">What it does</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200 bg-white">
+                    {[
+                      ["1", "Restore Point", "Safety net before any changes"],
+                      ["2", "High Performance Power Plan", "Removes CPU throttling"],
+                      ["3", "Visual Effects", '"Adjust for best performance" mode'],
+                      ["4", "Transparency & Animations", "Disables Fluent/Acrylic effects"],
+                      ["5", "Startup Delay", "Removes Explorer's artificial delay"],
+                      ["6", "Services", "Disables Telemetry, Xbox, Maps, Retail Demo"],
+                      ["7", "Background Apps", "Blocks apps running in background"],
+                      ["8", "Game Mode + HAGS", "Enables GPU Hardware Scheduling"],
+                      ["9", "Delivery Optimization", "Stops Windows using your bandwidth for P2P updates"],
+                      ["10", "Nagle's Algorithm", "Lower network latency"],
+                      ["11", "Temp File Cleanup", "Clears %TEMP% and C:\\Windows\\Temp"],
+                    ].map(([num, title, desc]) => (
+                      <tr key={num} className="hover:bg-slate-50/80">
+                        <td className="px-4 py-2.5 text-slate-500 font-medium">{num}</td>
+                        <td className="px-4 py-2.5 font-medium text-slate-900">{title}</td>
+                        <td className="px-4 py-2.5 text-slate-600">{desc}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quick Tips Section */}
       <section className="py-12 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
