@@ -486,6 +486,37 @@ export default function SupportPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Create restore point before installs */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-brand-green hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-brand-green/15 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Create a restore point when installing apps</h3>
+              <p className="text-slate-600 text-sm mb-3">
+                Before you install or upgrade software, drivers, or major Windows updates, create a system restore point.
+                It&apos;s much faster than a full backup and gives you useful insurance: if something goes wrong, you can
+                roll back system files and settings without touching your personal documents.
+              </p>
+              <ul className="text-sm text-slate-500 space-y-1 mb-4">
+                <li>• Quick to create—seconds or minutes, not hours</li>
+                <li>• Ideal before risky installs, patches, or trial software</li>
+                <li>• Complements (does not replace) backups for your irreplaceable files</li>
+              </ul>
+              <a
+                href="https://support.microsoft.com/en-us/windows/create-a-system-restore-point-77e02e2a-3298-c869-9974-ef5658ea3be9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-brand-green font-semibold text-sm hover:underline"
+              >
+                Microsoft: Create a restore point
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
             {/* Intel or AMD */}
             <div id="intel-or-amd" className="hidden bg-white rounded-2xl p-6 shadow-lg border-l-4 border-sky-500 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-4">
