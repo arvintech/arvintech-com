@@ -170,7 +170,7 @@ export default function AIReadinessPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/work-with-us" className="inline-flex justify-center items-center px-8 py-4 rounded-xl font-semibold bg-brand-blue text-white hover:bg-blue-700 transition-colors text-lg">
-              Work with ArvinTech
+              Work with <span className="arvintech-brand">arvintech</span>
             </Link>
             <Link
               href="/#services"

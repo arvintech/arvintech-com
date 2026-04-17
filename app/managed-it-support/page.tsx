@@ -96,8 +96,8 @@ export default function ManagedITSupportPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "24/7 remote support",
-                body: "Help when issues arise—triage, troubleshooting, and escalation handled by people who know your environment.",
+                title: "Emergency Remote Support",
+                body: "Rapid response when things break—secure remote triage, troubleshooting, and escalation from technicians who know your environment. Available 24/7 when you need urgent help.",
               },
               {
                 title: "Security monitoring",

@@ -181,7 +181,7 @@ export default function HomePage() {
               Infrastructure + Intelligence
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              ArvinTech helps businesses modernize their IT infrastructure and deploy AI systems that improve efficiency, security, and operational performance.
+              <span className="arvintech-brand">arvintech</span> helps businesses modernize their IT infrastructure and deploy AI systems that improve efficiency, security, and operational performance.
             </p>
           </div>
 
@@ -590,7 +590,7 @@ export default function HomePage() {
             Ready to Modernize Your Business?
           </h2>
           <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Schedule a free consultation to discuss your IT needs and discover how ArvinTech can help secure, manage, and modernize your technology infrastructure.
+            Schedule a free consultation to discuss your IT needs and discover how <span className="arvintech-brand">arvintech</span> can help secure, manage, and modernize your technology infrastructure.
           </p>
           
           <div className="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 md:p-12 border-2 border-slate-200 shadow-xl max-w-2xl mx-auto">
@@ -1064,7 +1064,7 @@ export default function HomePage() {
                       </div>
                       <h4 className="text-white font-bold text-base mb-2">Managed by <span className="arvintech-brand">arvintech</span></h4>
                       <p className="text-slate-400 text-sm">
-                        Every IA Atomic includes deployment, configuration, document preparation, training, and ongoing support from arvintech — managed IT and AI services since 2000.
+                        Every IA Atomic includes deployment, configuration, document preparation, training, and ongoing support from <span className="arvintech-brand">arvintech</span> — managed IT and AI services since 2000.
                       </p>
                     </div>
                   </div>

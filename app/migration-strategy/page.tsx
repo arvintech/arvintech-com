@@ -792,7 +792,7 @@ export default function MigrationStrategyPage() {
               Ready to Plan Your Windows 11 Migration?
             </h2>
             <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-              Don't wait until Windows 10 support ends. Start your migration planning today with ArvinTech's proven methodology.
+              Don't wait until Windows 10 support ends. Start your migration planning today with <span className="arvintech-brand">arvintech</span>'s proven methodology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

@@ -321,7 +321,7 @@ export default function SupportPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             <div className="bg-slate-50 rounded-2xl border-2 border-slate-200 p-8 flex flex-col h-full hover:border-brand-green/40 transition-colors">
               <div className="w-14 h-14 bg-brand-green/15 rounded-xl flex items-center justify-center mb-5">
                 <svg className="w-7 h-7 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -330,7 +330,7 @@ export default function SupportPage() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Remote support client</h3>
               <p className="text-slate-600 text-sm mb-6 flex-1">
-                LogMeIn Rescue session launcher. Download and run the installer when directed by an ArvinTech technician
+                LogMeIn Rescue session launcher. Download and run the installer when directed by an <span className="arvintech-brand">arvintech</span> technician
                 so we can share your screen and resolve issues in real time.
               </p>
               <a
@@ -358,7 +358,7 @@ export default function SupportPage() {
                 Microsoft&apos;s SaRA tool can diagnose and fix Office, Outlook, and Windows issues. Download and run it
                 locally when troubleshooting Microsoft 365 or desktop apps before or during a support session.
               </p>
-              <div className="space-y-3">
+              <div className="space-y-10">
                 <a
                   href="https://aka.ms/SaRA-Setup"
                   target="_blank"
@@ -397,45 +397,6 @@ export default function SupportPage() {
                 Plan and execute your Windows 11 upgrade with confidence. Our migration strategy ensures minimal downtime, 
                 hardware compatibility checks, and data preservation throughout the transition.
               </p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                  </svg>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">Hardware Compatibility Assessment</p>
-                    <p className="text-xs text-slate-500">TPM 2.0, Secure Boot, and system requirements check</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                  </svg>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">Data Backup & Migration</p>
-                    <p className="text-xs text-slate-500">Complete backup strategy before upgrade</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">Application Compatibility Testing</p>
-                    <p className="text-xs text-slate-500">Verify software works on Windows 11</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">Phased Rollout Plan</p>
-                    <p className="text-xs text-slate-500">Minimize business disruption with staged deployment</p>
-                  </div>
-                </div>
-              </div>
 
               <Link
                 href="/migration-strategy"
@@ -447,6 +408,30 @@ export default function SupportPage() {
                 View Full Strategy
               </Link>
               <p className="text-xs text-slate-500 mt-4">Windows 10 to 11 • Enterprise & SMB</p>
+            </div>
+
+            {/* Regular PC Maintenance */}
+            <div className="bg-slate-50 rounded-2xl border-2 border-slate-200 p-8 flex flex-col h-full hover:border-brand-green/40 transition-colors">
+              <div className="w-14 h-14 bg-brand-green/15 rounded-xl flex items-center justify-center mb-5">
+                <svg className="w-7 h-7 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Regular PC Maintenance</h3>
+              <p className="text-slate-600 text-sm mb-6 flex-1">
+                Keep your computer running smoothly with these essential maintenance best practices. Prevent issues before they start with routine care and optimization.
+              </p>
+
+              <Link
+                href="/maintenance"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-brand-green text-white font-semibold rounded-xl hover:bg-green-600 transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                View Best Practices
+              </Link>
+              <p className="text-xs text-slate-500 mt-4">Preventative care • Performance optimization</p>
             </div>
           </div>
 
@@ -461,7 +446,7 @@ export default function SupportPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </span>
-                    <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">ArvinTech</span>
+                    <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide arvintech-brand">arvintech</span>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Windows optimization bundle</h3>
                   <p className="text-slate-600 max-w-3xl">
@@ -484,7 +469,7 @@ export default function SupportPage() {
 
               <p className="text-sm text-amber-900 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6">
                 <strong>Safety:</strong> Create a restore point before any changes. Use only on systems you own or are
-                authorized to modify. When in doubt, contact ArvinTech support first.
+                authorized to modify. When in doubt, contact <span className="arvintech-brand">arvintech</span> support first.
               </p>
 
               <div className="overflow-x-auto rounded-xl border border-slate-200">
