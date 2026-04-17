@@ -321,7 +321,7 @@ export default function SupportPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <div className="bg-slate-50 rounded-2xl border-2 border-slate-200 p-8 flex flex-col h-full hover:border-brand-green/40 transition-colors">
               <div className="w-14 h-14 bg-brand-green/15 rounded-xl flex items-center justify-center mb-5">
                 <svg className="w-7 h-7 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -358,18 +358,95 @@ export default function SupportPage() {
                 Microsoft&apos;s SaRA tool can diagnose and fix Office, Outlook, and Windows issues. Download and run it
                 locally when troubleshooting Microsoft 365 or desktop apps before or during a support session.
               </p>
-              <a
-                href="https://aka.ms/SaRA-Setup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-brand-blue text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+              <div className="space-y-3">
+                <a
+                  href="https://aka.ms/SaRA-Setup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-brand-blue text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Download SaRA
+                </a>
+                <a
+                  href="https://support.microsoft.com/en-us/topic/microsoft-support-and-recovery-assistant-sara-command-line-utility-removal-from-windows-5913939c-87ff-45b0-8e9b-14dc89bfdfee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-white text-brand-blue border-2 border-brand-blue/20 font-semibold rounded-xl hover:bg-brand-blue/5 transition-colors text-sm"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  SaRA Deprecation Notice
+                </a>
+              </div>
+              <p className="text-xs text-slate-500 mt-4">Windows • Provided by Microsoft</p>
+            </div>
+
+            {/* Windows 11 Migration */}
+            <div className="bg-slate-50 rounded-2xl border-2 border-slate-200 p-8 flex flex-col h-full hover:border-brand-yellow/40 transition-colors">
+              <div className="w-14 h-14 bg-brand-yellow/15 rounded-xl flex items-center justify-center mb-5">
+                <svg className="w-7 h-7 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Windows 11 Migration Strategy</h3>
+              <p className="text-slate-600 text-sm mb-6 flex-1">
+                Plan and execute your Windows 11 upgrade with confidence. Our migration strategy ensures minimal downtime, 
+                hardware compatibility checks, and data preservation throughout the transition.
+              </p>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900">Hardware Compatibility Assessment</p>
+                    <p className="text-xs text-slate-500">TPM 2.0, Secure Boot, and system requirements check</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                  </svg>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900">Data Backup & Migration</p>
+                    <p className="text-xs text-slate-500">Complete backup strategy before upgrade</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900">Application Compatibility Testing</p>
+                    <p className="text-xs text-slate-500">Verify software works on Windows 11</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900">Phased Rollout Plan</p>
+                    <p className="text-xs text-slate-500">Minimize business disruption with staged deployment</p>
+                  </div>
+                </div>
+              </div>
+
+              <Link
+                href="/migration-strategy"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-brand-yellow text-white font-semibold rounded-xl hover:bg-yellow-500 transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Download SaRA
-              </a>
-              <p className="text-xs text-slate-500 mt-4">Windows • Provided by Microsoft</p>
+                View Full Strategy
+              </Link>
+              <p className="text-xs text-slate-500 mt-4">Windows 10 to 11 • Enterprise & SMB</p>
             </div>
           </div>
 
