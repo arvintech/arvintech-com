@@ -97,20 +97,29 @@ export default function SupportPage() {
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 h1-ocean">How can we help?</h1>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto mb-8">
-            Get the support you need to amplify your potential with <span className="arvintech-brand">arvintech</span>'s innovative solutions.
+            Get the support you need to amplify your potential with{" "}
+            <span className="arvintech-brand">arvintech&apos;s</span> innovative solutions.
           </p>
 
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto">
             <div className="relative">
+              <label htmlFor="support-search" className="sr-only">
+                Search help articles, guides, or FAQs
+              </label>
               <input
-                type="text"
+                id="support-search"
+                type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search for help articles, guides, or FAQs..."
                 className="w-full px-6 py-4 bg-card border border-border rounded-2xl text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent shadow-lg"
+                autoComplete="off"
               />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-brand-green hover:bg-brand-green/90 px-6 py-2 rounded-xl text-white font-medium transition-all hover:scale-105">
+              <button
+                type="button"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-brand-green hover:bg-brand-green/90 px-6 py-2 rounded-xl text-white font-medium transition-all hover:scale-105"
+              >
                 Search
               </button>
             </div>
@@ -139,8 +148,8 @@ export default function SupportPage() {
                   Intelligent Support
                 </h2>
                 <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-                  Get help with our AI-powered Intelligence Amplifier platform. From setup to advanced features, 
-                  we're here to ensure you get the most out of your AI tools.
+                  Get help with our AI-powered Intelligence Amplifier platform. From setup to advanced features,
+                  we&apos;re here to ensure you get the most out of your AI tools.
                 </p>
               </div>
 
@@ -506,6 +515,431 @@ export default function SupportPage() {
               </div>
             </div>
           </div>
+
+          {/* File Migration and Sync — GoodSync */}
+          <div className="mt-12 lg:mt-14 rounded-2xl border-2 border-slate-200 bg-gradient-to-br from-slate-50 to-white overflow-hidden shadow-sm">
+            <div className="p-6 md:p-8 lg:p-10 space-y-8">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-blue/15 text-brand-blue">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                        />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide arvintech-brand">arvintech</span>
+                  </div>
+                  <p className="text-sm font-semibold text-brand-blue mb-2">File migration and sync</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                    GoodSync: Preferred File Migration Tool for Backups and Sync
+                  </h3>
+                  <p className="text-slate-600 max-w-3xl">
+                    GoodSync is our designated solution for file migration, backup, and synchronization tasks. It delivers
+                    reliable, automated data movement across local drives, servers, and cloud storage platforms with
+                    block-level delta transfers, real-time monitoring, and verified file integrity. Its flexibility makes
+                    it well-suited for both one-time migrations and ongoing backup routines.
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+                  <a
+                    href="https://www.goodsync.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-brand-blue font-semibold rounded-xl border-2 border-brand-blue/30 hover:border-brand-blue hover:bg-brand-blue/5 transition-colors shadow-sm"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    GoodSync
+                  </a>
+                  <a
+                    href="mailto:support@intelligenceamplifier.ai?subject=GoodSync%20migration%20%26%20sync%20help"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-blue text-white font-semibold rounded-xl hover:bg-blue-600 transition-colors shadow-md"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    Email migration questions
+                  </a>
+                </div>
+              </div>
+
+              <figure className="rounded-xl border border-slate-200 bg-white p-4 md:p-6 shadow-sm overflow-x-auto">
+                <figcaption className="text-center text-sm font-semibold text-slate-800 mb-4">
+                  Migration &amp; backup architecture (Google Drive + GoodSync)
+                </figcaption>
+                <svg
+                  viewBox="0 0 760 420"
+                  className="w-full max-w-4xl mx-auto h-auto min-w-[520px]"
+                  role="img"
+                  aria-labelledby="goodsync-migration-diagram-title"
+                >
+                  <title id="goodsync-migration-diagram-title">
+                    Diagram: Users collaborate in Google Drive. GoodSync connects to Drive via a native connector for
+                    migration and backups. Legacy file servers and other sources feed initial migration into GoodSync.
+                    Secondary backups go to NAS, external drives, or alternate cloud, with audit logs on transfers.
+                  </title>
+                  <desc>
+                    Layered flow showing users and Google Drive at the top, GoodSync as the central engine, legacy
+                    sources entering from the left for migration, and secondary backup targets on the right.
+                  </desc>
+                  <defs>
+                    <marker id="goodsync-diag-arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+                    </marker>
+                    <marker id="goodsync-diag-arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                      <polygon points="0 0, 10 3.5, 0 7" fill="#0066B3" />
+                    </marker>
+                  </defs>
+
+                  {/* Collaboration layer */}
+                  <rect x="248" y="28" width="464" height="86" rx="10" fill="#f0fdf4" stroke="#00A94F" strokeWidth="2" />
+                  <text
+                    x="480"
+                    y="58"
+                    textAnchor="middle"
+                    fill="#0f172a"
+                    fontSize="15"
+                    fontWeight="700"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Google Drive
+                  </text>
+                  <text
+                    x="480"
+                    y="80"
+                    textAnchor="middle"
+                    fill="#475569"
+                    fontSize="12"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Collaboration layer — live docs, sharing &amp; permissions
+                  </text>
+                  <text
+                    x="480"
+                    y="100"
+                    textAnchor="middle"
+                    fill="#64748b"
+                    fontSize="11"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Day-to-day editing (not a substitute for policy-driven backup)
+                  </text>
+
+                  <rect x="32" y="44" width="168" height="54" rx="8" fill="#ffffff" stroke="#94a3b8" strokeWidth="1.5" />
+                  <text
+                    x="116"
+                    y="70"
+                    textAnchor="middle"
+                    fill="#0f172a"
+                    fontSize="13"
+                    fontWeight="600"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Users &amp; teams
+                  </text>
+                  <text
+                    x="116"
+                    y="88"
+                    textAnchor="middle"
+                    fill="#64748b"
+                    fontSize="11"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Create &amp; collaborate
+                  </text>
+
+                  <line x1="202" y1="71" x2="238" y2="71" stroke="#64748b" strokeWidth="2" markerEnd="url(#goodsync-diag-arr)" />
+                  <line x1="238" y1="81" x2="202" y2="81" stroke="#64748b" strokeWidth="2" markerEnd="url(#goodsync-diag-arr)" />
+
+                  {/* Connector Drive -> GoodSync */}
+                  <line x1="380" y1="116" x2="380" y2="148" stroke="#0066B3" strokeWidth="2.5" markerEnd="url(#goodsync-diag-arr-blue)" />
+                  <text
+                    x="392"
+                    y="138"
+                    fill="#0066B3"
+                    fontSize="11"
+                    fontWeight="500"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    native connector
+                  </text>
+
+                  {/* GoodSync hub */}
+                  <rect x="208" y="150" width="344" height="124" rx="12" fill="#eff6ff" stroke="#0066B3" strokeWidth="2.5" />
+                  <text
+                    x="380"
+                    y="186"
+                    textAnchor="middle"
+                    fill="#0066B3"
+                    fontSize="17"
+                    fontWeight="700"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    GoodSync
+                  </text>
+                  <text
+                    x="380"
+                    y="210"
+                    textAnchor="middle"
+                    fill="#334155"
+                    fontSize="12"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Migration &amp; backup layer — schedules, deltas, versioning
+                  </text>
+                  <text
+                    x="380"
+                    y="232"
+                    textAnchor="middle"
+                    fill="#475569"
+                    fontSize="11"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Checksums &amp; timestamps · audit trail · encryption options
+                  </text>
+                  <text
+                    x="380"
+                    y="256"
+                    textAnchor="middle"
+                    fill="#64748b"
+                    fontSize="10"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Independent of Drive&apos;s sync client — breaks destructive propagation chains
+                  </text>
+
+                  {/* Legacy */}
+                  <rect x="32" y="168" width="152" height="88" rx="8" fill="#f8fafc" stroke="#94a3b8" strokeWidth="1.5" />
+                  <text
+                    x="108"
+                    y="198"
+                    textAnchor="middle"
+                    fill="#0f172a"
+                    fontSize="13"
+                    fontWeight="600"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Legacy sources
+                  </text>
+                  <text
+                    x="108"
+                    y="218"
+                    textAnchor="middle"
+                    fill="#475569"
+                    fontSize="11"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    File servers, PCs,
+                  </text>
+                  <text
+                    x="108"
+                    y="234"
+                    textAnchor="middle"
+                    fill="#475569"
+                    fontSize="11"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    other clouds
+                  </text>
+                  <line x1="186" y1="212" x2="200" y2="212" stroke="#64748b" strokeWidth="2" markerEnd="url(#goodsync-diag-arr)" />
+                  <text
+                    x="188"
+                    y="204"
+                    textAnchor="middle"
+                    fill="#64748b"
+                    fontSize="9"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    migrate
+                  </text>
+
+                  {/* Secondary backups */}
+                  <rect x="576" y="158" width="152" height="108" rx="8" fill="#f8fafc" stroke="#94a3b8" strokeWidth="1.5" />
+                  <text
+                    x="652"
+                    y="190"
+                    textAnchor="middle"
+                    fill="#0f172a"
+                    fontSize="13"
+                    fontWeight="600"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Secondary backups
+                  </text>
+                  <text
+                    x="652"
+                    y="212"
+                    textAnchor="middle"
+                    fill="#475569"
+                    fontSize="11"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    NAS · USB · alt cloud
+                  </text>
+                  <text
+                    x="652"
+                    y="232"
+                    textAnchor="middle"
+                    fill="#475569"
+                    fontSize="11"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Scheduled one-way sync
+                  </text>
+                  <text
+                    x="652"
+                    y="250"
+                    textAnchor="middle"
+                    fill="#64748b"
+                    fontSize="10"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Versioned snapshots
+                  </text>
+                  <line x1="554" y1="212" x2="572" y2="212" stroke="#64748b" strokeWidth="2" markerEnd="url(#goodsync-diag-arr)" />
+                  <text x="548" y="204" textAnchor="end" fill="#64748b" fontSize="9" fontFamily="ui-sans-serif, system-ui, sans-serif">
+                    backup
+                  </text>
+
+                  {/* Initial bulk migration path */}
+                  <path
+                    d="M 108 256 Q 108 300 280 300 Q 400 300 380 274"
+                    fill="none"
+                    stroke="#94a3b8"
+                    strokeWidth="1.5"
+                    strokeDasharray="5 4"
+                  />
+                  <text
+                    x="248"
+                    y="318"
+                    textAnchor="middle"
+                    fill="#94a3b8"
+                    fontSize="10"
+                    fontFamily="ui-sans-serif, system-ui, sans-serif"
+                  >
+                    Initial bulk migration path (folder structure &amp; metadata)
+                  </text>
+                </svg>
+                <p className="text-center text-xs text-slate-500 mt-3 max-w-2xl mx-auto">
+                  Google Drive for working together; GoodSync for controlled movement, backups, and recoverability outside
+                  Drive&apos;s native sync behavior.
+                </p>
+              </figure>
+
+              <div>
+                <h4 className="text-lg font-bold text-slate-900 mb-3">Why GoodSync</h4>
+                <p className="text-slate-600 mb-4">
+                  GoodSync stands out for its combination of speed, precision, and trustworthiness. Key strengths include:
+                </p>
+                <ul className="list-disc pl-5 space-y-2 text-slate-600 max-w-3xl">
+                  <li>Bidirectional and one-way sync with granular control over conflict resolution</li>
+                  <li>Block-level copying that transfers only changed portions of files, reducing bandwidth and time</li>
+                  <li>Propagation of deletions, moves, and renames without duplicating data</li>
+                  <li>Automated scheduling with real-time, periodic, or event-triggered runs</li>
+                  <li>End-to-end encryption and versioning for recovery from accidental changes or ransomware</li>
+                  <li>
+                    Broad protocol support including SFTP, WebDAV, SMB, and native connectors for major cloud providers
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-bold text-slate-900 mb-3">Pairing Strategy with Google Drive</h4>
+                <p className="text-slate-600 mb-4">
+                  Pairing GoodSync with Google Drive creates a layered approach that separates active collaboration from
+                  controlled backup and archival. Your Gmail address is the same Google identity used for Drive and for
+                  authorizing GoodSync—keep that pairing explicit when planning file access and jobs. The strategy works
+                  as follows:
+                </p>
+                <ol className="list-decimal pl-5 space-y-5 text-slate-600 max-w-3xl marker:font-semibold marker:text-slate-800">
+                  <li>
+                    <span className="font-semibold text-slate-900">Google Drive as the collaboration layer.</span> Google
+                    Drive remains the live workspace where users create, edit, and share documents. It handles day-to-day
+                    access, permissions, and multi-user editing.
+                  </li>
+                  <li>
+                    <span className="font-semibold text-slate-900">File access from your Gmail (Google) account.</span>{" "}
+                    Gmail and Google Drive sit under the{" "}
+                    <strong className="text-slate-800">same Google account</strong>: the address you use to sign in to
+                    Gmail is the identity that owns &quot;My Drive,&quot; shared libraries, and sharing invitations. For
+                    pairing, treat that account as the single source of truth for who can see which files:
+                    <ul className="list-disc pl-5 mt-3 space-y-2">
+                      <li>
+                        <strong className="text-slate-800">Connector sign-in</strong> — When GoodSync uses Google&apos;s
+                        native Drive connector, you authorize it with that Google account (OAuth). Use the same account
+                        that should read and write the folders you are migrating or backing up; service accounts or
+                        delegated access may apply in Google Workspace—match the job to the correct identity.
+                      </li>
+                      <li>
+                        <strong className="text-slate-800">Where files live</strong> — Email attachments are not Drive
+                        files until you save them to Drive or use Drive-native workflows. Prefer keeping authoritative
+                        copies in Drive (or Shared drives) so GoodSync jobs target stable paths rather than mailbox
+                        attachments.
+                      </li>
+                      <li>
+                        <strong className="text-slate-800">Scope of access</strong> — Decide whether each sync job should
+                        use <em>My Drive</em>, a <em>Shared drive</em>, or <em>Shared with me</em> content; permissions
+                        follow the Google account you use to connect. Align sharing in Drive with who needs backup or
+                        migration before scheduling GoodSync.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span className="font-semibold text-slate-900">GoodSync as the migration and backup layer.</span>{" "}
+                    GoodSync connects directly to Google Drive via its native connector and handles the heavier lifting:
+                    <ul className="list-disc pl-5 mt-3 space-y-2">
+                      <li>
+                        <strong className="text-slate-800">Initial migration</strong> — bulk transfers from legacy file
+                        servers, personal drives, or other cloud platforms into Google Drive, preserving folder structures
+                        and metadata
+                      </li>
+                      <li>
+                        <strong className="text-slate-800">Scheduled backups</strong> — automated one-way sync from Google
+                        Drive to a secondary location (local NAS, external drive, or alternate cloud) on a defined cadence
+                      </li>
+                      <li>
+                        <strong className="text-slate-800">Versioned snapshots</strong> — retention of prior file versions
+                        outside of Drive&apos;s native history, protecting against corruption, accidental deletion, or
+                        account compromise
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span className="font-semibold text-slate-900">Separation of concerns.</span> Google Drive&apos;s
+                    built-in sync client is optimized for access, not backup. Relying on it alone means deletions and
+                    ransomware-encrypted files propagate everywhere. GoodSync breaks that chain by maintaining an
+                    independent, policy-driven copy that Drive cannot overwrite.
+                  </li>
+                  <li>
+                    <span className="font-semibold text-slate-900">Verification and audit.</span> GoodSync logs every
+                    transfer with checksums and timestamps, giving a clear audit trail for compliance and recovery
+                    scenarios — something Drive alone does not provide.
+                  </li>
+                </ol>
+              </div>
+
+              <p className="text-sm text-slate-800 bg-brand-blue/10 border border-brand-blue/20 rounded-xl px-4 py-4">
+                <strong>In short:</strong> Google Drive for working, GoodSync for protecting. Together they cover the full
+                lifecycle from active use through migration, backup, and long-term recoverability.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -656,82 +1090,174 @@ export default function SupportPage() {
               </a>
             </div>
 
-            {/* 3. Use Google Drive */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+            {/* 3. Use Google Drive — full width on md+ (spans grid row) */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-blue-500 hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-3">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Use Google Drive</h3>
               <p className="text-slate-600 text-sm mb-3">
-                Sync and backup your files to the cloud. Access them anywhere and never lose important documents.
+                Drive is more than a folder in the cloud: it&apos;s continuous sync to protect everyday files, a way to
+                recover earlier versions, and an offsite copy you can reach from any device—while sharing and
+                collaboration stay in one place.
               </p>
-              <ul className="text-sm text-slate-500 space-y-1">
-                <li>• Install Google Drive for Desktop</li>
-                <li>• Sync important folders automatically</li>
-                <li>• 15GB free storage included</li>
+              <p className="text-xs font-semibold text-slate-700 uppercase tracking-wide mb-2">Get started</p>
+              <ul className="text-sm text-slate-500 space-y-1 mb-4">
+                <li>• Install <strong className="text-slate-700 font-medium">Drive for desktop</strong> (Windows/Mac)</li>
+                <li>• Choose folders to sync or mirror; turn on <strong className="text-slate-700 font-medium">backup</strong>{" "}
+                  for Desktop, Documents, and Pictures where offered</li>
+                <li>• Free tier includes shared space across Drive, Gmail, and Photos—watch quotas so backups don&apos;t stall</li>
               </ul>
+              <p className="text-xs font-semibold text-slate-700 uppercase tracking-wide mb-2">Data protection &amp; recovery</p>
+              <ul className="text-sm text-slate-500 space-y-1.5 mb-4">
+                <li>
+                  • <strong className="text-slate-700 font-medium">Version history</strong> — restore or compare prior
+                  edits of Docs, Sheets, Slides, and many uploaded file types (limits vary by plan)
+                </li>
+                <li>
+                  • <strong className="text-slate-700 font-medium">Trash &amp; recovery</strong> — deleted items can often
+                  be recovered from Trash before permanent deletion; retention depends on Workspace admin settings
+                </li>
+                <li>
+                  • <strong className="text-slate-700 font-medium">Ransomware &amp; mistakes</strong> — cloud copies and
+                  version history help after bad syncs or encrypted files, but they are not a full substitute for
+                  dedicated backup tools or a second copy outside Google
+                </li>
+              </ul>
+              <p className="text-xs font-semibold text-slate-700 uppercase tracking-wide mb-2">Sync, access &amp; sharing</p>
+              <ul className="text-sm text-slate-500 space-y-1.5 mb-4">
+                <li>
+                  • <strong className="text-slate-700 font-medium">Anywhere access</strong> — web, mobile apps, and
+                  desktop keep the same library in reach when a device is lost or replaced
+                </li>
+                <li>
+                  • <strong className="text-slate-700 font-medium">Offline files</strong> — mark important folders or files
+                  available offline so you can work without connectivity; changes sync when you reconnect
+                </li>
+                <li>
+                  • <strong className="text-slate-700 font-medium">Shared drives</strong> (Google Workspace) — team-owned
+                  storage with shared permissions, separate from any one person&apos;s &quot;My Drive&quot;
+                </li>
+                <li>
+                  • <strong className="text-slate-700 font-medium">Photos</strong> — Google Photos can back up mobile
+                  camera rolls; remember it may share storage with Drive on consumer accounts
+                </li>
+              </ul>
+              <p className="text-xs text-slate-500 border-t border-slate-200 pt-3 leading-relaxed">
+                <strong className="text-slate-700">Reality check:</strong> Drive&apos;s sync client is built for access and
+                collaboration, not a complete backup strategy by itself. Pair it with the{" "}
+                <strong className="text-slate-700">3-2-1 mindset</strong> (see Backups &amp; Restore) or a tool like GoodSync
+                for policy-driven copies you control end to end.
+              </p>
             </div>
 
-            {/* 4. Backups & Restore */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-brand-red hover:shadow-xl transition-shadow relative">
-              <div className="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+            {/* Password strategies — strong passwords + 2FA (full width on md+) */}
+            <div
+              id="password-strategies"
+              className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-fuchsia-500 hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-3"
+            >
+              <div className="w-12 h-12 bg-fuchsia-100 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-fuchsia-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Backups & Restore</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Password strategies</h3>
               <p className="text-slate-600 text-sm mb-3">
-                Always maintain regular backups. Use the 3-2-1 rule: 3 copies, 2 different media types, 1 offsite.
+                Treat passwords as one layer in a stack: long unique secrets per site or app, stored in a password
+                manager you trust, plus a second proof of identity wherever the service allows it.
               </p>
-              <ul className="text-sm text-slate-500 space-y-1">
-                <li>• Automate daily backups</li>
-                <li>• Test restores quarterly</li>
-                <li>• Keep offsite/cloud copy</li>
+              <ul className="text-sm text-slate-500 space-y-1 mb-4">
+                <li>• Generate long, unique passwords—never reuse them across accounts</li>
+                <li>• Use a password manager so you only memorize a few strong passphrases</li>
+                <li>• Prioritize email, banking, and cloud accounts for extra protection first</li>
               </ul>
-              <a
-                href="https://secure.logmein.com/pullinstall_go.asp?page=addacomputer3_pull&lang=en&c=twk9htfslmi85dguy6rtdobpimhzsqkv1tomysuf&bnf=undefined"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 bg-brand-green/10 hover:bg-brand-green/20 text-brand-green text-xs font-semibold rounded-full transition-colors"
-              >
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-green"></span>
-                </span>
-                Remote Support
-              </a>
-            </div>
-
-            {/* Password Security */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-brand-green hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-brand-green/10 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
+              <div className="rounded-xl bg-fuchsia-50 border border-fuchsia-200/80 px-3 py-3 mb-4">
+                <p className="text-sm font-semibold text-fuchsia-900 mb-1">Why two-factor authentication (2FA) matters</p>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  A password is only &quot;something you know.&quot; It can be stolen via phishing, data breaches, or
+                  guessing. <strong className="text-slate-900">Two-factor authentication</strong> (also called two-step
+                  verification) adds a second factor—usually <strong className="text-slate-900">something you have</strong>{" "}
+                  (a code from an authenticator app, a security key, or a trusted device). Then an attacker who only has
+                  your password still cannot finish signing in. Enable 2FA on every critical account, and prefer an
+                  authenticator app or hardware key over SMS when the service offers it.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Password Security</h3>
-              <p className="text-slate-600 text-sm mb-3">
-                Strong, unique passwords are your first line of defense against cyber threats.
-              </p>
-              <ul className="text-sm text-slate-500 space-y-1">
-                <li>• Use a password manager</li>
-                <li>• Enable 2FA everywhere</li>
-                <li>• Never reuse passwords</li>
-              </ul>
-              <div className="mt-4 pt-4 border-t border-slate-200">
-                <a 
-                  href="https://support.google.com/accounts/answer/1066447" 
-                  target="_blank" 
+              <div className="mt-4 pt-4 border-t border-slate-200 flex flex-col gap-2">
+                <a
+                  href="https://support.google.com/accounts/answer/1066447"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs text-brand-green font-semibold hover:underline"
+                  className="inline-flex items-center gap-2 text-xs text-fuchsia-700 font-semibold hover:underline"
                 >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                  <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                   </svg>
-                  Get Google Authenticator (Free 2FA)
+                  Google: turn on 2-Step Verification
                 </a>
+                <a
+                  href="https://support.microsoft.com/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-b775dae3-a4a9-b790-3c3f-946d-8a8bca3768af"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs text-slate-600 font-semibold hover:underline"
+                >
+                  Microsoft: two-step verification
+                </a>
+              </div>
+            </div>
+
+            {/* Backups & Restore + Browse with Caution — paired row */}
+            <div className="md:col-span-2 lg:col-span-3 grid gap-6 lg:grid-cols-2 lg:items-stretch">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-brand-red hover:shadow-xl transition-shadow relative h-full flex flex-col">
+                <div className="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">Backups & Restore</h3>
+                <p className="text-slate-600 text-sm mb-3">
+                  Always maintain regular backups. Use the 3-2-1 rule: 3 copies, 2 different media types, 1 offsite.
+                </p>
+                <ul className="text-sm text-slate-500 space-y-1 flex-1">
+                  <li>• Automate daily backups</li>
+                  <li>• Test restores quarterly</li>
+                  <li>• Keep offsite/cloud copy</li>
+                </ul>
+                <a
+                  href="https://secure.logmein.com/pullinstall_go.asp?page=addacomputer3_pull&lang=en&c=twk9htfslmi85dguy6rtdobpimhzsqkv1tomysuf&bnf=undefined"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 bg-brand-green/10 hover:bg-brand-green/20 text-brand-green text-xs font-semibold rounded-full transition-colors w-fit"
+                >
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-green"></span>
+                  </span>
+                  Remote Support
+                </a>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-teal-500 hover:shadow-xl transition-shadow h-full flex flex-col">
+                <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">Browse with Caution</h3>
+                <p className="text-slate-600 text-sm mb-3">
+                  The web is full of threats. Protect yourself with good habits and reliable antivirus software.
+                </p>
+                <ul className="text-sm text-slate-500 space-y-1 flex-1">
+                  <li>• Use Windows Defender or Bitdefender</li>
+                  <li>• Avoid sketchy download sites</li>
+                  <li>• Look for HTTPS on websites</li>
+                </ul>
               </div>
             </div>
 
@@ -778,7 +1304,7 @@ export default function SupportPage() {
               </p>
               <ul className="text-sm text-slate-500 space-y-1">
                 <li>• Verify sender addresses</li>
-                <li>• Don't click suspicious links</li>
+                <li>• Don&apos;t click suspicious links</li>
                 <li>• Report phishing attempts</li>
               </ul>
               <div className="mt-4 pt-4 border-t border-slate-200">
@@ -848,7 +1374,7 @@ export default function SupportPage() {
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Invest in Quality Hardware</h3>
               <p className="text-slate-600 text-sm mb-3">
-                Don't waste money on cheap PCs and laptops. They cost more in repairs, frustration, and lost productivity.
+                Don&apos;t waste money on cheap PCs and laptops. They cost more in repairs, frustration, and lost productivity.
               </p>
               <ul className="text-sm text-slate-500 space-y-1">
                 <li>• Minimum 16GB RAM for business</li>
@@ -864,7 +1390,7 @@ export default function SupportPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Don't Overload with Software</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Don&apos;t Overload with Software</h3>
               <p className="text-slate-600 text-sm mb-3">
                 Too many programs slow your PC down. Keep it lean—install only what you need.
               </p>
@@ -872,24 +1398,6 @@ export default function SupportPage() {
                 <li>• Uninstall unused programs</li>
                 <li>• Limit startup applications</li>
                 <li>• One tool per job, not five</li>
-              </ul>
-            </div>
-
-            {/* Browse with Caution */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-teal-500 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Browse with Caution</h3>
-              <p className="text-slate-600 text-sm mb-3">
-                The web is full of threats. Protect yourself with good habits and reliable antivirus software.
-              </p>
-              <ul className="text-sm text-slate-500 space-y-1">
-                <li>• Use Windows Defender or Bitdefender</li>
-                <li>• Avoid sketchy download sites</li>
-                <li>• Look for HTTPS on websites</li>
               </ul>
             </div>
 
@@ -962,7 +1470,7 @@ export default function SupportPage() {
             <div className="bg-card rounded-2xl p-6 shadow-md">
               <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
                 <span className="w-2 h-2 bg-brand-green rounded-full" />
-                How do I get started with <span className="arvintech-brand">arvintech</span>'s AI tools?
+                How do I get started with <span className="arvintech-brand">arvintech&apos;s</span> AI tools?
               </h3>
               <p className="text-foreground/70">
                 Getting started is easy! Simply create an account, choose your preferred AI application 
@@ -973,7 +1481,7 @@ export default function SupportPage() {
             <div className="bg-card rounded-2xl p-6 shadow-md">
               <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
                 <span className="w-2 h-2 bg-brand-blue rounded-full" />
-                What makes <span className="arvintech-brand">arvintech</span>'s AI different?
+                What makes <span className="arvintech-brand">arvintech&apos;s</span> AI different?
               </h3>
               <p className="text-foreground/70">
                 Our AI is specifically designed to amplify human intelligence rather than replace it. 
@@ -1061,7 +1569,7 @@ export default function SupportPage() {
           <div className="bg-card rounded-3xl p-8 md:p-12 shadow-xl text-center">
             <h2 className="text-3xl font-bold mb-4">Still need help?</h2>
             <p className="text-foreground/60 mb-8 max-w-2xl mx-auto">
-              Our support team is here to help you succeed. Get in touch and we'll respond within 24 hours.
+              Our support team is here to help you succeed. Get in touch and we&apos;ll respond within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-green">
