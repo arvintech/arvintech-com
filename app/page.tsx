@@ -1096,148 +1096,147 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Publishing Transformation Section */}
+            {/* AI + Classic Literature Section */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-red/20 rounded-3xl blur-2xl opacity-30" />
-              <div className="relative bg-gradient-to-br from-white via-slate-50 to-white rounded-3xl p-10 border-4 border-slate-200 shadow-2xl overflow-hidden">
-                {/* LEGO studs decoration */}
-                <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-r from-brand-blue to-brand-red flex items-center justify-center gap-6">
-                  <div className="w-4 h-4 bg-blue-300 rounded-full" />
-                  <div className="w-4 h-4 bg-purple-300 rounded-full" />
-                  <div className="w-4 h-4 bg-red-300 rounded-full" />
-                  <div className="w-4 h-4 bg-orange-300 rounded-full" />
-                  <div className="w-4 h-4 bg-yellow-300 rounded-full" />
+              <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl overflow-hidden border-4 border-slate-700 shadow-2xl">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue via-purple-500 to-brand-red" />
+                <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
+                  <div className="absolute top-8 left-8 text-9xl text-white font-serif">"</div>
+                  <div className="absolute bottom-8 right-8 text-9xl text-white font-serif rotate-180">"</div>
                 </div>
-                
-                <div className="pt-6">
-                  {/* Section Header */}
-                  <div className="text-center mb-10">
-                    <div className="inline-flex items-center gap-3 mb-4">
-                      <div className="w-20 h-16 bg-gradient-to-br from-brand-blue to-brand-red rounded-xl flex items-center justify-center shadow-lg relative overflow-visible">
-                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
-                          <div className="w-4 h-4 bg-blue-300 rounded-full shadow-inner border-2 border-blue-400" />
-                          <div className="w-4 h-4 bg-red-300 rounded-full shadow-inner border-2 border-red-400" />
-                        </div>
-                        <svg className="w-10 h-10 text-white mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                      </div>
+
+                <div className="relative z-10 p-10 md:p-12">
+                  {/* Header */}
+                  <div className="flex flex-col md:flex-row md:items-center gap-5 mb-10">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-brand-blue to-purple-600 rounded-2xl flex items-center justify-center shadow-xl">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-                      Transformations of the Publishing Business
-                    </h3>
-                    <p className="text-lg text-slate-600 font-semibold mb-2">IA in Action</p>
-                    <p className="text-slate-600 max-w-3xl mx-auto">
-                      Intelligence Amplification transforms how we engage with literature—from deep exploration to daily practice
-                    </p>
+                    <div>
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-blue/20 border border-brand-blue/30 rounded-full mb-2">
+                        <div className="w-2 h-2 bg-brand-blue rounded-full animate-pulse" />
+                        <span className="text-brand-blue text-xs font-bold uppercase tracking-widest">New Chapter</span>
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+                        An AI Collaboration with{" "}
+                        <span className="bg-gradient-to-r from-brand-blue to-purple-400 bg-clip-text text-transparent">Classic Literature</span>
+                      </h3>
+                    </div>
                   </div>
 
-                  {/* Two Products Grid */}
-                  <div className="grid md:grid-cols-2 gap-8">
-                    {/* Amplified Classics */}
-                    <div className="bg-white rounded-2xl p-6 border-2 border-brand-blue/20 hover:border-brand-blue/50 transition-all shadow-lg">
+                  {/* Intro */}
+                  <p className="text-slate-300 text-base leading-relaxed mb-10 max-w-3xl">
+                    We're launching a new chapter at <span className="arvintech-brand text-white">arvintech</span> — where artificial intelligence meets the enduring works that shaped human thought. What began as the Intelligence Amplifier Series now extends into the library of classical literature itself.
+                  </p>
+
+                  {/* Three Panels */}
+                  <div className="grid md:grid-cols-3 gap-6">
+
+                    {/* Panel 1 - Intelligence Amplifier Series */}
+                    <div className="bg-white/5 rounded-2xl p-6 border border-white/10 flex flex-col">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center shadow-md">
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        <div className="w-9 h-9 bg-brand-blue/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <svg className="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                           </svg>
                         </div>
                         <div>
-                          <h4 className="text-xl font-bold text-slate-900">Amplified Classics</h4>
-                          <p className="text-xs text-brand-blue font-semibold">Deep Literary Exploration</p>
+                          <p className="text-white font-bold text-sm leading-tight">The Intelligence Amplifier Series</p>
+                          <p className="text-slate-500 text-xs">by Arvin Lioanag · Amazon KDP</p>
                         </div>
                       </div>
-                      <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                        Experience timeless literature through Intelligence Amplification—enriched with dynamic annotations, contextual essays, and reflective dialogues.
+                      <p className="text-slate-400 text-xs leading-relaxed mb-4 flex-1">
+                        A collection exploring how AI can amplify human intelligence, spirit, and wisdom. Conceived in January 2025 and in print by March 2025 — demonstrating how quickly ideas can travel from thought to printed book in readers' hands.
                       </p>
-                      <div className="space-y-2 mb-5">
-                        <div className="flex items-start gap-2">
-                          <svg className="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <p className="text-slate-600 text-xs">105+ free books with audio narration</p>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <svg className="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <p className="text-slate-600 text-xs">Dynamic annotations & character analysis</p>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <svg className="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <p className="text-slate-600 text-xs">For educators, students & aficionados</p>
-                        </div>
+                      <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">Published Volumes</p>
+                      <div className="space-y-2">
+                        {[
+                          "The Alarming Rise of Stupidity Amplified — Navigating the Ethical Risks Beyond Intelligence",
+                          "The Amplified Human Spirit",
+                          "San Francisco: The AI Capital of the World — How City College Will Transform a Technology Hub into the World's Intelligence Amplification Capital",
+                        ].map((title, i) => (
+                          <div key={i} className="flex items-start gap-2">
+                            <div className="w-5 h-5 bg-brand-blue/10 border border-brand-blue/30 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <span className="text-brand-blue text-xs font-bold">{i + 1}</span>
+                            </div>
+                            <p className="text-slate-300 text-xs leading-relaxed">{title}</p>
+                          </div>
+                        ))}
                       </div>
-                      <a 
-                        href="https://amplifiedclassics.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-blue text-white rounded-lg font-semibold hover:bg-blue-600 transition-colors text-sm shadow-md"
-                      >
-                        Explore Library
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
                     </div>
 
-                    {/* One Classic Daily */}
-                    <div className="bg-white rounded-2xl p-6 border-2 border-brand-red/20 hover:border-brand-red/50 transition-all shadow-lg">
+                    {/* Panel 2 - Amplified Classics */}
+                    <div className="bg-white/5 rounded-2xl p-6 border border-white/10 flex flex-col">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-brand-red rounded-lg flex items-center justify-center shadow-md">
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        <div className="w-9 h-9 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-white font-bold text-sm">Amplified Classics</p>
+                          <a href="https://amplifiedclassics.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 text-xs hover:text-purple-300 transition-colors">amplifiedclassics.com ↗</a>
+                        </div>
+                      </div>
+                      <p className="text-slate-400 text-xs leading-relaxed mb-4 flex-1">
+                        A dedicated website featuring 104 works of classical literature — each dissected, condensed, and reimagined through AI collaboration. Also produces original books in the Intelligence Amplifier tradition.
+                      </p>
+                      <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">AC Originals</p>
+                      <div className="space-y-1.5">
+                        {[
+                          "Ancient Classics Paradox",
+                          "The Paradox of Wealth",
+                          "The Lit of Love",
+                          "You Are Not Lost",
+                          "The Last Chapter First",
+                        ].map((title, i) => (
+                          <div key={i} className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 bg-purple-400 rounded-full flex-shrink-0" />
+                            <p className="text-slate-300 text-xs">{title}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Panel 3 - One Daily Classic */}
+                    <div className="bg-white/5 rounded-2xl p-6 border border-white/10 flex flex-col">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-9 h-9 bg-brand-red/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <svg className="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                           </svg>
                         </div>
                         <div>
                           <div className="flex items-center gap-2">
-                            <h4 className="text-xl font-bold text-slate-900">One Classic Daily</h4>
-                            <span className="px-2 py-0.5 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">LIVE</span>
+                            <p className="text-white font-bold text-sm">One Daily Classic</p>
+                            <span className="px-1.5 py-0.5 bg-brand-red/20 text-brand-red text-xs font-bold rounded">LIVE</span>
                           </div>
-                          <p className="text-xs text-brand-red font-semibold">Daily Literary Practice</p>
+                          <a href="https://oneclassicdaily.com" target="_blank" rel="noopener noreferrer" className="text-red-400 text-xs hover:text-red-300 transition-colors">oneclassicdaily.com ↗</a>
                         </div>
                       </div>
-                      <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                        One chapter a day from the greatest books ever written—amplified with context, insights, and practical skills that land in your life.
+                      <p className="text-slate-400 text-xs leading-relaxed mb-4 flex-1">
+                        A pocket-sized web experience — a Classic Literature library designed for your phone.
                       </p>
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-start gap-2">
-                          <div className="w-5 h-5 bg-brand-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-brand-red font-bold text-xs">1</span>
+                      <div className="space-y-2">
+                        {[
+                          { label: "AI-guided discussions" },
+                          { label: "English narration" },
+                          { label: "Spanish narration", note: "in development" },
+                          { label: "Print editions available via Amazon KDP" },
+                        ].map((item, i) => (
+                          <div key={i} className="flex items-start gap-2">
+                            <svg className="w-4 h-4 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <p className="text-slate-300 text-xs">
+                              {item.label}
+                              {item.note && <span className="text-slate-500 ml-1">({item.note})</span>}
+                            </p>
                           </div>
-                          <p className="text-slate-600 text-xs"><strong>One chapter a day</strong> — Build a reading habit</p>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <div className="w-5 h-5 bg-brand-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-brand-red font-bold text-xs">2</span>
-                          </div>
-                          <p className="text-slate-600 text-xs"><strong>Amplified context</strong> — Character maps & insights</p>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <div className="w-5 h-5 bg-brand-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-brand-red font-bold text-xs">3</span>
-                          </div>
-                          <p className="text-slate-600 text-xs"><strong>Practical skills</strong> — Literature as a tool</p>
-                        </div>
+                        ))}
                       </div>
-                      <div className="flex flex-wrap gap-2 mb-5">
-                        <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Communication</span>
-                        <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Emotional Intelligence</span>
-                        <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Decision Making</span>
-                      </div>
-                      <a 
-                        href="https://oneclassicdaily.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-red text-white rounded-lg font-semibold hover:bg-red-600 transition-colors text-sm shadow-md"
-                      >
-                        Read Today
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
                     </div>
                   </div>
                 </div>
