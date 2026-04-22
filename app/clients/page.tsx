@@ -91,9 +91,37 @@ const clients = [
     logo: "/clients/adonais-mercy-house-logo.png",
     hasLogo: true,
     color: "brand-yellow",
-    website: "https://v0-adonais-mercy-house.vercel.app"
+    website: "https://adonaismercyhouse.org"
+  },
+  {
+    id: "amplified-classics",
+    name: "Amplified Classics",
+    industry: "Music & Culture",
+    description: "A modern home for timeless music. Celebrating classic recordings, artists, and the stories behind the songs that endure.",
+    logo: "",
+    color: "brand-blue",
+    website: "https://amplifiedclassics.com"
+  },
+  {
+    id: "one-daily-classic",
+    name: "One Daily Classic",
+    industry: "Music & Media",
+    description: "One great classic every day. A curated daily experience for lovers of enduring music, delivered in a clean, fast Next.js site.",
+    logo: "",
+    color: "brand-green",
+    website: "https://onedailyclassic.com"
+  },
+  {
+    id: "intelligence-amplifier",
+    name: "Intelligence Amplifier",
+    industry: "AI & Technology",
+    description: "Tools, insights, and frameworks for amplifying human intelligence with AI. Practical guides for builders and thinkers.",
+    logo: "",
+    color: "brand-blue",
+    website: "https://intelligenceamplifier.org"
   }
 ]
+
 
 export default function ClientsPage() {
   return (

@@ -108,6 +108,26 @@ export default function HomePage() {
             Secure, manage, and modernize your business infrastructure with expert IT support and AI-powered automation.
           </p>
 
+          {/* How this site is built: Next.js, Cursor, Vercel */}
+          <div
+            className={`max-w-3xl mx-auto text-left space-y-4 md:space-y-5 mb-10 transition-all duration-1000 delay-325 ${
+              isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <h2 className="text-xl md:text-2xl font-semibold text-white text-center">
+              Web pages created in Next.js
+            </h2>
+            <p className="text-sm md:text-base text-white/85 leading-relaxed">
+              {`The site isn't a WordPress-style website where someone logs in to a dashboard and types posts.`}
+            </p>
+            <p className="text-sm md:text-base text-white/85 leading-relaxed">
+              {`It's built in Cursor — an AI-assisted editor where I work on the site's content and design directly, with the AI helping write the underlying code. When I'm ready to publish, the changes push to Vercel, which rebuilds the site and puts the update live worldwide in seconds.`}
+            </p>
+            <p className="text-sm md:text-base text-white/85 leading-relaxed">
+              {`The result is a site that's faster, more secure, and more flexible than a traditional CMS, because there's no database or admin panel exposed to the internet — the live site is essentially a pre-built, high-performance version of the source files.`}
+            </p>
+          </div>
+
           {/* Value Props */}
           <div 
             className={`grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10 transition-all duration-1000 delay-350 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
@@ -354,7 +374,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Mission Pages Studio Section */}
+      {/* Web development breakthrough — Next.js & React */}
       <section className="py-20 px-6 bg-gradient-to-br from-brand-blue/10 via-white to-brand-green/10 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-20 left-10 w-16 h-16 bg-brand-blue/20 rounded-xl rotate-12 animate-float" />
@@ -371,21 +391,32 @@ export default function HomePage() {
           
           <h2 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-brand-blue via-brand-green to-brand-blue bg-clip-text text-transparent">
-              Mission Pages Studio
+              Web Development Breakthrough
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Full-service web development that amplifies your mission. 
-            Built on modern technology with powerful features for growth.
+          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-4">
+            with Next.js and React
+          </p>
+          <p className="mb-8 max-w-3xl mx-auto">
+            <Link
+              href="/mission-web-studio"
+              className="inline-flex items-center gap-1.5 text-lg font-semibold text-brand-blue hover:text-brand-green transition-colors underline-offset-4 hover:underline"
+            >
+              Mission Pages Studio
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <span className="text-slate-500 text-base font-normal"> — how we build mission-focused sites</span>
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <span className="px-4 py-2 bg-brand-blue/10 text-brand-blue rounded-full text-sm font-medium">Next.js</span>
-            <span className="px-4 py-2 bg-brand-green/10 text-brand-green rounded-full text-sm font-medium">SEO Optimized</span>
+            <span className="px-4 py-2 bg-brand-green/10 text-brand-green rounded-full text-sm font-medium">React</span>
             <span className="px-4 py-2 bg-brand-yellow/10 text-yellow-700 rounded-full text-sm font-medium">Automation</span>
-            <span className="px-4 py-2 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium">Customer Portal</span>
+            <span className="px-4 py-2 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium">SEO Optimized</span>
           </div>
-          <Link href="/mission-web-studio" className="btn-green text-lg px-8 py-4 inline-block">
-            Explore Mission Pages Studio
+          <Link href="/how-we-build" className="btn-green text-lg px-8 py-4 inline-block">
+            Learn more
           </Link>
         </div>
       </section>

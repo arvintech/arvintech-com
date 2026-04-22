@@ -4,6 +4,116 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 
+function SitePreview({ url, name }: { url: string; name: string }) {
+  const [loaded, setLoaded] = useState(false)
+  const [errored, setErrored] = useState(false)
+  const src = `https://s0.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=800&h=500`
+
+  return (
+    <div className="relative w-full h-48 bg-slate-800 overflow-hidden flex-shrink-0">
+      {/* skeleton while loading */}
+      {!loaded && !errored && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 animate-pulse">
+          <div className="w-10 h-10 rounded-xl bg-slate-700 flex items-center justify-center">
+            <svg className="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <span className="text-slate-500 text-xs">Loading preview…</span>
+        </div>
+      )}
+      {/* fallback when errored */}
+      {errored && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
+          <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span className="text-slate-500 text-xs">{name}</span>
+        </div>
+      )}
+      {/* actual screenshot */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={`${name} website preview`}
+        className={`w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${loaded ? "opacity-100" : "opacity-0"}`}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        onError={() => setErrored(true)}
+      />
+      {/* gradient fade at bottom */}
+      <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-slate-900/80 to-transparent pointer-events-none" />
+    </div>
+  )
+}
+
+const liveSites = [
+  {
+    name: "Adonais Mercy House",
+    url: "https://adonaismercyhouse.org",
+    display: "Adonaismercyhouse.org",
+    tagline: "Life-saving care for children with cancer",
+    desc: "A mission-driven non-profit site serving impoverished children with cancer in the Philippines. Secure, fast, and zero admin exposure.",
+    accent: "from-amber-500 to-orange-800",
+    ring: "ring-amber-400/40",
+    badge: "bg-amber-500/20 text-amber-200 border-amber-500/30",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Amplified Classics",
+    url: "https://amplifiedclassics.com",
+    display: "AmplifiedClassics.com",
+    tagline: "Free classic literature guides with audio",
+    desc: "Practical insights from Austen, Dostoevsky, Gatsby, and more — with full audio narration. Classic books stripped of the fog, turned into skills you can actually use.",
+    accent: "from-blue-600 to-blue-900",
+    ring: "ring-blue-400/40",
+    badge: "bg-blue-500/20 text-blue-200 border-blue-500/30",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+  },
+  {
+    name: "One Daily Classic",
+    url: "https://onedailyclassic.com",
+    display: "OneDailyClassic.com",
+    tagline: "One great classic, every day",
+    desc: "A curated daily music experience. Each day surfaces one enduring piece — served from Vercel's edge for instant load worldwide.",
+    accent: "from-violet-600 to-violet-950",
+    ring: "ring-violet-400/40",
+    badge: "bg-violet-500/20 text-violet-200 border-violet-500/30",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Intelligence Amplifier",
+    url: "https://intelligenceamplifier.org",
+    display: "IntelligenceAmplifier.org",
+    tagline: "Amplifying human intelligence with AI",
+    desc: "Tools, guides, and frameworks for builders and thinkers navigating the AI era. AI-ready Next.js — built in Cursor, deployed on Vercel.",
+    accent: "from-emerald-600 to-emerald-950",
+    ring: "ring-emerald-400/40",
+    badge: "bg-emerald-500/20 text-emerald-200 border-emerald-500/30",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    ),
+  },
+]
+
 export default function MissionWebStudioPage() {
   const [hoveredService, setHoveredService] = useState<string | null>(null)
 
@@ -65,6 +175,84 @@ export default function MissionWebStudioPage() {
             <span className="px-4 py-2 bg-brand-yellow/10 text-yellow-700 rounded-full text-sm font-medium">Automation</span>
             <span className="px-4 py-2 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium">Customer Portal</span>
           </div>
+        </div>
+      </section>
+
+      {/* Live Sites Showcase */}
+      <section className="py-20 px-6 bg-slate-900">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-slate-300 text-xs font-bold uppercase tracking-wider mb-4">
+              <svg className="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              Built with Next.js · Hosted on Vercel
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Sites We&apos;ve Built
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              Live, production Next.js sites developed in Cursor and deployed on Vercel — fast, secure, and ready for whatever comes next.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            {liveSites.map((site) => (
+              <a
+                key={site.url}
+                href={site.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group relative rounded-2xl bg-gradient-to-br ${site.accent} p-px hover:ring-2 ${site.ring} transition-all`}
+              >
+                <div className="rounded-2xl bg-slate-900/60 backdrop-blur-sm overflow-hidden h-full flex flex-col">
+                  {/* Screenshot preview */}
+                  <div className="relative flex-shrink-0">
+                    <SitePreview url={site.url} name={site.name} />
+                    {/* Live badge */}
+                    <span className={`absolute top-3 right-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full border text-[11px] font-semibold uppercase tracking-wide backdrop-blur-sm z-10 ${site.badge}`}>
+                      <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+                      Live
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 flex flex-col gap-3 flex-1">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${site.accent} flex items-center justify-center text-white shadow-md flex-shrink-0`}>
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          {site.icon.props.children}
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-slate-400 text-[11px] font-semibold uppercase tracking-wider leading-none mb-0.5">{site.tagline}</p>
+                        <h3 className="text-lg font-bold text-white group-hover:text-slate-100 transition-colors leading-tight">
+                          {site.name}
+                        </h3>
+                      </div>
+                    </div>
+
+                    <p className="text-slate-400 text-sm leading-relaxed flex-1">{site.desc}</p>
+
+                    <div className="flex items-center gap-1.5 text-slate-500 group-hover:text-white transition-colors text-sm font-medium pt-1 border-t border-white/5">
+                      <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      {site.display}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <p className="text-center text-slate-500 text-sm mt-10">
+            Curious how these were built?{" "}
+            <a href="/how-we-build" className="text-emerald-400 hover:text-emerald-300 font-medium underline underline-offset-2 transition-colors">
+              See how we build →
+            </a>
+          </p>
         </div>
       </section>
 
@@ -683,54 +871,6 @@ export default function Dashboard() {
                 <div className="flex items-center gap-4 p-3 bg-white rounded-lg">
                   <div className="text-3xl font-bold text-brand-yellow">∞</div>
                   <div className="text-sm text-slate-600">Scales infinitely with serverless</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* WordPress Comparison */}
-          <div className="bg-slate-900 rounded-3xl p-8 md:p-12 text-white mb-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <span className="inline-block px-3 py-1 bg-brand-yellow/20 text-brand-yellow text-sm font-semibold rounded-full mb-4">HONEST COMPARISON</span>
-                <h3 className="text-3xl font-bold mb-4">What About WordPress?</h3>
-                <p className="text-slate-300 mb-6">
-                  WordPress powers 43% of the web—and for good reason. It's proven, familiar, and has a massive 
-                  ecosystem. <strong className="text-white">We still build WordPress sites when it makes sense.</strong>
-                </p>
-                <p className="text-slate-300">
-                  But for businesses that need <strong className="text-brand-green">speed, security, and AI-ready architecture</strong>, 
-                  Next.js is the clear choice. Here's why:
-                </p>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
-                  <span className="text-slate-300">Security Vulnerabilities</span>
-                  <div className="flex gap-4">
-                    <span className="text-red-400 font-semibold">WordPress: High</span>
-                    <span className="text-brand-green font-semibold">Next.js: Low</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
-                  <span className="text-slate-300">Page Load Speed</span>
-                  <div className="flex gap-4">
-                    <span className="text-yellow-400 font-semibold">WordPress: 2-4s</span>
-                    <span className="text-brand-green font-semibold">Next.js: &lt;1s</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
-                  <span className="text-slate-300">Hosting Costs</span>
-                  <div className="flex gap-4">
-                    <span className="text-yellow-400 font-semibold">WordPress: $$</span>
-                    <span className="text-brand-green font-semibold">Next.js: $</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
-                  <span className="text-slate-300">AI Integration</span>
-                  <div className="flex gap-4">
-                    <span className="text-red-400 font-semibold">WordPress: Limited</span>
-                    <span className="text-brand-green font-semibold">Next.js: Native</span>
-                  </div>
                 </div>
               </div>
             </div>
