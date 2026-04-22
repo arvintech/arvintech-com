@@ -109,7 +109,7 @@ const clients = [
     description: "One great classic every day. A curated daily experience for lovers of enduring music, delivered in a clean, fast Next.js site.",
     logo: "",
     color: "brand-green",
-    website: "https://onedailyclassic.com"
+    website: "https://oneclassicdaily.com"
   },
   {
     id: "intelligence-amplifier",

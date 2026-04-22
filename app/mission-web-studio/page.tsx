@@ -82,8 +82,8 @@ const liveSites = [
   },
   {
     name: "One Daily Classic",
-    url: "https://onedailyclassic.com",
-    display: "OneDailyClassic.com",
+    url: "https://oneclassicdaily.com",
+    display: "OneClassicDaily.com",
     tagline: "One great classic, every day",
     desc: "A curated daily music experience. Each day surfaces one enduring piece — served from Vercel's edge for instant load worldwide.",
     accent: "from-violet-600 to-violet-950",
@@ -326,10 +326,10 @@ export default function MissionWebStudioPage() {
                 </svg>
               </div>
               
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Non-Profit & Faith</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Organizations & NGOs</h3>
               <p className="text-slate-600 mb-6">
-                Empowering churches, charities, and community organizations with beautiful, 
-                purpose-driven websites that inspire action and build community.
+                Purpose-built websites for non-profits, advocacy groups, and mission-driven organizations
+                that need to communicate impact, mobilize supporters, and operate without a large technical team.
               </p>
               
               <ul className="space-y-3 mb-8">
@@ -339,7 +339,7 @@ export default function MissionWebStudioPage() {
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <div className="w-2 h-2 bg-brand-green rounded-full" />
-                  Event & Volunteer Management
+                  Volunteer & Event Management
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <div className="w-2 h-2 bg-brand-green rounded-full" />
@@ -347,7 +347,7 @@ export default function MissionWebStudioPage() {
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <div className="w-2 h-2 bg-brand-green rounded-full" />
-                  Sermon & Media Libraries
+                  Impact Reports & Media Libraries
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <div className="w-2 h-2 bg-brand-green rounded-full" />
@@ -356,9 +356,11 @@ export default function MissionWebStudioPage() {
               </ul>
 
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Churches</span>
-                <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Charities</span>
+                <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Non-Profits</span>
                 <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">NGOs</span>
+                <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Advocacy Groups</span>
+                <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Chambers of Commerce</span>
+                <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Community Church</span>
               </div>
             </div>
 
@@ -377,10 +379,10 @@ export default function MissionWebStudioPage() {
                 </svg>
               </div>
               
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Restaurant & Events</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Hospitality Services</h3>
               <p className="text-slate-600 mb-6">
-                Stunning digital experiences for restaurants, caterers, and event venues 
-                that showcase your offerings and drive bookings.
+                Stunning digital experiences for restaurants, caterers, event venues, and small hotel franchises
+                that showcase your offerings, drive bookings, and keep guests coming back.
               </p>
               
               <ul className="space-y-3 mb-8">
@@ -404,12 +406,18 @@ export default function MissionWebStudioPage() {
                   <div className="w-2 h-2 bg-brand-red rounded-full" />
                   Photo & Video Galleries
                 </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <div className="w-2 h-2 bg-brand-red rounded-full" />
+                  Multi-Location Site Management
+                </li>
               </ul>
 
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-brand-red/10 text-brand-red text-sm rounded-full">Restaurants</span>
                 <span className="px-3 py-1 bg-brand-red/10 text-brand-red text-sm rounded-full">Catering</span>
                 <span className="px-3 py-1 bg-brand-red/10 text-brand-red text-sm rounded-full">Venues</span>
+                <span className="px-3 py-1 bg-brand-red/10 text-brand-red text-sm rounded-full">Multi-Site Fast Food</span>
+                <span className="px-3 py-1 bg-brand-red/10 text-brand-red text-sm rounded-full">Franchised Hotels</span>
               </div>
             </div>
 
@@ -430,8 +438,9 @@ export default function MissionWebStudioPage() {
               
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Professional Services</h3>
               <p className="text-slate-600 mb-6">
-                Sophisticated websites for accountants, lawyers, engineers, and architects 
-                that establish credibility and generate leads.
+                Sophisticated websites for accountants, lawyers, engineers, and architects
+                that establish credibility, generate leads, and deliver AI agent-driven
+                client relationship support services.
               </p>
               
               <ul className="space-y-3 mb-8">
@@ -461,6 +470,7 @@ export default function MissionWebStudioPage() {
                 <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Lawyers</span>
                 <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Accountants</span>
                 <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Engineers</span>
+                <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Consulting Professionals</span>
               </div>
             </div>
           </div>
@@ -474,101 +484,155 @@ export default function MissionWebStudioPage() {
             <span className="inline-block px-4 py-2 bg-brand-green/10 text-brand-green rounded-full text-sm font-semibold mb-4">
               Growth Playbook
             </span>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Comprehensive Marketing Strategy</h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Business owners get a clear plan that connects brand, content, and ads to revenue goals—with transparent
-              investment options.
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-balance">
+              Your Website Is the Starting Point —<br className="hidden md:block" /> Not the Finish Line
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              A great website without a strategy is a brochure nobody sees. We build your online presence end-to-end:
+              the site, the traffic plan, the conversion path, and the follow-up — so every channel works together toward measurable growth.
             </p>
           </div>
 
+          {/* Strategy pillars — 4-column icon grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+            {[
+              {
+                color: "brand-green",
+                bg: "bg-brand-green/10",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                ),
+                title: "Search & Visibility",
+                body: "Technical SEO, Google Business Profile, local citations, and AI-optimized content so you're found before your competitors.",
+              },
+              {
+                color: "brand-blue",
+                bg: "bg-brand-blue/10",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                ),
+                title: "Paid & Social Ads",
+                body: "Google Search, Meta, and YouTube campaigns built around your ideal customer — targeted, trackable, and adjusted monthly.",
+              },
+              {
+                color: "brand-yellow",
+                bg: "bg-brand-yellow/10",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                ),
+                title: "Email & SMS Nurture",
+                body: "Automated sequences that follow up, re-engage, and convert — turning cold leads into paying customers without manual effort.",
+              },
+              {
+                color: "brand-red",
+                bg: "bg-brand-red/10",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                ),
+                title: "AI-Powered Content",
+                body: "Blog posts, landing pages, and social content produced with AI assistance — consistent brand voice, published on a schedule that builds authority.",
+              },
+            ].map((p) => (
+              <div key={p.title} className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                <div className={`w-11 h-11 ${p.bg} rounded-xl flex items-center justify-center mb-4`}>
+                  <svg className={`w-6 h-6 text-${p.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {p.icon}
+                  </svg>
+                </div>
+                <h4 className="font-bold text-slate-900 mb-1">{p.title}</h4>
+                <p className="text-sm text-slate-600 leading-relaxed">{p.body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Goals + Snapshot */}
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Goals We Target</h3>
-              <ul className="space-y-3 text-slate-700">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-green rounded-full mt-2" />
-                  <div>
-                    <p className="font-semibold text-slate-900">Consistent lead flow</p>
-                    <p className="text-sm text-slate-600">SEO + paid search to capture high-intent prospects.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-green rounded-full mt-2" />
-                  <div>
-                    <p className="font-semibold text-slate-900">Brand authority</p>
-                    <p className="text-sm text-slate-600">Content, case studies, and social proof to win trust.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-green rounded-full mt-2" />
-                  <div>
-                    <p className="font-semibold text-slate-900">Customer lifetime value</p>
-                    <p className="text-sm text-slate-600">Email/SMS nurture and retargeting to grow repeat revenue.</p>
-                  </div>
-                </li>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">What We Optimise For</h3>
+              <ul className="space-y-4 text-slate-700">
+                {[
+                  { title: "Consistent lead flow", sub: "High-intent visitors from SEO, paid search, and local discovery — delivered to a site built to convert." },
+                  { title: "Brand authority & trust", sub: "Case studies, reviews, AI-assisted content, and social proof that make you the obvious choice." },
+                  { title: "Customer lifetime value", sub: "Automated email/SMS sequences and retargeting campaigns that turn first-time buyers into repeat customers." },
+                  { title: "AI agent-driven follow-up", sub: "Chatbots and AI agents that qualify leads, answer questions, and book appointments 24/7 — without extra headcount." },
+                ].map((item) => (
+                  <li key={item.title} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <div>
+                      <p className="font-semibold text-slate-900">{item.title}</p>
+                      <p className="text-sm text-slate-600">{item.sub}</p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Strategy Snapshot</h3>
-              <div className="space-y-3 text-slate-700">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2" />
-                  <div>
-                    <p className="font-semibold text-slate-900">3-6 month roadmap</p>
-                    <p className="text-sm text-slate-600">Prioritized sprints across web, content, SEO, and ads.</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">How We Work Together</h3>
+              <div className="space-y-4">
+                {[
+                  { color: "bg-brand-blue", title: "90-day action plan", sub: "We prioritise the highest-impact moves first — website, SEO foundation, and one paid channel — then expand." },
+                  { color: "bg-brand-green", title: "Full-channel mix", sub: "SEO · Google Ads · Meta Ads · Email/SMS · AI content · Retargeting — coordinated, not siloed." },
+                  { color: "bg-brand-yellow", title: "Transparent measurement", sub: "Monthly reports tracking cost-per-lead, ROAS, conversion rate, and pipeline — in plain language, not agency jargon." },
+                  { color: "bg-brand-red", title: "No lock-in contracts", sub: "Month-to-month after the initial launch sprint. You own all assets, accounts, and data — always." },
+                ].map((item) => (
+                  <div key={item.title} className="flex items-start gap-3">
+                    <div className={`w-2 h-2 ${item.color} rounded-full mt-2 flex-shrink-0`} />
+                    <div>
+                      <p className="font-semibold text-slate-900">{item.title}</p>
+                      <p className="text-sm text-slate-600">{item.sub}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2" />
-                  <div>
-                    <p className="font-semibold text-slate-900">Channel mix</p>
-                    <p className="text-sm text-slate-600">SEO, Google/Meta ads, email/SMS, and conversion-focused landing pages.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2" />
-                  <div>
-                    <p className="font-semibold text-slate-900">Measurement</p>
-                    <p className="text-sm text-slate-600">Dashboards that track CAC, CPL, ROAS, and lead-to-close rates.</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
 
+          {/* Pricing tiers */}
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-brand-blue/10 to-white rounded-2xl p-6 border border-brand-blue/20">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">Essentials Plan</h4>
-              <p className="text-sm text-slate-600 mb-4">Foundational marketing for early-stage or local businesses.</p>
-              <ul className="space-y-2 text-sm text-slate-700 mb-4">
-                <li>• SEO setup, on-page fixes</li>
-                <li>• One campaign (Google or Meta)</li>
-                <li>• Monthly reporting</li>
+              <h4 className="text-xl font-bold text-slate-900 mb-1">Essentials</h4>
+              <p className="text-sm text-slate-500 mb-4">Foundational online presence for local or early-stage businesses.</p>
+              <ul className="space-y-2 text-sm text-slate-700 mb-5">
+                <li>• Next.js website setup & SEO foundation</li>
+                <li>• Google Business Profile optimisation</li>
+                <li>• One paid channel (Google or Meta)</li>
+                <li>• Monthly performance report</li>
               </ul>
-              <p className="text-lg font-semibold text-brand-blue">Starting at $2k/mo + ad spend</p>
+              <p className="text-base font-semibold text-brand-blue">From $2k / mo + ad spend</p>
             </div>
 
-            <div className="bg-gradient-to-br from-brand-green/10 to-white rounded-2xl p-6 border border-brand-green/20 shadow-md">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">Growth Plan</h4>
-              <p className="text-sm text-slate-600 mb-4">Multi-channel growth for teams ready to scale lead volume.</p>
-              <ul className="space-y-2 text-sm text-slate-700 mb-4">
-                <li>• SEO + Google + Meta ads</li>
+            <div className="relative bg-gradient-to-br from-brand-green/10 to-white rounded-2xl p-6 border-2 border-brand-green/40 shadow-lg">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-brand-green text-white text-xs font-bold rounded-full uppercase tracking-wide">Most Popular</span>
+              <h4 className="text-xl font-bold text-slate-900 mb-1">Growth</h4>
+              <p className="text-sm text-slate-500 mb-4">Multi-channel growth for businesses ready to scale leads and revenue.</p>
+              <ul className="space-y-2 text-sm text-slate-700 mb-5">
+                <li>• SEO + Google + Meta campaigns</li>
                 <li>• Landing page CRO testing</li>
-                <li>• Email/SMS nurture & retargeting</li>
+                <li>• Email & SMS automation</li>
+                <li>• AI-assisted content publishing</li>
+                <li>• Retargeting & lookalike audiences</li>
               </ul>
-              <p className="text-lg font-semibold text-brand-green">Starting at $4k/mo + ad spend</p>
+              <p className="text-base font-semibold text-brand-green">From $4k / mo + ad spend</p>
             </div>
 
             <div className="bg-gradient-to-br from-brand-yellow/10 to-white rounded-2xl p-6 border border-brand-yellow/30">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">Performance Partner</h4>
-              <p className="text-sm text-slate-600 mb-4">Conversion-led programs with shared upside.</p>
-              <ul className="space-y-2 text-sm text-slate-700 mb-4">
-                <li>• Full-funnel ownership</li>
-                <li>• Creative + media + analytics</li>
-                <li>• Hybrid retainer + performance incentives</li>
+              <h4 className="text-xl font-bold text-slate-900 mb-1">Performance Partner</h4>
+              <p className="text-sm text-slate-500 mb-4">Full-funnel ownership with AI agents and shared-upside incentives.</p>
+              <ul className="space-y-2 text-sm text-slate-700 mb-5">
+                <li>• Everything in Growth</li>
+                <li>• AI chatbot & lead-qualification agent</li>
+                <li>• Creative production & A/B testing</li>
+                <li>• CRM integration & pipeline tracking</li>
+                <li>• Hybrid retainer + performance fee</li>
               </ul>
-              <p className="text-lg font-semibold text-brand-yellow">Custom pricing based on goals</p>
+              <p className="text-base font-semibold text-brand-yellow">Custom — scoped to your goals</p>
             </div>
           </div>
         </div>
