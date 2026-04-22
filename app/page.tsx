@@ -780,313 +780,306 @@ export default function HomePage() {
 
           {/* Building Blocks Grid - Stacked Layout */}
           <div className="grid gap-8">
-            {/* Row 1 - Featured Block: Intelligence Amplifier */}
+            {/* Row 1 - AI Readiness White Paper Preview */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-green via-brand-blue to-brand-green rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
-              <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-10 border border-slate-700/50 overflow-hidden">
-                {/* Decorative studs */}
-                <div className="absolute top-4 left-4 flex gap-3">
-                  <div className="w-4 h-4 bg-brand-green rounded-full shadow-lg" />
-                  <div className="w-4 h-4 bg-brand-green rounded-full shadow-lg" />
-                  <div className="w-4 h-4 bg-brand-green rounded-full shadow-lg" />
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-slate-700 to-brand-blue rounded-3xl blur-xl opacity-10 group-hover:opacity-20 transition-opacity" />
+              <div className="relative bg-white rounded-3xl border border-slate-200 shadow-2xl overflow-hidden">
+                {/* Top publication bar */}
+                <div className="bg-slate-900 px-10 py-4 flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-widest">
+                  <span className="text-brand-blue">ArvinTech Insights</span>
+                  <span className="text-slate-600">·</span>
+                  <span className="text-slate-400">White Paper Series</span>
+                  <span className="text-slate-600">·</span>
+                  <span className="text-slate-400">Volume 1, 2026</span>
+                  <span className="ml-auto text-brand-green">30 min read</span>
                 </div>
-                <div className="absolute top-4 right-4 flex gap-3">
-                  <div className="w-4 h-4 bg-brand-green rounded-full shadow-lg" />
-                  <div className="w-4 h-4 bg-brand-green rounded-full shadow-lg" />
-                  <div className="w-4 h-4 bg-brand-green rounded-full shadow-lg" />
-                </div>
-                
-                <div className="grid lg:grid-cols-2 gap-8 items-center pt-6">
-                  <div>
-                    <div className="flex items-center gap-3 mb-4">
-                      {/* LEGO Brick Icon - Brain/Mind */}
-                      <div className="w-20 h-16 bg-brand-green rounded-xl flex flex-col items-center justify-center shadow-lg shadow-brand-green/20 relative overflow-visible">
-                        {/* Studs on top */}
-                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
-                          <div className="w-4 h-4 bg-green-400 rounded-full shadow-inner border-2 border-green-500" />
-                          <div className="w-4 h-4 bg-green-400 rounded-full shadow-inner border-2 border-green-500" />
-                        </div>
-                        {/* Brain/lightbulb symbol */}
-                        <div className="mt-2 relative">
-                          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                            <div className="w-5 h-5 bg-white/90 rounded-full animate-pulse" />
-                          </div>
-                          {/* Rays */}
-                          <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-0.5 h-2 bg-white/60" />
-                          <div className="absolute top-0 -left-1 w-2 h-0.5 bg-white/60 rotate-45" />
-                          <div className="absolute top-0 -right-1 w-2 h-0.5 bg-white/60 -rotate-45" />
-                        </div>
-                      </div>
-                      <div className="px-4 py-1 bg-brand-green/20 rounded-full">
-                        <span className="text-brand-green text-sm font-semibold">FLAGSHIP</span>
-                      </div>
-                    </div>
-                    <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Intelligence Amplifier™</h3>
-                    
-                    <div className="bg-white/5 rounded-xl p-4 mb-6 border border-white/10">
-                      <p className="text-slate-200 text-base leading-relaxed">
-                        The Intelligence Amplifier (IA) is not merely an invention — it is an <strong className="text-brand-green">evolution in how we learn, create, and perceive</strong>.
-                      </p>
-                    </div>
 
-                    <p className="text-slate-300 text-lg mb-5 leading-relaxed">
-                      Where Artificial Intelligence (AI) aims to <span className="text-red-400 line-through">replace</span> human effort, 
-                      Intelligence Amplification seeks to <strong className="text-brand-green">expand it</strong>.
+                <div className="p-10 md:p-14">
+                  {/* Header */}
+                  <div className="max-w-4xl mb-12">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-blue/10 border border-brand-blue/20 rounded-full mb-5">
+                      <div className="w-1.5 h-1.5 bg-brand-blue rounded-full animate-pulse" />
+                      <span className="text-brand-blue text-xs font-bold uppercase tracking-widest">Strategic Study</span>
+                    </div>
+                    <h3 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-5 leading-[1.05]">
+                      The AI Readiness <span className="text-brand-blue">Imperative</span>
+                    </h3>
+                    <p className="text-xl md:text-2xl text-slate-600 font-light leading-snug">
+                      A strategic framework for small and midsize businesses to move from observation to operational AI advantage in 2026.
                     </p>
-                    
-                    <div className="bg-gradient-to-r from-brand-green/20 to-brand-blue/20 rounded-xl p-5 mb-6 border-l-4 border-brand-green">
-                      <p className="text-white text-xl font-semibold italic">
-                        "What happens when intelligence is not substituted, but multiplied?"
-                      </p>
-                    </div>
+                  </div>
 
-                    <h4 className="text-white text-lg font-bold mb-4">Five Methods of Amplification</h4>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
-                        <div className="w-6 h-6 bg-brand-green rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-xs font-bold">1</span>
-                        </div>
-                        <div>
-                          <p className="text-white font-bold text-sm mb-1">Direct Amplification</p>
-                          <p className="text-slate-400 text-xs">The act of co-creation — writing, thinking, or designing with an AI partner in real time. Rapid feedback loops where human intuition meets machine precision.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
-                        <div className="w-6 h-6 bg-brand-blue rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-xs font-bold">2</span>
-                        </div>
-                        <div>
-                          <p className="text-white font-bold text-sm mb-1">Selective Amplification</p>
-                          <p className="text-slate-400 text-xs">Curation and discernment. Not every generated idea deserves preservation — amplification demands judgment. <em>Amplification is not abundance — it is refinement.</em></p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
-                        <div className="w-6 h-6 bg-brand-yellow rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-xs font-bold">3</span>
-                        </div>
-                        <div>
-                          <p className="text-white font-bold text-sm mb-1">Shaped Amplification</p>
-                          <p className="text-slate-400 text-xs">Contextual framing — applying ethical, emotional, or aesthetic boundaries that shape how intelligence operates. Where human values sculpt machine outputs.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
-                        <div className="w-6 h-6 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-xs font-bold">4</span>
-                        </div>
-                        <div>
-                          <p className="text-white font-bold text-sm mb-1">Reflective Amplification</p>
-                          <p className="text-slate-400 text-xs">Every amplified act must lead to reflection — a feedback mirror that teaches the human as much as it instructs the machine. <em>Amplification without reflection is automation.</em></p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors">
-                        <div className="w-6 h-6 bg-teal-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-xs font-bold">5</span>
-                        </div>
-                        <div>
-                          <p className="text-white font-bold text-sm mb-1">Collective Amplification</p>
-                          <p className="text-slate-400 text-xs">Connects many minds into one learning field. The social dimension where communities contribute to shared growth. <em>Intelligence shared is intelligence multiplied.</em></p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-white/5 rounded-xl p-4 mb-6 border border-white/10">
-                      <p className="text-slate-300 text-sm italic">
-                        "You were never meant to be replaced. You were meant to be amplified — to see farther, feel deeper, and understand faster."
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-4">
-                      <a 
-                        href="https://intelligenceamplifier.ai" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-brand-green text-white rounded-lg font-semibold hover:bg-green-600 transition-colors"
-                      >
-                        Visit Site
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                      <Link 
-                        href="/support"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
-                      >
-                        IA Support
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
+                  {/* Key Findings Grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-0 mb-12 border-y border-slate-200">
+                    {[
+                      { stat: "78%", label: "of SMBs explored AI in 2025", color: "text-slate-900", href: "/smb-ai-tools-2025" },
+                      { stat: "14%", label: "reached production deployment", color: "text-brand-red", href: "/ai-readiness" },
+                      { stat: "3.2×", label: "ROI on structured programs", color: "text-brand-green", href: "/ai-readiness" },
+                      { stat: "18 mo", label: "closing window to act", color: "text-brand-blue", href: "/ai-window-2026" },
+                    ].map((s, i) => (
+                      <Link key={i} href={s.href} className={`group py-8 px-5 hover:bg-slate-50 transition-colors ${i < 3 ? "md:border-r border-slate-200" : ""} ${i === 1 ? "border-r border-slate-200" : ""} ${i === 2 ? "border-t md:border-t-0 border-slate-200" : ""} ${i === 3 ? "border-t md:border-t-0 border-slate-200" : ""}`}>
+                        <p className={`text-4xl md:text-5xl font-black mb-2 ${s.color}`}>{s.stat}</p>
+                        <p className="text-slate-500 text-xs uppercase tracking-wider leading-tight group-hover:text-brand-blue transition-colors">{s.label}</p>
                       </Link>
+                    ))}
+                  </div>
+
+                  {/* Executive Thesis */}
+                  <div className="grid md:grid-cols-3 gap-8 mb-12">
+                    <div className="md:col-span-1">
+                      <p className="text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Executive Summary</p>
+                      <p className="text-2xl font-extrabold text-slate-900 leading-tight">
+                        The decisive factor is not technology. It is <span className="text-brand-blue">readiness</span>.
+                      </p>
+                    </div>
+                    <div className="md:col-span-2 text-slate-700 leading-relaxed space-y-4">
+                      <p>
+                        The marginal cost of AI experimentation has collapsed while the marginal value of production deployment has never been higher. Yet most SMBs remain trapped between the two — aware of the opportunity, actively experimenting, but structurally unable to convert pilots into operational advantage.
+                      </p>
+                      <p>
+                        This study presents a five-dimension readiness framework developed from 127 client engagements across professional services, retail, and healthcare — cross-referenced against McKinsey, Gartner, and BCG global research.
+                      </p>
                     </div>
                   </div>
-                  <div className="relative">
-                    <div className="relative flex items-center justify-center">
-                      {/* Tailwind motion trails */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="absolute w-[600px] h-[600px] bg-gradient-to-r from-brand-blue/30 via-transparent to-transparent rounded-full blur-3xl -translate-x-20 animate-pulse" />
-                        <div className="absolute w-[500px] h-[500px] bg-gradient-to-r from-orange-500/20 via-transparent to-transparent rounded-full blur-2xl -translate-x-32 animate-pulse delay-100" />
-                        <div className="absolute w-[400px] h-[400px] bg-gradient-to-r from-brand-green/20 via-transparent to-transparent rounded-full blur-xl -translate-x-40 animate-pulse delay-200" />
+
+                  {/* The Framework at a Glance */}
+                  <div className="mb-12">
+                    <p className="text-brand-blue text-xs font-bold uppercase tracking-widest mb-5">The Five-Dimension Framework</p>
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                      {[
+                        { letter: "S", dim: "Strategy", weight: "25%", color: "brand-blue" },
+                        { letter: "D", dim: "Data", weight: "20%", color: "brand-green" },
+                        { letter: "I", dim: "Infrastructure", weight: "15%", color: "purple-500" },
+                        { letter: "P", dim: "People", weight: "25%", color: "brand-yellow" },
+                        { letter: "G", dim: "Governance", weight: "15%", color: "brand-red" },
+                      ].map((d, i) => (
+                        <div key={i} className="bg-slate-50 border border-slate-200 rounded-xl p-4 hover:border-brand-blue/40 transition-colors">
+                          <div className={`w-11 h-11 bg-${d.color} rounded-lg flex items-center justify-center shadow mb-3`}>
+                            <span className="text-white font-black text-xl">{d.letter}</span>
+                          </div>
+                          <p className="text-slate-900 font-bold text-sm mb-0.5">{d.dim}</p>
+                          <p className="text-slate-500 text-xs font-mono">Weight: {d.weight}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Sector Outcomes Table */}
+                  <div className="mb-12">
+                    <p className="text-brand-blue text-xs font-bold uppercase tracking-widest mb-5">Sector Outcomes (Observed 2023–2026)</p>
+                    <div className="overflow-hidden rounded-xl border border-slate-200">
+                      <table className="w-full text-sm">
+                        <thead className="bg-slate-900 text-white">
+                          <tr>
+                            <th className="text-left p-4 font-bold">Segment</th>
+                            <th className="text-left p-4 font-bold hidden md:table-cell">Primary Use Cases</th>
+                            <th className="text-right p-4 font-bold">Avg. ROI</th>
+                            <th className="text-right p-4 font-bold">Payback</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {[
+                            { seg: "Professional Services", sub: "Legal · CPA · Consulting", uses: "Document review, intake triage, drafting", roi: "280%", pay: "4.5 mo", color: "brand-blue" },
+                            { seg: "Multi-Commerce Retail", sub: "Ecommerce · Brick & Mortar", uses: "Catalog generation, CX automation, forecasting", roi: "340%", pay: "3.2 mo", color: "brand-green" },
+                            { seg: "Healthcare Providers", sub: "Urgent Care · Homecare · Clinics", uses: "Clinical documentation, intake, multi-site ops", roi: "220%", pay: "6.8 mo", color: "purple-500" },
+                          ].map((r, i) => (
+                            <tr key={i} className={`${i % 2 === 0 ? "bg-white" : "bg-slate-50"} border-b border-slate-200 last:border-0`}>
+                              <td className="p-4">
+                                <p className={`text-${r.color} font-bold`}>{r.seg}</p>
+                                <p className="text-slate-500 text-xs mt-0.5">{r.sub}</p>
+                              </td>
+                              <td className="p-4 text-slate-700 hidden md:table-cell">{r.uses}</td>
+                              <td className="p-4 text-right font-black text-slate-900 text-lg">{r.roi}</td>
+                              <td className="p-4 text-right text-slate-700 font-semibold">{r.pay}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="text-xs text-slate-500 italic mt-3">Source: <span className="arvintech-brand font-semibold">arvintech</span> client engagements 2023–2026. Individual results vary with baseline conditions. Full methodology in the complete study.</p>
+                  </div>
+
+                  {/* Maturity Curve Visualization */}
+                  <div className="mb-12">
+                    <p className="text-brand-blue text-xs font-bold uppercase tracking-widest mb-5">Where SMBs Sit on the Maturity Curve</p>
+                    <div className="relative">
+                      <div className="flex items-end gap-2 h-32">
+                        {[
+                          { stage: 0, name: "Unaware", pct: 18, color: "bg-slate-400" },
+                          { stage: 1, name: "Curious", pct: 34, color: "bg-brand-yellow" },
+                          { stage: 2, name: "Piloting", pct: 26, color: "bg-brand-blue" },
+                          { stage: 3, name: "Producing", pct: 14, color: "bg-brand-green" },
+                          { stage: 4, name: "Institutional", pct: 8, color: "bg-purple-500" },
+                        ].map((s, i) => (
+                          <div key={i} className="flex-1 flex flex-col items-center gap-1">
+                            <p className="text-xs font-bold text-slate-700">{s.pct}%</p>
+                            <div className={`w-full ${s.color} rounded-t-lg transition-all hover:opacity-80`} style={{ height: `${s.pct * 2.5}px` }} />
+                          </div>
+                        ))}
                       </div>
-                      {/* Speed lines */}
-                      <div className="absolute right-0 top-1/4 w-32 h-1 bg-gradient-to-l from-transparent via-white/30 to-white/10 animate-ping" />
-                      <div className="absolute right-4 top-1/3 w-24 h-0.5 bg-gradient-to-l from-transparent via-brand-blue/40 to-brand-blue/20 animate-ping delay-150" />
-                      <div className="absolute right-2 top-1/2 w-28 h-0.5 bg-gradient-to-l from-transparent via-orange-400/40 to-orange-400/20 animate-ping delay-300" />
-                      <div className="absolute right-6 top-2/3 w-20 h-1 bg-gradient-to-l from-transparent via-white/20 to-white/10 animate-ping delay-200" />
-                      <Image
-                        src="/abstractMind.png"
-                        alt="Intelligence Amplifier - Abstract Mind"
-                        width={800}
-                        height={800}
-                        className="object-contain scale-125 relative z-10 drop-shadow-2xl hover:scale-130 transition-transform duration-500"
-                      />
+                      <div className="flex gap-2 mt-2 pt-2 border-t-2 border-slate-300">
+                        {[
+                          { stage: 0, name: "Unaware" },
+                          { stage: 1, name: "Curious" },
+                          { stage: 2, name: "Piloting" },
+                          { stage: 3, name: "Producing" },
+                          { stage: 4, name: "Institutional" },
+                        ].map((s, i) => (
+                          <div key={i} className="flex-1 text-center">
+                            <p className="text-slate-400 text-xs font-mono">Stage {s.stage}</p>
+                            <p className="text-slate-900 text-xs font-bold">{s.name}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Pull Quote */}
+                  <div className="border-l-4 border-brand-blue pl-6 py-3 mb-12 bg-slate-50 rounded-r-xl">
+                    <p className="text-xl md:text-2xl font-semibold text-slate-900 italic leading-snug">
+                      "The organizations that treat AI readiness as a strategic program — not a technology purchase — will capture disproportionate value over the next 18 months."
+                    </p>
+                    <p className="text-slate-500 text-sm mt-3">— From the study, Executive Summary</p>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="flex flex-col sm:flex-row gap-4 items-center pt-6 border-t border-slate-200">
+                    <div className="flex-1">
+                      <p className="text-slate-900 font-bold text-lg">Read the complete white paper</p>
+                      <p className="text-slate-500 text-sm">12 sections · framework · maturity model · 90-day roadmap · financial tiers · risk analysis</p>
+                    </div>
+                    <div className="flex flex-wrap gap-3">
+                      <Link
+                        href="/ai-readiness"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-brand-blue text-white rounded-xl font-bold hover:bg-blue-600 transition-colors shadow-lg"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Read Full Study
+                      </Link>
+                      <Link
+                        href="/work-with-us"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 border-2 border-slate-200 rounded-xl font-bold hover:border-brand-blue hover:text-brand-blue transition-colors"
+                      >
+                        Request Assessment
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* IA Atomic Section */}
+            {/* CoreWeave AI Strategy Section */}
             <div className="group relative">
               <div className="absolute inset-0 bg-slate-900 rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity" />
               <div className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-3xl p-10 border border-slate-600/50 overflow-hidden shadow-2xl">
-                {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-brand-blue/20 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
-                
-                {/* LEGO studs decoration */}
-                <div className="absolute top-4 left-4 flex gap-3">
-                  <div className="w-4 h-4 bg-purple-500 rounded-full shadow-lg" />
-                  <div className="w-4 h-4 bg-brand-blue rounded-full shadow-lg" />
-                </div>
-                <div className="absolute top-4 right-4 flex gap-3">
-                  <div className="w-4 h-4 bg-purple-500 rounded-full shadow-lg" />
-                  <div className="w-4 h-4 bg-brand-blue rounded-full shadow-lg" />
-                  <div className="w-4 h-4 bg-purple-500 rounded-full shadow-lg" />
-                </div>
-                
+                {/* Decorative blurs */}
+                <div className="absolute top-0 right-0 w-72 h-72 bg-brand-blue/20 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-72 h-72 bg-brand-blue/10 rounded-full blur-3xl" />
+
                 <div className="relative z-10">
-                  <div className="text-center mb-8">
-                    <div className="flex items-center justify-center gap-3 mb-4">
-                      <div className="w-16 h-14 bg-purple-600 rounded-xl flex flex-col items-center justify-center shadow-lg relative overflow-visible">
-                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-2">
-                          <div className="w-3 h-3 bg-purple-400 rounded-full shadow-inner border-2 border-purple-500" />
-                          <div className="w-3 h-3 bg-purple-400 rounded-full shadow-inner border-2 border-purple-500" />
-                        </div>
-                        <div className="mt-2">
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                  {/* Header */}
+                  <div className="text-center mb-10">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-blue/20 border border-brand-blue/30 rounded-full mb-5">
+                      <div className="w-2 h-2 bg-brand-blue rounded-full animate-pulse" />
+                      <span className="text-brand-blue text-xs font-bold uppercase tracking-widest">AI Infrastructure · SMB &amp; Mid-Market</span>
+                    </div>
+                    <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-3">
+                      CoreWeave{" "}
+                      <span className="bg-gradient-to-r from-brand-blue to-cyan-400 bg-clip-text text-transparent">AI Strategy</span>
+                    </h3>
+                    <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                      Production-grade GPU cloud infrastructure — purpose-built for AI — now accessible at SMB economics. Deploy private LLMs, document intelligence, and fine-tuned domain models in 90 days.
+                    </p>
+                  </div>
+
+                  {/* Key Stats */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                    {[
+                      { stat: "40–60%", label: "Below hyperscaler pricing", color: "brand-green" },
+                      { stat: "90 days", label: "Concept to production", color: "brand-blue" },
+                      { stat: "H100 / A100", label: "NVIDIA GPU clusters", color: "purple-400" },
+                      { stat: "SOC 2", label: "Type II compliant", color: "cyan-400" },
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/5 rounded-xl p-4 border border-white/10 text-center">
+                        <p className={`text-2xl font-black text-${item.color} mb-1`}>{item.stat}</p>
+                        <p className="text-slate-400 text-xs leading-tight">{item.label}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Use Cases Grid */}
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+                    {[
+                      {
+                        color: "brand-blue",
+                        icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+                        title: "Private LLM Inference",
+                        body: "Run open-weight models on your own CoreWeave cluster. Zero data to OpenAI, Anthropic, or any third party — full sovereignty over your AI and your documents.",
+                      },
+                      {
+                        color: "brand-green",
+                        icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+                        title: "Document Intelligence",
+                        body: "Process contracts, reports, and compliance docs at scale with a RAG pipeline. 10,000 documents embedded and queryable in hours, not weeks.",
+                      },
+                      {
+                        color: "purple-400",
+                        icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+                        title: "Fine-Tuned Domain Models",
+                        body: "Train on your industry data — legal, medical, financial, technical. A model that speaks your language, applies your standards, and is yours to own.",
+                      },
+                      {
+                        color: "cyan-400",
+                        icon: "M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z",
+                        title: "AI Customer Operations",
+                        body: "Draft responses, classify requests, route tickets — integrated into your CRM or helpdesk. 50–70% reduction in first-response time.",
+                      },
+                      {
+                        color: "brand-yellow",
+                        icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+                        title: "Batch Analytics",
+                        body: "Weekly AI-generated reports, anomaly detection, and NL summaries of operational data. Burst capacity means you pay only when jobs run.",
+                      },
+                      {
+                        color: "brand-green",
+                        icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z",
+                        title: "Managed by arvintech",
+                        body: "End-to-end deployment, integration, and ongoing operations handled by arvintech — managed IT and AI services since 2000.",
+                      },
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
+                        <div className={`w-11 h-11 bg-${item.color}/20 rounded-lg flex items-center justify-center mb-4`}>
+                          <svg className={`w-5 h-5 text-${item.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
                           </svg>
                         </div>
+                        <h4 className="text-white font-bold text-sm mb-2">{item.title}</h4>
+                        <p className="text-slate-400 text-xs leading-relaxed">{item.body}</p>
                       </div>
-                      <div className="px-4 py-1 bg-purple-500/20 rounded-full">
-                        <span className="text-purple-300 text-sm font-semibold">ENTERPRISE APPLIANCE</span>
-                      </div>
-                    </div>
-                    
-                    <h3 className="text-5xl font-bold text-white mb-3">IA Atomic</h3>
-                    <p className="text-2xl text-slate-300 font-semibold mb-8">The Intelligence Amplifier Appliance</p>
+                    ))}
                   </div>
 
-                  <p className="text-slate-200 text-lg text-center mb-8 leading-relaxed max-w-4xl mx-auto">
-                    A self-contained, pre-configured AI deployment that arrives ready to power your organization — 
-                    plug it in, train it on your documents, and start amplifying your team's intelligence on day one.
-                  </p>
-
-                  {/* Features Grid */}
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                    {/* Your Data Never Leaves */}
-                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-                      <div className="w-12 h-12 bg-brand-blue/20 rounded-lg flex items-center justify-center mb-4">
-                        <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                        </svg>
-                      </div>
-                      <h4 className="text-white font-bold text-base mb-2">Your Data Never Leaves</h4>
-                      <p className="text-slate-400 text-sm">
-                        IA Atomic runs entirely on-premise. Your documents, queries, and AI's knowledge stay within your physical control — no cloud dependency, no external API calls, no data transmission.
-                      </p>
-                    </div>
-
-                    {/* Deploy in Days */}
-                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-                      <div className="w-12 h-12 bg-brand-green/20 rounded-lg flex items-center justify-center mb-4">
-                        <svg className="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                      </div>
-                      <h4 className="text-white font-bold text-base mb-2">Deploy in Days, Not Months</h4>
-                      <p className="text-slate-400 text-sm">
-                        Pre-loaded with IntelligenceAmplifier.AI, the LLM inference engine, vector database, and document ingestion pipeline. Connect to your network, feed it your documents, and the system is operational.
-                      </p>
-                    </div>
-
-                    {/* Enterprise AI Compact */}
-                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-                      <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                        <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                        </svg>
-                      </div>
-                      <h4 className="text-white font-bold text-base mb-2">Enterprise AI, Compact Form</h4>
-                      <p className="text-slate-400 text-sm">
-                        GPU-accelerated hardware running the same architecture deployed in healthcare, government, and finance case studies — packaged into an appliance that fits in a standard server rack.
-                      </p>
-                    </div>
-
-                    {/* Trained on Your Knowledge */}
-                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-                      <div className="w-12 h-12 bg-brand-yellow/20 rounded-lg flex items-center justify-center mb-4">
-                        <svg className="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                      </div>
-                      <h4 className="text-white font-bold text-base mb-2">Trained on Your Knowledge</h4>
-                      <p className="text-slate-400 text-sm">
-                        Feed it your policies, procedures, research, client documents, and operational manuals. The AI learns exclusively from your organization's own institutional knowledge — not the internet.
-                      </p>
-                    </div>
-
-                    {/* Every Industry */}
-                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-                      <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
-                        <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                        </svg>
-                      </div>
-                      <h4 className="text-white font-bold text-base mb-2">Every Industry, Every Size</h4>
-                      <p className="text-slate-400 text-sm">
-                        Healthcare, government, finance, legal, manufacturing, education — IA Atomic adapts to any industry. Configurations available for organizations from 50 to 5,000+ employees.
-                      </p>
-                    </div>
-
-                    {/* Managed by arvintech */}
-                    <div className="bg-white/5 backdrop-blur rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-                      <div className="w-12 h-12 bg-brand-green/20 rounded-lg flex items-center justify-center mb-4">
-                        <span className="text-brand-green font-bold arvintech-brand text-sm">AT</span>
-                      </div>
-                      <h4 className="text-white font-bold text-base mb-2">Managed by <span className="arvintech-brand">arvintech</span></h4>
-                      <p className="text-slate-400 text-sm">
-                        Every IA Atomic includes deployment, configuration, document preparation, training, and ongoing support from <span className="arvintech-brand">arvintech</span> — managed IT and AI services since 2000.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* CTA Buttons */}
+                  {/* CTA */}
                   <div className="flex flex-wrap justify-center gap-4">
-                    <a 
-                      href="https://intelligenceamplifier.ai" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white rounded-xl font-bold text-lg hover:bg-purple-700 transition-colors shadow-xl"
+                    <Link
+                      href="/coreweave-ai-strategy"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-brand-blue text-white rounded-xl font-bold text-lg hover:bg-blue-600 transition-colors shadow-xl"
                     >
-                      Learn About IA Atomic
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
-                    </a>
-                    <Link 
-                      href="/support-pro"
+                      Read the White Paper
+                    </Link>
+                    <Link
+                      href="/ai-readiness"
                       className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white border-2 border-white/30 rounded-xl font-bold text-lg hover:bg-white/20 transition-colors"
                     >
-                      Get Enterprise Support
+                      AI Readiness Assessment
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
