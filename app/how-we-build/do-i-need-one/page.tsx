@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -85,6 +85,118 @@ const questions = [
       { label: "I need full control of the site without any technical dependency", score: -3 },
     ],
   },
+  {
+    id: "business_type",
+    question: "What best describes your business?",
+    options: [
+      { label: "Ecommerce store or online marketplace", score: 3 },
+      { label: "Service-based business (consulting, professional, hospitality)", score: 2 },
+      { label: "Non-profit, charity, or community organization", score: 1 },
+      { label: "Content site, blog, or personal portfolio", score: 0 },
+    ],
+  },
+  {
+    id: "ecommerce",
+    question: "Do you sell products or services online?",
+    options: [
+      { label: "Yes — large or complex catalog (hundreds of products)", score: 3 },
+      { label: "Yes — small catalog (under 50 products)", score: 2 },
+      { label: "Not yet, but planning to sell online soon", score: 1 },
+      { label: "No, we don't sell online", score: 0 },
+    ],
+  },
+  {
+    id: "site_count",
+    question: "How many websites do you currently manage or need?",
+    options: [
+      { label: "Three or more", score: 3 },
+      { label: "Two", score: 2 },
+      { label: "One", score: 1 },
+      { label: "None yet — starting from scratch", score: 0 },
+    ],
+  },
+  {
+    id: "team_size",
+    question: "How many people work in your business?",
+    options: [
+      { label: "50 or more", score: 3 },
+      { label: "10–49", score: 2 },
+      { label: "2–9", score: 1 },
+      { label: "Just me", score: 0 },
+    ],
+  },
+  {
+    id: "marketing_budget",
+    question: "Do you have a dedicated marketing budget?",
+    options: [
+      { label: "Yes — $5,000 or more per month", score: 3 },
+      { label: "Yes — $2,000–$4,999 per month", score: 2 },
+      { label: "Yes — under $2,000 per month", score: 1 },
+      { label: "No dedicated budget yet", score: 0 },
+    ],
+  },
+  {
+    id: "online_advertising",
+    question: "Do you run or want to run online advertising?",
+    options: [
+      { label: "Yes — actively running Google, Meta, or YouTube ads", score: 3 },
+      { label: "Yes — planning to start paid ads soon", score: 2 },
+      { label: "Maybe — open to it but haven't decided", score: 1 },
+      { label: "No — not interested in paid advertising", score: 0 },
+    ],
+  },
+  {
+    id: "social_presence",
+    question: "How active is your social media marketing presence?",
+    options: [
+      { label: "Very active — regular posts, engaged following, paid social", score: 3 },
+      { label: "Somewhat active — occasional posts but no real strategy", score: 2 },
+      { label: "Minimal — a profile exists but rarely used", score: 1 },
+      { label: "None — not on social media", score: 0 },
+    ],
+  },
+  {
+    id: "members_users",
+    question: "Do you have members, registered users, or a community?",
+    options: [
+      { label: "Yes — with logins, profiles, or role-based access", score: 3 },
+      { label: "Yes — basic newsletter or mailing list subscribers", score: 2 },
+      { label: "Not yet, but I want to build one", score: 1 },
+      { label: "No — it's a public-only site", score: 0 },
+    ],
+  },
+  {
+    id: "subscription",
+    question: "Do you want a subscription or recurring billing model?",
+    options: [
+      { label: "Yes — memberships, SaaS, or recurring service plans", score: 3 },
+      { label: "Yes — a simple newsletter or content subscription", score: 2 },
+      { label: "Maybe — I'd like to explore it", score: 1 },
+      { label: "No — one-time purchases or no billing needed", score: 0 },
+    ],
+  },
+  {
+    id: "custom_function",
+    question: "Would you like a custom function built into your website?",
+    subtext: "Custom functions go beyond standard pages — think client portals, employee dashboards, booking systems, or internal tools.",
+    options: [
+      { label: "Yes — both a customer-facing portal and an employee or internal portal", score: 3 },
+      { label: "Yes — a customer-facing portal (bookings, accounts, client self-service)", score: 2 },
+      { label: "Yes — an internal employee or team portal only", score: 1 },
+      { label: "No — standard pages and content are all I need", score: 0 },
+    ],
+  },
+  {
+    id: "ai_support",
+    question: "Do you need AI-powered front-line support on your site?",
+    subtext: "Front-line AI handles quick questions (under 5 min) instantly — filtering them before they reach your team.",
+    options: [
+      { label: "Yes — handle most queries automatically, escalate complex ones to humans", score: 3 },
+      { label: "Yes — answer FAQs and basic questions instantly, 24/7", score: 2 },
+      { label: "Maybe — I'm interested but haven't decided", score: 1 },
+      { label: "No — human support or a contact form is enough", score: 0 },
+    ],
+  },
 ] as const
 
 type QuestionId = typeof questions[number]["id"]
@@ -106,7 +218,7 @@ function getResult(score: number, answered: number): {
       ctaHref: "",
     }
   }
-  if (score >= 16) {
+  if (score >= 38) {
     return {
       level: "strong",
       headline: "A strong fit",
@@ -116,7 +228,7 @@ function getResult(score: number, answered: number): {
       ctaHref: "/work-with-us",
     }
   }
-  if (score >= 9) {
+  if (score >= 21) {
     return {
       level: "good",
       headline: "A good fit with some things to consider",
@@ -126,7 +238,7 @@ function getResult(score: number, answered: number): {
       ctaHref: "/work-with-us",
     }
   }
-  if (score >= 3) {
+  if (score >= 7) {
     return {
       level: "possible",
       headline: "Possible, but worth a conversation first",
@@ -171,11 +283,71 @@ const levelStyles = {
 
 export default function DoINeedOnePage() {
   const [answers, setAnswers] = useState<Answers>({})
+  const [aiText, setAiText] = useState("")
+  const [aiLoading, setAiLoading] = useState(false)
+  const [aiError, setAiError] = useState<string | null>(null)
+  const [copied, setCopied] = useState(false)
+  const resultRef = useRef<HTMLDivElement>(null)
+  const hasFetched = useRef(false)
 
   const answered = Object.keys(answers).length
   const score = Object.values(answers).reduce((a, b) => a + b, 0)
   const result = getResult(score, answered)
   const allAnswered = answered === questions.length
+
+  useEffect(() => {
+    if (!allAnswered || hasFetched.current) return
+    hasFetched.current = true
+    setAiLoading(true)
+    setAiText("")
+    setAiError(null)
+
+    const answersPayload = questions.map((q) => {
+      const selectedScore = answers[q.id as QuestionId]
+      const selectedOption = q.options.find((o) => o.score === selectedScore)
+      return {
+        question: q.question,
+        answer: selectedOption?.label ?? "",
+      }
+    })
+
+    fetch("/api/quiz-assessment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ answers: answersPayload, level: result.level }),
+    }).then(async (res) => {
+      if (!res.ok || !res.body) {
+        setAiError("Could not load your assessment. Please try again.")
+        setAiLoading(false)
+        return
+      }
+      const reader = res.body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = ""
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        buffer += decoder.decode(value, { stream: true })
+        const lines = buffer.split("\n")
+        buffer = lines.pop() ?? ""
+        for (const line of lines) {
+          if (!line.startsWith("data: ")) continue
+          const data = line.slice(6).trim()
+          if (data === "[DONE]") { setAiLoading(false); continue }
+          try {
+            const parsed = JSON.parse(data)
+            if (parsed.error) { setAiError(parsed.error); setAiLoading(false) }
+            else if (parsed.text) setAiText((prev) => prev + parsed.text)
+          } catch { /* ignore malformed chunks */ }
+        }
+      }
+      setAiLoading(false)
+      setTimeout(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 100)
+    }).catch(() => {
+      setAiError("Network error. Please try again.")
+      setAiLoading(false)
+    })
+  }, [allAnswered, answers, result.level])
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -218,8 +390,14 @@ export default function DoINeedOnePage() {
           <p className="text-xl text-slate-600 leading-relaxed mb-4">
             {`You want one. But is it the right fit for where your business is right now?`}
           </p>
-          <p className="text-base text-slate-500 leading-relaxed">
-            Answer 8 quick questions and get an honest assessment. No email required.
+          <p className="text-base text-slate-500 leading-relaxed mb-4">
+            Answer 19 quick questions and get an honest assessment. No email required.
+          </p>
+          <p className="inline-flex items-center gap-2 text-xs text-slate-400 bg-slate-100 rounded-full px-4 py-2">
+            <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Your answers are confidential — nothing is stored or saved anywhere.
           </p>
         </div>
       </header>
@@ -234,8 +412,15 @@ export default function DoINeedOnePage() {
               style={{ width: `${(answered / questions.length) * 100}%` }}
             />
           </div>
-          {allAnswered && (
+          {allAnswered ? (
             <span className="text-xs font-bold text-brand-green shrink-0">Complete</span>
+          ) : (
+            <span className="hidden sm:inline-flex items-center gap-1 text-xs text-slate-400 shrink-0">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              Confidential · nothing saved
+            </span>
           )}
         </div>
       </div>
@@ -255,7 +440,11 @@ export default function DoINeedOnePage() {
                 <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
                   Question {qi + 1} of {questions.length}
                 </p>
-                <h2 className="text-lg md:text-xl font-semibold text-slate-900 mb-5">{q.question}</h2>
+                <h2 className="text-lg md:text-xl font-semibold text-slate-900 mb-1">{q.question}</h2>
+                {"subtext" in q && q.subtext && (
+                  <p className="text-sm text-slate-500 mb-5 leading-relaxed">{q.subtext}</p>
+                )}
+                {!("subtext" in q && q.subtext) && <div className="mb-5" />}
                 <div className="space-y-3">
                   {q.options.map((opt) => {
                     const isSelected = selected === opt.score && selected !== undefined
@@ -282,7 +471,7 @@ export default function DoINeedOnePage() {
 
       {/* Result */}
       {allAnswered && (
-        <section className="px-6 pb-20">
+        <section className="px-6 pb-20" ref={resultRef}>
           <div className="max-w-2xl mx-auto">
             <div className={`rounded-2xl border-2 p-8 md:p-10 ${levelStyles[result.level].bg}`}>
               <div className="flex items-center gap-3 mb-6">
@@ -292,19 +481,82 @@ export default function DoINeedOnePage() {
                 <span className="text-slate-400 text-sm">Score: {score} / {questions.length * 3}</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">{result.headline}</h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">{result.summary}</p>
+
+              {/* AI-generated assessment */}
+              <div className="mb-8 min-h-[80px]">
+                {aiLoading && aiText === "" && (
+                  <div className="flex items-center gap-3 text-slate-500">
+                    <svg className="w-5 h-5 animate-spin text-brand-green" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                    </svg>
+                    <span className="text-base">Preparing your personalised assessment…</span>
+                  </div>
+                )}
+                {aiError && (
+                  <p className="text-red-600 text-base">{aiError}</p>
+                )}
+                {aiText && (
+                  <div className="text-slate-600 text-lg leading-relaxed space-y-4">
+                    {aiText.split("\n\n").filter(Boolean).map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                    {aiLoading && (
+                      <span className="inline-block w-1.5 h-5 bg-brand-green rounded-sm animate-pulse align-middle ml-0.5" />
+                    )}
+                  </div>
+                )}
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={result.ctaHref} className="btn-green text-lg px-8 py-4 inline-flex items-center justify-center">
                   {result.cta}
                 </Link>
                 <Link
-                  href="/how-we-build"
+                  href="/how-we-build/your-site-needs"
                   className="inline-flex items-center justify-center rounded-xl border-2 border-slate-300 text-slate-700 font-semibold hover:bg-slate-100 transition-colors text-lg px-8 py-4"
                 >
-                  Read how we build
+                  What your site needs
                 </Link>
                 <button
-                  onClick={() => setAnswers({})}
+                  onClick={async () => {
+                    const shareText = `I just took the "Do I need a Next.js site?" quiz — result: ${result.headline}. Try it yourself:`
+                    const url = typeof window !== "undefined" ? window.location.href : ""
+                    if (typeof navigator !== "undefined" && navigator.share) {
+                      try {
+                        await navigator.share({ title: "Do I need a Next.js site?", text: shareText, url })
+                      } catch { /* user cancelled */ }
+                    } else {
+                      await navigator.clipboard.writeText(`${shareText} ${url}`)
+                      setCopied(true)
+                      setTimeout(() => setCopied(false), 2500)
+                    }
+                  }}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border-2 border-slate-200 text-slate-600 hover:border-brand-green hover:text-brand-green transition-all text-sm font-semibold"
+                >
+                  {copied ? (
+                    <>
+                      <svg className="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Copied!
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                      </svg>
+                      Share result
+                    </>
+                  )}
+                </button>
+                <button
+                  onClick={() => {
+                    setAnswers({})
+                    setAiText("")
+                    setAiError(null)
+                    hasFetched.current = false
+                  }}
                   className="inline-flex items-center justify-center text-sm text-slate-400 hover:text-slate-600 transition-colors underline underline-offset-4"
                 >
                   Start over
@@ -319,8 +571,8 @@ export default function DoINeedOnePage() {
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-white/80 mb-6 text-lg">Not sure yet? Let us walk you through it.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/how-we-build" className="inline-flex items-center justify-center btn-green text-lg px-8 py-4">
-              How We Build
+            <Link href="/how-we-build/your-site-needs" className="inline-flex items-center justify-center btn-green text-lg px-8 py-4">
+              What your site needs
             </Link>
             <Link
               href="/work-with-us"

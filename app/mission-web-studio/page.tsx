@@ -310,7 +310,7 @@ export default function MissionWebStudioPage() {
             <p className="text-xl text-slate-600">Specialized solutions for organizations that make a difference</p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Non-Profit Websites */}
             <div 
               className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-brand-green overflow-hidden"
@@ -326,7 +326,7 @@ export default function MissionWebStudioPage() {
                 </svg>
               </div>
               
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Organizations & NGOs</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Non-Profits & Donation-Based</h3>
               <p className="text-slate-600 mb-6">
                 Purpose-built websites for non-profits, advocacy groups, and mission-driven organizations
                 that need to communicate impact, mobilize supporters, and operate without a large technical team.
@@ -359,7 +359,6 @@ export default function MissionWebStudioPage() {
                 <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Non-Profits</span>
                 <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">NGOs</span>
                 <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Advocacy Groups</span>
-                <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Chambers of Commerce</span>
                 <span className="px-3 py-1 bg-brand-green/10 text-brand-green text-sm rounded-full">Community Church</span>
               </div>
             </div>
@@ -388,11 +387,7 @@ export default function MissionWebStudioPage() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3 text-slate-700">
                   <div className="w-2 h-2 bg-brand-red rounded-full" />
-                  Online Ordering & Menus
-                </li>
-                <li className="flex items-center gap-3 text-slate-700">
-                  <div className="w-2 h-2 bg-brand-red rounded-full" />
-                  Reservation Systems
+                  Event Reservation Systems
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <div className="w-2 h-2 bg-brand-red rounded-full" />
@@ -471,6 +466,61 @@ export default function MissionWebStudioPage() {
                 <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Accountants</span>
                 <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Engineers</span>
                 <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">Consulting Professionals</span>
+              </div>
+            </div>
+
+            {/* Organizations & Co-ops */}
+            <div
+              className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-brand-yellow overflow-hidden"
+              onMouseEnter={() => setHoveredService('coops')}
+              onMouseLeave={() => setHoveredService(null)}
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-yellow to-brand-green" />
+
+              {/* Icon */}
+              <div className="w-20 h-20 bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg className="w-10 h-10 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Organizations & Co-ops</h3>
+              <p className="text-slate-600 mb-6">
+                Collaborative, member-owned, and community-run organizations need websites that reflect shared governance,
+                serve diverse stakeholders, and make participation easy — online and off.
+              </p>
+
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3 text-slate-700">
+                  <div className="w-2 h-2 bg-brand-yellow rounded-full" />
+                  Member Sign-Up & Portals
+                </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <div className="w-2 h-2 bg-brand-yellow rounded-full" />
+                  Board & Governance Pages
+                </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <div className="w-2 h-2 bg-brand-yellow rounded-full" />
+                  Event & Meeting Calendars
+                </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <div className="w-2 h-2 bg-brand-yellow rounded-full" />
+                  Online Store & Product Listings
+                </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <div className="w-2 h-2 bg-brand-yellow rounded-full" />
+                  Newsletter & Announcement Hub
+                </li>
+              </ul>
+
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-brand-yellow/10 text-yellow-700 text-sm rounded-full">Credit Unions</span>
+                <span className="px-3 py-1 bg-brand-yellow/10 text-yellow-700 text-sm rounded-full">Food Co-ops</span>
+                <span className="px-3 py-1 bg-brand-yellow/10 text-yellow-700 text-sm rounded-full">Housing Co-ops</span>
+                <span className="px-3 py-1 bg-brand-yellow/10 text-yellow-700 text-sm rounded-full">Worker Co-ops</span>
+                <span className="px-3 py-1 bg-brand-yellow/10 text-yellow-700 text-sm rounded-full">Trade Associations</span>
+                <span className="px-3 py-1 bg-brand-yellow/10 text-yellow-700 text-sm rounded-full">Chambers of Commerce</span>
               </div>
             </div>
           </div>
