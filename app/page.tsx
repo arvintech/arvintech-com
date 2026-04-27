@@ -1,17 +1,9 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function HomePage() {
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100)
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <div className="min-h-screen bg-background blocks-pattern lego-sf-bg">
       {/* Navigation */}
@@ -71,7 +63,7 @@ export default function HomePage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           {/* Logo animation */}
-          <div className={`mb-8 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <div className="mb-8 transition-all duration-1000 opacity-100 translate-y-0">
             <Image
               src="/arvintech-blocks-logo.png"
               alt="ArvinTech Building Blocks"
@@ -84,7 +76,7 @@ export default function HomePage() {
 
           {/* Relaunch Badge */}
           <div 
-            className={`inline-flex items-center gap-2 px-6 py-3 bg-brand-green/20 border-2 border-brand-green rounded-full mb-6 transition-all duration-1000 delay-100 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-brand-green/20 border-2 border-brand-green rounded-full mb-6 transition-all duration-1000 delay-100 opacity-100 translate-y-0"
           >
             <div className="w-3 h-3 bg-brand-green rounded-full animate-pulse" />
             <span className="text-brand-green font-bold text-sm uppercase tracking-wider">Relaunched for the AI Era</span>
@@ -92,7 +84,7 @@ export default function HomePage() {
 
           {/* Main headline */}
           <h1 
-            className={`text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 transition-all duration-1000 delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 transition-all duration-1000 delay-200 opacity-100 translate-y-0"
           >
             <span className="text-white">Managed IT and</span>
             <br />
@@ -103,16 +95,14 @@ export default function HomePage() {
 
           {/* Tagline */}
           <p 
-            className={`text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-10 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-10 transition-all duration-1000 delay-300 opacity-100 translate-y-0"
           >
             Secure, manage, and modernize your business infrastructure with expert IT support and AI-powered automation.
           </p>
 
           {/* How this site is built: Next.js, Cursor, Vercel */}
           <div
-            className={`max-w-3xl mx-auto text-left space-y-4 md:space-y-5 mb-10 transition-all duration-1000 delay-325 ${
-              isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+            className="max-w-3xl mx-auto text-left space-y-4 md:space-y-5 mb-10 transition-all duration-1000 delay-325 opacity-100 translate-y-0"
           >
             <h2 className="text-xl md:text-2xl font-semibold text-white text-center">
               Web pages created in Next.js
@@ -130,7 +120,7 @@ export default function HomePage() {
 
           {/* Value Props */}
           <div 
-            className={`grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10 transition-all duration-1000 delay-350 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10 transition-all duration-1000 delay-350 opacity-100 translate-y-0"
           >
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
               <div className="w-12 h-12 bg-brand-green rounded-lg flex items-center justify-center mb-3 mx-auto">
@@ -163,7 +153,7 @@ export default function HomePage() {
 
           {/* CTA Buttons */}
           <div 
-            className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-400 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-400 opacity-100 translate-y-0"
           >
             <Link href="#services" className="btn-green text-lg px-8 py-4">
               View Services
@@ -178,7 +168,7 @@ export default function HomePage() {
 
           {/* Scroll indicator */}
           <div 
-            className={`mt-16 transition-all duration-1000 delay-500 ${isLoaded ? "opacity-100" : "opacity-0"}`}
+            className="mt-16 transition-all duration-1000 delay-500 opacity-100"
           >
             <div className="flex flex-col items-center gap-2 text-white/60">
               <span className="text-sm font-medium">Scroll to explore</span>

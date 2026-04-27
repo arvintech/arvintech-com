@@ -248,13 +248,90 @@ const clientsData: Record<string, {
       "Clear paths to print editions and related titles",
       "Foundation for ongoing editorial and AI-assisted releases"
     ]
+  },
+  "one-daily-classic": {
+    name: "One Daily Classic",
+    industry: "Music & Media",
+    tagline: "One great classic, every day.",
+    description:
+      "A curated daily experience for lovers of enduring music and classic culture—delivered in a fast, mobile-friendly Next.js site with room to grow into audio, discussion, and print paths.",
+    logo: "",
+    color: "brand-green",
+    website: "https://oneclassicdaily.com",
+    services: [
+      "Next.js marketing and content site",
+      "Daily editorial workflow and publishing patterns",
+      "Performance and edge delivery",
+      "Roadmap for audio, multilingual, and commerce integrations"
+    ],
+    howTheyUse: [
+      "Visitors discover one highlighted classic per day",
+      "Lightweight experience optimized for phones and sharing",
+      "Clear link-out to streaming, print, and related properties",
+      "Foundation for future narration and community features"
+    ]
+  },
+  "intelligence-amplifier": {
+    name: "Intelligence Amplifier",
+    industry: "AI & Technology",
+    tagline: "Amplify how you think, build, and decide.",
+    description:
+      "Intelligence Amplifier is the umbrella for practical AI guidance—frameworks, tools, and stories that help individuals and teams use AI without losing judgment, ethics, or craft.",
+    logo: "",
+    color: "brand-blue",
+    website: "https://intelligenceamplifier.org",
+    services: [
+      "Content architecture and publishing on modern web stacks",
+      "Brand and narrative alignment across books, sites, and products",
+      "Technical integration with IA-adjacent offerings",
+      "Ongoing updates as models and best practices evolve"
+    ],
+    howTheyUse: [
+      "Readers and builders find structured guidance on AI adoption",
+      "Hub connects to books, courses, and partner experiences",
+      "SEO and clarity for complex, fast-moving topics",
+      "Consistent voice across arvintech-aligned properties"
+    ]
   }
+}
+
+/** Full class names so Tailwind can compile (dynamic `bg-${color}` is stripped). */
+const brandTheme: Record<
+  string,
+  { bg: string; bg10: string; bg30: string; text: string }
+> = {
+  "brand-red": {
+    bg: "bg-brand-red",
+    bg10: "bg-brand-red/10",
+    bg30: "bg-brand-red/30",
+    text: "text-brand-red",
+  },
+  "brand-green": {
+    bg: "bg-brand-green",
+    bg10: "bg-brand-green/10",
+    bg30: "bg-brand-green/30",
+    text: "text-brand-green",
+  },
+  "brand-blue": {
+    bg: "bg-brand-blue",
+    bg10: "bg-brand-blue/10",
+    bg30: "bg-brand-blue/30",
+    text: "text-brand-blue",
+  },
+  "brand-yellow": {
+    bg: "bg-brand-yellow",
+    bg10: "bg-brand-yellow/10",
+    bg30: "bg-brand-yellow/30",
+    text: "text-brand-yellow",
+  },
 }
 
 export default function ClientPage() {
   const params = useParams()
-  const slug = params.slug as string
-  const client = clientsData[slug]
+  const raw = params?.slug
+  const slug =
+    typeof raw === "string" ? raw : Array.isArray(raw) ? (raw[0] ?? "") : ""
+  const client = slug ? clientsData[slug] : undefined
 
   if (!client) {
     return (
@@ -268,6 +345,8 @@ export default function ClientPage() {
       </div>
     )
   }
+
+  const theme = brandTheme[client.color] ?? brandTheme["brand-green"]
 
   return (
     <div className="min-h-screen bg-background">
@@ -349,7 +428,7 @@ export default function ClientPage() {
             </div>
             <div className="flex justify-center">
               {/* Logo */}
-              {client.hasLogo ? (
+              {client.logo ? (
                 <div className="w-64 h-64 bg-white rounded-3xl flex items-center justify-center border-2 border-white/20 p-6">
                   <Image
                     src={client.logo}
@@ -362,7 +441,9 @@ export default function ClientPage() {
               ) : (
                 <div className="w-64 h-64 bg-white/10 rounded-3xl flex items-center justify-center border-2 border-white/20">
                   <div className="text-center">
-                    <div className={`w-24 h-24 bg-${client.color}/30 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                    <div
+                      className={`w-24 h-24 ${theme.bg30} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+                    >
                       <span className="text-5xl font-bold text-white">
                         {client.name.charAt(0)}
                       </span>
@@ -398,7 +479,9 @@ export default function ClientPage() {
             {/* What We Do With Them */}
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className={`w-12 h-12 bg-${client.color} rounded-xl flex items-center justify-center`}>
+                <div
+                  className={`w-12 h-12 ${theme.bg} rounded-xl flex items-center justify-center`}
+                >
                   <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                   </svg>
@@ -409,8 +492,10 @@ export default function ClientPage() {
                 <ul className="space-y-4">
                   {client.services.map((service, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className={`w-6 h-6 bg-${client.color}/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                        <svg className={`w-4 h-4 text-${client.color}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div
+                        className={`w-6 h-6 ${theme.bg10} rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5`}
+                      >
+                        <svg className={`w-4 h-4 ${theme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
@@ -424,7 +509,9 @@ export default function ClientPage() {
             {/* How They Use ArvinTech */}
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className={`w-12 h-12 bg-${client.color} rounded-xl flex items-center justify-center`}>
+                <div
+                  className={`w-12 h-12 ${theme.bg} rounded-xl flex items-center justify-center`}
+                >
                   <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
@@ -435,8 +522,10 @@ export default function ClientPage() {
                 <ul className="space-y-4">
                   {client.howTheyUse.map((use, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className={`w-6 h-6 bg-${client.color}/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                        <span className={`text-xs font-bold text-${client.color}`}>{index + 1}</span>
+                      <div
+                        className={`w-6 h-6 ${theme.bg10} rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5`}
+                      >
+                        <span className={`text-xs font-bold ${theme.text}`}>{index + 1}</span>
                       </div>
                       <span className="text-slate-700">{use}</span>
                     </li>
@@ -456,8 +545,10 @@ export default function ClientPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className={`w-16 h-16 bg-${client.color}/10 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                <svg className={`w-8 h-8 text-${client.color}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div
+                className={`w-16 h-16 ${theme.bg10} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+              >
+                <svg className={`w-8 h-8 ${theme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -465,8 +556,10 @@ export default function ClientPage() {
               <div className="text-sm text-slate-500">Partnership Status</div>
             </div>
             <div className="text-center">
-              <div className={`w-16 h-16 bg-${client.color}/10 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                <svg className={`w-8 h-8 text-${client.color}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div
+                className={`w-16 h-16 ${theme.bg10} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+              >
+                <svg className={`w-8 h-8 ${theme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>
               </div>
@@ -474,8 +567,10 @@ export default function ClientPage() {
               <div className="text-sm text-slate-500">Services Provided</div>
             </div>
             <div className="text-center">
-              <div className={`w-16 h-16 bg-${client.color}/10 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                <svg className={`w-8 h-8 text-${client.color}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div
+                className={`w-16 h-16 ${theme.bg10} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+              >
+                <svg className={`w-8 h-8 ${theme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
@@ -483,8 +578,10 @@ export default function ClientPage() {
               <div className="text-sm text-slate-500">Business Status</div>
             </div>
             <div className="text-center">
-              <div className={`w-16 h-16 bg-${client.color}/10 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                <svg className={`w-8 h-8 text-${client.color}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div
+                className={`w-16 h-16 ${theme.bg10} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+              >
+                <svg className={`w-8 h-8 ${theme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>

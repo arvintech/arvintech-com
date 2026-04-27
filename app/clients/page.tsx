@@ -3,6 +3,14 @@
 import Image from "next/image"
 import Link from "next/link"
 
+/** Static classes so Tailwind can compile (dynamic `bg-${color}` is stripped). */
+const brandPlaceholder: Record<string, { box: string; text: string }> = {
+  "brand-red": { box: "bg-brand-red/20", text: "text-brand-red" },
+  "brand-green": { box: "bg-brand-green/20", text: "text-brand-green" },
+  "brand-blue": { box: "bg-brand-blue/20", text: "text-brand-blue" },
+  "brand-yellow": { box: "bg-brand-yellow/20", text: "text-brand-yellow" },
+}
+
 // Client data
 const clients = [
   {
@@ -200,24 +208,23 @@ export default function ClientsPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {clients.map((client) => (
-              <Link 
-                key={client.id} 
-                href={`/clients/${client.id}`}
-                className="group"
-              >
-                <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent hover:border-brand-green/30 transition-all duration-300 h-full flex flex-col">
+            {clients.map((client) => {
+              const ph = brandPlaceholder[client.color] ?? {
+                box: "bg-slate-200",
+                text: "text-slate-700",
+              }
+              return (
+              <div key={client.id} className="group relative h-full min-h-[320px]">
+                <Link
+                  href={`/clients/${client.id}`}
+                  className="absolute inset-0 z-0 rounded-2xl outline-none ring-offset-2 focus-visible:ring-2 focus-visible:ring-brand-green"
+                  aria-label={`View details for ${client.name}`}
+                />
+                <div className="pointer-events-none relative z-10 flex h-full flex-col">
+                <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-brand-green/30 transition-all duration-300 h-full flex flex-col">
                   {/* Logo */}
                   <div className="w-full h-32 bg-slate-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-slate-50 transition-colors overflow-hidden">
-                    {client.hasLogo ? (
-                      <Image
-                        src={client.logo}
-                        alt={`${client.name} logo`}
-                        width={200}
-                        height={100}
-                        className="object-contain max-h-28 p-2"
-                      />
-                    ) : client.useIcon === "face" ? (
+                    {client.useIcon === "face" ? (
                       <div className="text-center">
                         <div className="w-20 h-20 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto">
                           <svg className="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -243,10 +250,18 @@ export default function ClientsPage() {
                           </svg>
                         </div>
                       </div>
+                    ) : client.logo ? (
+                      <Image
+                        src={client.logo}
+                        alt={`${client.name} logo`}
+                        width={200}
+                        height={100}
+                        className="object-contain max-h-28 p-2"
+                      />
                     ) : (
                       <div className="text-center">
-                        <div className={`w-16 h-16 bg-${client.color}/20 rounded-xl flex items-center justify-center mx-auto mb-2`}>
-                          <span className={`text-2xl font-bold text-${client.color}`}>
+                        <div className={`w-16 h-16 ${ph.box} rounded-xl flex items-center justify-center mx-auto mb-2`}>
+                          <span className={`text-2xl font-bold ${ph.text}`}>
                             {client.name.charAt(0)}
                           </span>
                         </div>
@@ -269,12 +284,11 @@ export default function ClientsPage() {
                       {client.description}
                     </p>
                     {client.website && (
-                      <a 
+                      <a
                         href={client.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-1 text-xs text-brand-blue hover:text-blue-700 font-medium mb-2"
+                        className="pointer-events-auto relative z-20 inline-flex items-center gap-1 text-xs text-brand-blue hover:text-blue-700 font-medium mb-2"
                       >
                         Visit Site
                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -292,8 +306,10 @@ export default function ClientsPage() {
                     </svg>
                   </div>
                 </div>
-              </Link>
-            ))}
+                </div>
+              </div>
+              )
+            })}
           </div>
         </div>
       </section>

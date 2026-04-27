@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import { GeistMono } from "geist/font/mono"
 import { Sora, Space_Grotesk, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
 import "./globals.css"
 
 const sora = Sora({
@@ -44,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sora.variable} ${spaceGrotesk.variable} ${poppins.variable} ${GeistMono.variable} font-sans`}>
-        <Suspense fallback={null}>{children}</Suspense>
+        {children}
         <Analytics />
       </body>
     </html>
