@@ -6,6 +6,25 @@ import Link from "next/link"
 // Client data
 const clients = [
   {
+    id: "contra-costa-firefighters",
+    name: "Contra Costa Firefighters",
+    industry: "Public Safety",
+    description: "Serving and protecting Contra Costa County communities with courage and dedication.",
+    logo: "/clients/contra-costa-firefighters-logo.webp",
+    hasLogo: true,
+    color: "brand-red"
+  },
+  {
+    id: "adonais-mercy-house",
+    name: "Adonais Mercy House",
+    industry: "Non-Profit",
+    description: "Providing life-saving care and dignity to impoverished children with cancer in the Philippines.",
+    logo: "/clients/adonais-mercy-house-logo.png",
+    hasLogo: true,
+    color: "brand-yellow",
+    website: "https://adonaismercyhouse.org"
+  },
+  {
     id: "metrobox-cargo",
     name: "Metrobox Cargo",
     industry: "Logistics & Shipping",
@@ -23,6 +42,25 @@ const clients = [
     website: "https://www.drglafkides.com",
     useIcon: "face",
     color: "brand-green"
+  },
+  {
+    id: "one-daily-classic",
+    name: "One Daily Classic",
+    industry: "Music & Media",
+    description: "One great classic every day. A curated daily experience for lovers of enduring music, delivered in a clean, fast Next.js site.",
+    logo: "",
+    color: "brand-green",
+    website: "https://oneclassicdaily.com"
+  },
+  {
+    id: "wisereads",
+    name: "WiseReads",
+    industry: "Publishing & Literature",
+    description:
+      "A dedicated home for classical literature — works dissected, condensed, and reimagined through AI collaboration, plus original titles in the Intelligence Amplifier tradition.",
+    logo: "",
+    color: "brand-blue",
+    website: "https://wisereads.com"
   },
   {
     id: "hallanna-management",
@@ -73,43 +111,6 @@ const clients = [
     description: "CRM solutions built for solo legal practitioners.",
     logo: "/clients/sololegalcrm-logo.png",
     color: "brand-blue"
-  },
-  {
-    id: "contra-costa-firefighters",
-    name: "Contra Costa Firefighters",
-    industry: "Public Safety",
-    description: "Serving and protecting Contra Costa County communities with courage and dedication.",
-    logo: "/clients/contra-costa-firefighters-logo.webp",
-    hasLogo: true,
-    color: "brand-red"
-  },
-  {
-    id: "adonais-mercy-house",
-    name: "Adonais Mercy House",
-    industry: "Non-Profit",
-    description: "Providing life-saving care and dignity to impoverished children with cancer in the Philippines.",
-    logo: "/clients/adonais-mercy-house-logo.png",
-    hasLogo: true,
-    color: "brand-yellow",
-    website: "https://adonaismercyhouse.org"
-  },
-  {
-    id: "amplified-classics",
-    name: "Amplified Classics",
-    industry: "Music & Culture",
-    description: "A modern home for timeless music. Celebrating classic recordings, artists, and the stories behind the songs that endure.",
-    logo: "",
-    color: "brand-blue",
-    website: "https://amplifiedclassics.com"
-  },
-  {
-    id: "one-daily-classic",
-    name: "One Daily Classic",
-    industry: "Music & Media",
-    description: "One great classic every day. A curated daily experience for lovers of enduring music, delivered in a clean, fast Next.js site.",
-    logo: "",
-    color: "brand-green",
-    website: "https://oneclassicdaily.com"
   },
   {
     id: "intelligence-amplifier",

@@ -65,9 +65,9 @@ const liveSites = [
     ),
   },
   {
-    name: "Amplified Classics",
-    url: "https://amplifiedclassics.com",
-    display: "AmplifiedClassics.com",
+    name: "WiseReads",
+    url: "https://wisereads.com",
+    display: "WiseReads.com",
     tagline: "Free classic literature guides with audio",
     desc: "Practical insights from Austen, Dostoevsky, Gatsby, and more — with full audio narration. Classic books stripped of the fog, turned into skills you can actually use.",
     accent: "from-blue-600 to-blue-900",

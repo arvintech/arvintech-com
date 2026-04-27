@@ -226,6 +226,28 @@ const clientsData: Record<string, {
       "Resource library and documentation",
       "Community outreach coordination"
     ]
+  },
+  wisereads: {
+    name: "WiseReads",
+    industry: "Publishing & Literature",
+    tagline: "Classical literature, amplified for modern readers.",
+    description:
+      "WiseReads is a publishing and reading experience focused on classical literature—titles dissected, condensed, and reimagined through AI collaboration, alongside original works in the Intelligence Amplifier tradition.",
+    logo: "",
+    color: "brand-blue",
+    website: "https://wisereads.com",
+    services: [
+      "Next.js content platform and reading experience",
+      "Structured catalog and work presentation",
+      "SEO and performance for long-form literary content",
+      "Integration with publishing and distribution workflows"
+    ],
+    howTheyUse: [
+      "Readers explore curated classical works and originals",
+      "Fast, mobile-friendly access to condensed and full treatments",
+      "Clear paths to print editions and related titles",
+      "Foundation for ongoing editorial and AI-assisted releases"
+    ]
   }
 }
 

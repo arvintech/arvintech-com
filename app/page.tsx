@@ -1191,7 +1191,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    {/* Panel 2 - Amplified Classics */}
+                    {/* Panel 2 - WideReads */}
                     <div className="bg-white/5 rounded-2xl p-6 border border-white/10 flex flex-col">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-9 h-9 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1200,14 +1200,14 @@ export default function HomePage() {
                           </svg>
                         </div>
                         <div>
-                          <p className="text-white font-bold text-sm">Amplified Classics</p>
-                          <a href="https://amplifiedclassics.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 text-xs hover:text-purple-300 transition-colors">amplifiedclassics.com ↗</a>
+                          <p className="text-white font-bold text-sm">WideReads</p>
+                          <a href="https://widereads.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 text-xs hover:text-purple-300 transition-colors">WideReads.com ↗</a>
                         </div>
                       </div>
                       <p className="text-slate-400 text-xs leading-relaxed mb-4 flex-1">
                         A dedicated website featuring 104 works of classical literature — each dissected, condensed, and reimagined through AI collaboration. Also produces original books in the Intelligence Amplifier tradition.
                       </p>
-                      <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">AC Originals</p>
+                      <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">WideReads originals</p>
                       <div className="space-y-1.5">
                         {[
                           "Ancient Classics Paradox",
