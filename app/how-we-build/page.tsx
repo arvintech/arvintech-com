@@ -157,6 +157,52 @@ export default function HowWeBuildPage() {
         </div>
       </section>
 
+      <section
+        className="py-20 px-6 bg-slate-50 border-y border-slate-200"
+        aria-labelledby="sites-this-builds-heading"
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <h2
+              id="sites-this-builds-heading"
+              className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-balance"
+            >
+              The sites this approach can build
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              The same Next.js-and-Vercel workflow scales to many mission-driven sites—whether you serve guests, members, clients, or communities.
+            </p>
+          </div>
+          <ul className="grid sm:grid-cols-2 gap-5" role="list">
+            {(
+              [
+                { label: "Non Profits", href: "/non-profits" },
+                { label: "Events Hosting and Catering" },
+                { label: "Organization" },
+                { label: "Professional Services" },
+              ] as const
+            ).map((item) => {
+              const cardClass =
+                "rounded-2xl bg-white border border-slate-200 px-6 py-5 text-lg font-semibold text-slate-900 shadow-sm text-center sm:text-left transition-all"
+              return (
+                <li key={item.label}>
+                  {"href" in item && item.href ? (
+                    <Link
+                      href={item.href}
+                      className={`${cardClass} block hover:border-brand-blue/50 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2`}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <div className={cardClass}>{item.label}</div>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </section>
+
       <section className="py-20 px-6 bg-white border-y border-slate-200">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">

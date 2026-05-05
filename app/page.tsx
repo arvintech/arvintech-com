@@ -411,192 +411,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Service Packages Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl" />
-        
-        <div className="max-w-7xl mx-auto relative z-10">
+      {/* Core Offerings Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-green/20 border border-brand-green/30 rounded-full mb-6">
-              <span className="text-brand-green font-bold text-xs uppercase tracking-wider">Pricing Plans</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 text-white leading-tight">
-              Simple, Predictable Pricing
-            </h2>
-            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Choose the managed service package that fits your business. All plans include expert support and ongoing maintenance.
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Services Offerings</h2>
+            <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
+              Two powerful solutions to amplify your business in the AI age
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-10 items-center pt-8">
-            {/* Starter Package */}
-            <div className="relative bg-white rounded-3xl p-6 md:p-8 border-4 border-slate-200 shadow-2xl hover:shadow-3xl hover:border-brand-green/30 transition-all duration-300 flex flex-col h-full">
-              <div className="absolute top-0 left-0 right-0 h-6 bg-brand-green flex items-center justify-center gap-4 rounded-t-[1.25rem]">
-                <div className="w-3 h-3 bg-green-300 rounded-full shadow-inner" />
-                <div className="w-3 h-3 bg-green-300 rounded-full shadow-inner" />
-              </div>
-              <div className="pt-6 flex flex-col flex-grow">
-                <div className="mb-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Starter</h3>
-                  <p className="text-slate-600 text-sm mb-4">For small businesses (1–5 users)</p>
-                  <div className="flex items-baseline gap-1.5 mb-6">
-                    <span className="text-4xl md:text-5xl font-extrabold text-brand-green">$500</span>
-                    <span className="text-slate-600 font-medium text-lg">/month</span>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* IT Infrastructure Support */}
+            <div className="group bg-gradient-to-br from-brand-yellow/5 to-brand-red/5 rounded-2xl p-8 border border-brand-yellow/20 hover:border-brand-yellow/40 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 bg-brand-yellow rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                  </svg>
                 </div>
-                <ul className="space-y-3.5 mb-8 flex-grow">
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Remote IT support</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Security monitoring</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Automated backups</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">System updates</span>
-                  </li>
-                </ul>
-                <Link href="#consultation" className="block w-full text-center px-6 py-4 bg-brand-green text-white rounded-xl font-bold text-base hover:bg-green-600 hover:shadow-xl transition-all duration-200 shadow-lg">
-                  Get Started
-                </Link>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">IT Infrastructure Support</h3>
+                  <p className="text-foreground/60 mb-4">AI readiness planning, implementation strategies, mobile working solutions, and AI tools selection for maximum growth.</p>
+                  <Link href="/it-infrastructure-support" className="text-brand-yellow font-semibold hover:underline">Learn more →</Link>
+                </div>
               </div>
             </div>
 
-            {/* Professional Package - Featured */}
-            <div className="relative bg-white rounded-3xl p-6 md:p-8 border-4 border-brand-blue shadow-2xl transform md:scale-[1.08] flex flex-col h-full mt-10">
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2.5 bg-gradient-to-r from-brand-blue to-blue-600 text-white rounded-full text-xs font-bold uppercase shadow-lg border-2 border-white whitespace-nowrap z-10">
-                Most Popular
-              </div>
-              <div className="absolute top-0 left-0 right-0 h-6 bg-brand-blue flex items-center justify-center gap-4 rounded-t-[1.25rem]">
-                <div className="w-3 h-3 bg-blue-300 rounded-full shadow-inner" />
-                <div className="w-3 h-3 bg-blue-300 rounded-full shadow-inner" />
-                <div className="w-3 h-3 bg-blue-300 rounded-full shadow-inner" />
-              </div>
-              <div className="pt-6 flex flex-col flex-grow">
-                <div className="mb-7">
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Professional</h3>
-                  <p className="text-slate-600 text-sm mb-4">For growing businesses (5–15 users)</p>
-                  <div className="flex items-baseline gap-1.5 mb-6">
-                    <span className="text-5xl md:text-6xl font-extrabold text-brand-blue">$1,200</span>
-                    <span className="text-slate-600 font-medium text-lg">/month</span>
-                  </div>
+            {/* Mission Web */}
+            <div className="group bg-gradient-to-br from-brand-red/5 to-brand-green/5 rounded-2xl p-8 border border-brand-red/20 hover:border-brand-red/40 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 bg-brand-red rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
                 </div>
-                <ul className="space-y-3.5 mb-8 flex-grow">
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">All Starter features</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Managed IT support</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Advanced cybersecurity</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">AI assistant deployment</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Priority support</span>
-                  </li>
-                </ul>
-                <Link href="#consultation" className="block w-full text-center px-6 py-4 bg-brand-blue text-white rounded-xl font-bold text-base hover:bg-blue-600 hover:shadow-xl transition-all duration-200 shadow-lg">
-                  Get Started
-                </Link>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">Mission Web</h3>
+                  <p className="text-foreground/60 mb-4">Full-service Next.js development, optimized web search and visibility, payment gateways, and company portal implementation.</p>
+                  <Link href="/mission-web-studio" className="text-brand-red font-semibold hover:underline">Learn more →</Link>
+                </div>
               </div>
             </div>
-
-            {/* Business Package */}
-            <div className="relative bg-white rounded-3xl p-6 md:p-8 border-4 border-slate-200 shadow-2xl hover:shadow-3xl hover:border-brand-yellow/30 transition-all duration-300 flex flex-col h-full">
-              <div className="absolute top-0 left-0 right-0 h-6 bg-brand-yellow flex items-center justify-center gap-4 rounded-t-[1.25rem]">
-                <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner" />
-                <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner" />
-                <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner" />
-                <div className="w-3 h-3 bg-yellow-300 rounded-full shadow-inner" />
-              </div>
-              <div className="pt-6 flex flex-col flex-grow">
-                <div className="mb-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Business</h3>
-                  <p className="text-slate-600 text-sm mb-4">For established businesses (15+ users)</p>
-                  <div className="flex items-baseline gap-1.5 mb-6">
-                    <span className="text-4xl md:text-5xl font-extrabold text-brand-yellow">$2,500</span>
-                    <span className="text-slate-600 font-medium text-lg">/month</span>
-                  </div>
-                </div>
-                <ul className="space-y-3.5 mb-8 flex-grow">
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">All Professional features</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Custom automation systems</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Dedicated priority support</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Strategic IT consulting</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
-                    <svg className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-medium">Account manager</span>
-                  </li>
-                </ul>
-                <Link href="#consultation" className="block w-full text-center px-6 py-4 bg-brand-yellow text-white rounded-xl font-bold text-base hover:bg-yellow-500 hover:shadow-xl transition-all duration-200 shadow-lg">
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-12 pt-6 border-t border-white/10">
-            <p className="text-white/80 text-base md:text-lg leading-relaxed">
-              All prices are monthly recurring. Custom enterprise solutions available.{" "}
-              <Link href="#consultation" className="text-brand-green font-bold hover:text-green-400 hover:underline transition-colors">
-                Contact us for details →
-              </Link>
-            </p>
           </div>
         </div>
       </section>
@@ -1007,7 +863,7 @@ export default function HomePage() {
                   <div className="text-center mb-10">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-blue/20 border border-brand-blue/30 rounded-full mb-5">
                       <div className="w-2 h-2 bg-brand-blue rounded-full animate-pulse" />
-                      <span className="text-brand-blue text-xs font-bold uppercase tracking-widest">AI Infrastructure · SMB &amp; Mid-Market</span>
+                      <span className="text-brand-blue text-xs font-bold uppercase tracking-widest">Our Partner Focus</span>
                     </div>
                     <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-3">
                       CoreWeave{" "}
@@ -1110,7 +966,99 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* AI + Classic Literature Section */}
+            {/* Bottom connector - visual representation of blocks connecting */}
+            <div className="flex justify-center pt-8">
+              <div className="flex items-end gap-2">
+                <div className="w-6 h-12 bg-brand-green rounded-t-lg" />
+                <div className="w-6 h-16 bg-brand-red rounded-t-lg" />
+                <div className="w-6 h-20 bg-brand-yellow rounded-t-lg" />
+                <div className="w-6 h-24 bg-brand-blue rounded-t-lg" />
+                <div className="w-6 h-28 bg-brand-green rounded-t-lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-2 mb-6">
+                <div className="h-1 w-12 bg-brand-green rounded-full" />
+                <span className="text-brand-green font-semibold uppercase tracking-wider text-sm">Our Philosophy</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Unlearn to <span className="text-brand-green">Relearn</span>
+              </h2>
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                Measure intelligence by possibility. Prepare for new, exciting ways to live our human lives amplified. 
+                We believe in collaboration, not replacement—where AI enhances what makes us uniquely human.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-brand-green/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Collaboration Over Replacement</h4>
+                    <p className="text-slate-400 text-sm">AI that amplifies your capabilities, not substitutes them.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-brand-blue/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Possibility-Centered</h4>
+                    <p className="text-slate-400 text-sm">We don't just solve problems—we expand horizons.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-brand-yellow/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Preparation for Tomorrow</h4>
+                    <p className="text-slate-400 text-sm">Strategic positioning for an AI-enhanced future.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="aspect-square relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-green/20 via-brand-blue/20 to-brand-red/20 rounded-3xl" />
+                <div className="absolute inset-4 glass-dark rounded-2xl flex items-center justify-center">
+                  <Image
+                    src="/arvintech-blocks-logo.png"
+                    alt="ArvinTech Philosophy"
+                    width={280}
+                    height={280}
+                    className="animate-pulse-scale"
+                  />
+                </div>
+                {/* Floating blocks */}
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-green rounded-xl rotate-12 animate-float" />
+                <div className="absolute -top-2 -right-6 w-10 h-10 bg-brand-blue rounded-lg -rotate-12 animate-float delay-200" />
+                <div className="absolute -bottom-4 -left-6 w-8 h-8 bg-brand-yellow rounded-lg rotate-45 animate-float delay-400" />
+                <div className="absolute -bottom-2 -right-4 w-14 h-14 bg-brand-red rounded-xl -rotate-6 animate-float delay-300" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI + Classic Literature Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid gap-8">
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-red/20 rounded-3xl blur-2xl opacity-30" />
               <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl overflow-hidden border-4 border-slate-700 shadow-2xl">
@@ -1131,7 +1079,7 @@ export default function HomePage() {
                     <div>
                       <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-blue/20 border border-brand-blue/30 rounded-full mb-2">
                         <div className="w-2 h-2 bg-brand-blue rounded-full animate-pulse" />
-                        <span className="text-brand-blue text-xs font-bold uppercase tracking-widest">New Chapter</span>
+                        <span className="text-brand-blue text-xs font-bold uppercase tracking-widest">Initiative Projects with AI</span>
                       </div>
                       <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
                         An AI Collaboration with{" "}
@@ -1257,170 +1205,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Bottom connector - visual representation of blocks connecting */}
-            <div className="flex justify-center pt-8">
-              <div className="flex items-end gap-2">
-                <div className="w-6 h-12 bg-brand-green rounded-t-lg" />
-                <div className="w-6 h-16 bg-brand-red rounded-t-lg" />
-                <div className="w-6 h-20 bg-brand-yellow rounded-t-lg" />
-                <div className="w-6 h-24 bg-brand-blue rounded-t-lg" />
-                <div className="w-6 h-28 bg-brand-green rounded-t-lg" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center gap-2 mb-6">
-                <div className="h-1 w-12 bg-brand-green rounded-full" />
-                <span className="text-brand-green font-semibold uppercase tracking-wider text-sm">Our Philosophy</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Unlearn to <span className="text-brand-green">Relearn</span>
-              </h2>
-              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                Measure intelligence by possibility. Prepare for new, exciting ways to live our human lives amplified. 
-                We believe in collaboration, not replacement—where AI enhances what makes us uniquely human.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-brand-green/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Collaboration Over Replacement</h4>
-                    <p className="text-slate-400 text-sm">AI that amplifies your capabilities, not substitutes them.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-brand-blue/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Possibility-Centered</h4>
-                    <p className="text-slate-400 text-sm">We don't just solve problems—we expand horizons.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-brand-yellow/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-brand-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Preparation for Tomorrow</h4>
-                    <p className="text-slate-400 text-sm">Strategic positioning for an AI-enhanced future.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="aspect-square relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-green/20 via-brand-blue/20 to-brand-red/20 rounded-3xl" />
-                <div className="absolute inset-4 glass-dark rounded-2xl flex items-center justify-center">
-                  <Image
-                    src="/arvintech-blocks-logo.png"
-                    alt="ArvinTech Philosophy"
-                    width={280}
-                    height={280}
-                    className="animate-pulse-scale"
-                  />
-                </div>
-                {/* Floating blocks */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-green rounded-xl rotate-12 animate-float" />
-                <div className="absolute -top-2 -right-6 w-10 h-10 bg-brand-blue rounded-lg -rotate-12 animate-float delay-200" />
-                <div className="absolute -bottom-4 -left-6 w-8 h-8 bg-brand-yellow rounded-lg rotate-45 animate-float delay-400" />
-                <div className="absolute -bottom-2 -right-4 w-14 h-14 bg-brand-red rounded-xl -rotate-6 animate-float delay-300" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Offerings Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Offerings</h2>
-            <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-              Four powerful solutions to amplify your business in the AI age
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Amplified Operations */}
-            <div className="group bg-gradient-to-br from-brand-green/5 to-brand-blue/5 rounded-2xl p-8 border border-brand-green/20 hover:border-brand-green/40 transition-all">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-brand-green rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Amplified Operations</h3>
-                  <p className="text-foreground/60 mb-4">AI-powered workflow automation, business process optimization, on-time AR management, and QuickBooks integrations.</p>
-                  <Link href="/amplified-operations" className="text-brand-green font-semibold hover:underline">Learn more →</Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Amplified Customer Communications */}
-            <div className="group bg-gradient-to-br from-brand-blue/5 to-brand-yellow/5 rounded-2xl p-8 border border-brand-blue/20 hover:border-brand-blue/40 transition-all">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-brand-blue rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Amplified Customer Communications</h3>
-                  <p className="text-foreground/60 mb-4">Product transparency, AI-powered incident management, client portals, and automated follow-ups that create more customers.</p>
-                  <Link href="/amplified-customer-communications" className="text-brand-blue font-semibold hover:underline">Learn more →</Link>
-                </div>
-              </div>
-            </div>
-
-            {/* IT Infrastructure Support */}
-            <div className="group bg-gradient-to-br from-brand-yellow/5 to-brand-red/5 rounded-2xl p-8 border border-brand-yellow/20 hover:border-brand-yellow/40 transition-all">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-brand-yellow rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">IT Infrastructure Support</h3>
-                  <p className="text-foreground/60 mb-4">AI readiness planning, implementation strategies, mobile working solutions, and AI tools selection for maximum growth.</p>
-                  <Link href="/it-infrastructure-support" className="text-brand-yellow font-semibold hover:underline">Learn more →</Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Mission Web */}
-            <div className="group bg-gradient-to-br from-brand-red/5 to-brand-green/5 rounded-2xl p-8 border border-brand-red/20 hover:border-brand-red/40 transition-all">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-brand-red rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Mission Web</h3>
-                  <p className="text-foreground/60 mb-4">Full-service Next.js development, optimized web search and visibility, payment gateways, and company portal implementation.</p>
-                  <Link href="/mission-web-studio" className="text-brand-red font-semibold hover:underline">Learn more →</Link>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
