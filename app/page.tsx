@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { LOCATIONS } from "@/lib/locations"
 
 export default function HomePage() {
   return (
@@ -97,7 +98,7 @@ export default function HomePage() {
           <p 
             className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-10 transition-all duration-1000 delay-300 opacity-100 translate-y-0"
           >
-            Secure, manage, and modernize your business infrastructure with expert IT support and AI-powered automation.
+            Secure, manage, and modernize your business infrastructure with expert IT support and AI-powered automation — in Concord, the Bay Area, Walla Walla, and the Tri-Cities of Washington.
           </p>
 
           {/* How this site is built: Next.js, Cursor, Vercel */}
@@ -1305,14 +1306,14 @@ export default function HomePage() {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-3 text-slate-400 text-sm">
-                <div>
-                  <p className="text-white font-medium">San Francisco & Bay Area</p>
-                  <p>785 Oak Grove Rd. Suite E2, Concord CA 94518</p>
-                </div>
-                <div>
-                  <p className="text-white font-medium">Portland & Pacific Northwest</p>
-                  <p>Park Avenue West 11th Floor, SW 9th Ave, Portland OR 97205</p>
-                </div>
+                {LOCATIONS.map((place) => (
+                  <div key={place.id}>
+                    <p className="text-white font-medium">{place.label}</p>
+                    {place.lines.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

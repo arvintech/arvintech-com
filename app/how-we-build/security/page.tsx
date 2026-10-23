@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Why Next.js Sites Are More Secure | Security Deep Dive | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Why Next.js Sites Are More Secure",
   description:
     "A full explanation of the security advantages of a Next.js site on Vercel compared to WordPress and traditional CMS platforms—no exposed admin, no plugin attack surface, HTTPS by default.",
-}
+  path: "/how-we-build/security",
+})
 
 const sections = [
   {

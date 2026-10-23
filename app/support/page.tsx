@@ -97,8 +97,7 @@ export default function SupportPage() {
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 h1-ocean">How can we help?</h1>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto mb-8">
-            Get the support you need to amplify your potential with{" "}
-            <span className="arvintech-brand">arvintech&apos;s</span> innovative solutions.
+            Device, backup, and security help for firms in Concord, the Bay Area, Walla Walla, and the Tri-Cities of Washington — Kennewick, Pasco, and Richland. Our Washington office is at 3838 Pranger Road, Walla Walla.
           </p>
 
           {/* Search Bar */}

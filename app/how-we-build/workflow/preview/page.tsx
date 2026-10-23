@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Step 3 · Review on a Preview URL | Client Workflow | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Step 3 · Review on a Preview URL",
   description:
     "How preview builds work: a shareable URL, client review in a real browser, scope decisions, and what goes into the project contract before merge.",
-}
+  path: "/how-we-build/workflow/preview",
+})
 
 const contractItems = [
   {

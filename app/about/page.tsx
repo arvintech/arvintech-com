@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/Footer"
+import { CONCORD, WALLA_WALLA } from "@/lib/locations"
 
 export default function AboutPage() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -94,7 +95,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
               An innovative attitude to AI—<span className="text-brand-green font-semibold">Collaboration</span>, not replacement.
-              Building intelligent solutions that amplify human potential.
+              Managed IT and AI automation for professional firms in Concord, the Bay Area, Walla Walla, and the Tri-Cities of Washington.
             </p>
           </div>
         </div>
@@ -117,9 +118,10 @@ export default function AboutPage() {
                 relearn new possibilities—measuring intelligence not by what machines can do alone, but by what humans and AI can achieve together.
               </p>
               <p>
-                This is about possibility. This is about preparation. This is about discovering new, exciting ways to live human lives 
-                amplified. As a Bay Area-based IT consulting and digital innovation firm with a distributed support team in Manila, 
-                we don't just provide technology solutions—we forge partnerships that expand what it means to be human in an AI-enhanced world.
+                This is about possibility. This is about preparation. This is about discovering new, exciting ways to live human lives
+                amplified. We work from Concord in the East Bay and from 3838 Pranger Road in Walla Walla, serving the Tri-Cities—
+                Kennewick, Pasco, and Richland—with a distributed support team in Manila. We don't just provide technology solutions—we
+                forge partnerships that expand what it means to be human in an AI-enhanced world.
               </p>
               <p>
                 Our approach combines the reliability of proven IT infrastructure with the transformative power of collaborative intelligence. 
@@ -353,10 +355,11 @@ export default function AboutPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-brand-green mb-3">Distributed Excellence</h3>
+                <h3 className="text-xl font-semibold text-brand-green mb-3">Two US markets, one team</h3>
                 <p className="text-foreground/70 leading-relaxed">
-                  Our Bay Area innovation hub drives strategic vision and cutting-edge development, while our Manila 
-                  support team ensures 24/7 operational excellence and cost-effective scalability.
+                  Concord anchors the Bay Area practice. The Washington office is in Walla Walla, at 3838 Pranger Road,
+                  and serves Walla Walla plus the Tri-Cities—Kennewick, Pasco, and Richland. A Manila support team covers
+                  overnight operations so both regions stay covered.
                 </p>
               </div>
               <div>
@@ -379,6 +382,50 @@ export default function AboutPage() {
                   From small business operations to independent author success stories, we've helped diverse clients 
                   amplify their potential through strategic technology integration.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Where we work */}
+          <div className="mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Where we work</h2>
+              <p className="text-foreground/60 max-w-2xl mx-auto">
+                Two US markets. Same managed IT, AI automation, and Next.js practice.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-card rounded-2xl p-8 border border-border">
+                <p className="text-brand-green text-xs font-bold uppercase tracking-widest mb-3">California</p>
+                <h3 className="text-2xl font-bold mb-2">{CONCORD.label}</h3>
+                {CONCORD.lines.map((line) => (
+                  <p key={line} className="text-foreground/70 mb-4">{line}</p>
+                ))}
+                <p className="text-foreground/60 text-sm leading-relaxed">
+                  Professional firms in Concord, Walnut Creek, and the wider East Bay — law, accounting, medical, and real estate.
+                </p>
+                <Link href="/managed-it-support" className="inline-flex items-center gap-2 text-brand-green font-semibold mt-6 hover:gap-3 transition-all">
+                  Managed IT in the Bay Area
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+              <div className="bg-card rounded-2xl p-8 border border-border">
+                <p className="text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Washington</p>
+                <h3 className="text-2xl font-bold mb-2">{WALLA_WALLA.label}</h3>
+                {WALLA_WALLA.lines.map((line) => (
+                  <p key={line} className="text-foreground/70 mb-4">{line}</p>
+                ))}
+                <p className="text-foreground/60 text-sm leading-relaxed">
+                  The office is in Walla Walla. We support healthcare, agriculture, logistics, and professional offices there and across the Tri-Cities—Kennewick, Pasco, and Richland.
+                </p>
+                <Link href="/managed-it-support" className="inline-flex items-center gap-2 text-brand-blue font-semibold mt-6 hover:gap-3 transition-all">
+                  Managed IT in Washington
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

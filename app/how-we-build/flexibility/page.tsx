@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Why Next.js Sites Are Flexible | Flexibility Deep Dive | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Why Next.js Sites Are Flexible",
   description:
     "A full explanation of the flexibility advantages of a code-first Next.js site—custom layouts, third-party integrations, AI APIs, and adaptability without plugin or theme constraints.",
-}
+  path: "/how-we-build/flexibility",
+})
 
 const sections = [
   {

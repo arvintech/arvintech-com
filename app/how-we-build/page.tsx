@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 import WorkflowDiagram from "./WorkflowDiagram"
 import GearSection from "./GearSection"
 
-export const metadata: Metadata = {
-  title: "How We Build the Site | Next.js & Vercel | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "How We Build",
   description:
     "This site is built in Next.js with Cursor and deployed on Vercel — not a traditional WordPress-style CMS. Learn how it works and why that matters.",
-}
+  path: "/how-we-build",
+})
 
 const processSteps = [
   {

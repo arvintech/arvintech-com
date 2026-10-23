@@ -69,7 +69,7 @@ export default function WorkWithUs() {
               <span className="h1-neon">Work with us</span>
             </h1>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              You were never meant to be replaced. We're collaborating with industry leaders to deliver exceptional solutions.
+              You were never meant to be replaced. Join the team behind managed IT and AI automation for Concord, the Bay Area, Walla Walla, and the Tri-Cities of Washington.
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@ export default function WorkWithUs() {
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-white/20 px-4 py-1 rounded-full text-sm">Full-time</span>
                     <span className="bg-white/20 px-4 py-1 rounded-full text-sm">On-site</span>
-                    <span className="bg-white/20 px-4 py-1 rounded-full text-sm">Walla Walla, WA</span>
+                    <span className="bg-white/20 px-4 py-1 rounded-full text-sm">3838 Pranger Road, Walla Walla WA</span>
                   </div>
                 </div>
                 <button className="bg-white text-brand-green px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all mt-4 md:mt-0">
@@ -165,7 +165,7 @@ export default function WorkWithUs() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-brand-yellow">•</span>
-                      Willingness to work on-site in Walla Walla, WA
+                      Willingness to work on-site in Walla Walla, WA, serving the Tri-Cities
                     </li>
                   </ul>
                 </div>

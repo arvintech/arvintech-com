@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Why Next.js Sites Are Fast | Speed Deep Dive | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Why Next.js Sites Are Fast",
   description:
     "A full explanation of why a Next.js site on Vercel is fast—covering Next.js, React, Tailwind CSS, PostgreSQL, and the edge delivery model.",
-}
+  path: "/how-we-build/speed",
+})
 
 const technologies = [
   {

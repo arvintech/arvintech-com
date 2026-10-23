@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Cursor IDE | VS Code-Based Development Environment | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Cursor IDE",
   description:
     "Cursor is the IDE of choice — built on VS Code, with AI woven into the editing workflow. Not WordPress, not a CMS, just a professional code editor.",
-}
+  path: "/how-we-build/cursor-ide",
+})
 
 const features = [
   {

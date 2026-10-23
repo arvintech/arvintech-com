@@ -1,17 +1,13 @@
 import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "AI Readiness with Intelligence Amplifier | ArvinTech",
+export const metadata: Metadata = pageMetadata({
+  title: "AI Readiness Assessment",
   description:
-    "Prepare your business for the AI era with Intelligence Amplifier assessment, strategy, and implementation planning.",
-  openGraph: {
-    title: "AI Readiness with Intelligence Amplifier | ArvinTech",
-    description:
-      "Assessment, IA platform deployment, custom AI strategy, and team onboarding from ArvinTech.",
-    type: "website",
-  },
-}
+    "Prepare your business for production AI with an Intelligence Amplifier assessment, strategy, and implementation plan from ArvinTech.",
+  path: "/ai-readiness",
+})
 
 export default function AIReadinessLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return children
 }

@@ -1,7 +1,21 @@
+import { LOCATIONS } from "@/lib/locations"
+
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 py-8 px-8">
-      <div className="max-w-6xl mx-auto text-center">
+    <footer className="bg-slate-900 border-t border-slate-800 py-10 px-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-8 mb-8 text-center sm:text-left">
+          {LOCATIONS.map((place) => (
+            <div key={place.id}>
+              <p className="text-white font-medium mb-1">{place.label}</p>
+              {place.lines.map((line) => (
+                <p key={line} className="text-slate-400 text-sm">
+                  {line}
+                </p>
+              ))}
+            </div>
+          ))}
+        </div>
         <div className="flex justify-center space-x-6 mb-4">
           <a
             href="https://facebook.com/arvintech"
@@ -26,7 +40,7 @@ export default function Footer() {
             </svg>
           </a>
         </div>
-        <p className="text-slate-400 text-sm">© {new Date().getFullYear()} arvintech.com. All rights reserved.</p>
+        <p className="text-slate-400 text-sm text-center">© {new Date().getFullYear()} arvintech.com. All rights reserved.</p>
       </div>
     </footer>
   )

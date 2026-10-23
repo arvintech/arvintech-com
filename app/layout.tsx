@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { GeistMono } from "geist/font/mono"
 import { Sora, Space_Grotesk, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import JsonLd from "@/components/JsonLd"
+import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, SITE_NAME, SITE_URL } from "@/lib/seo"
 import "./globals.css"
 
 const sora = Sora({
@@ -24,14 +26,40 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "ArvinTech - Amplify Your Mind",
-  description: "An innovative approach to AI—Collaboration, not replacement. Building intelligent solutions that amplify human potential.",
-  generator: "Next.js",
-  keywords: ["AI", "technology", "consulting", "digital transformation", "intelligence amplification"],
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/arvintech-blocks-logo.png",
     shortcut: "/arvintech-blocks-logo.png",
     apple: "/arvintech-blocks-logo.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+  },
+  alternates: {
+    canonical: "/",
   },
 }
 
@@ -43,6 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sora.variable} ${spaceGrotesk.variable} ${poppins.variable} ${GeistMono.variable} font-sans`}>
+        <JsonLd />
         {children}
         <Analytics />
       </body>

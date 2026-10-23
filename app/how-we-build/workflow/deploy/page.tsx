@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Step 4 · Merge and Go Live | Client Workflow | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Step 4 · Merge and Go Live",
   description:
     "How an approved branch merges to main, triggers a Vercel production build, and pushes the new version worldwide in seconds.",
-}
+  path: "/how-we-build/workflow/deploy",
+})
 
 export default function DeployPage() {
   return (

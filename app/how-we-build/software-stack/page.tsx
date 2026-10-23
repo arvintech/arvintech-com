@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Software Stack | Next.js, React, Tailwind & More | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Software Stack",
   description:
     "A practical map of the packages and frameworks in this project — how they fit together and what each one does.",
-}
+  path: "/how-we-build/software-stack",
+})
 
 const packages = [
   {

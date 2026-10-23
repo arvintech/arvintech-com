@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Predictable Deploys | Deep Dive | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Predictable Deploys",
   description:
     "How the Git and Vercel workflow keeps every deploy traceable, every preview shareable, and every feature decision tied to something you can try in a browser before it goes live.",
-}
+  path: "/how-we-build/predictable-deploys",
+})
 
 const sections = [
   {

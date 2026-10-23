@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "AI-Ready Site Development | Deep Dive | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "AI-Ready Site Development",
   description:
     "How building a Next.js site in Cursor makes sophisticated AI features achievable in days—smart UI, automation hooks, model integrations, and a real web surface that grows with the product.",
-}
+  path: "/how-we-build/ai-ready",
+})
 
 const sections = [
   {

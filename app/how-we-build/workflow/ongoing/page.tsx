@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Step 5 · Ongoing Updates | Client Workflow | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Step 5 · Ongoing Updates",
   description:
     "How maintenance and change requests work with a Next.js site — no WordPress dashboard, just a clean request → implement → approve → deploy loop.",
-}
+  path: "/how-we-build/workflow/ongoing",
+})
 
 export default function OngoingPage() {
   return (

@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Step 1 · Agree on the Outcome | Client Workflow | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Step 1 · Agree on the Outcome",
   description:
     "How a project brief becomes a concrete scope: goals, existing site assessment, complexity conversation, and what 'done' looks like before any code is written.",
-}
+  path: "/how-we-build/workflow/agree",
+})
 
 const nav = [
   { label: "Build in Cursor & Git", href: "/how-we-build/workflow/build", dir: "next" },

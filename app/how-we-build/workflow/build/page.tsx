@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Step 2 · Build in Cursor & Git | Client Workflow | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Step 2 · Build in Cursor & Git",
   description:
     "How a Next.js site is built in Cursor on a Git branch — a real, clickable test drive you can review in a browser before any contract is signed.",
-}
+  path: "/how-we-build/workflow/build",
+})
 
 export default function BuildPage() {
   return (

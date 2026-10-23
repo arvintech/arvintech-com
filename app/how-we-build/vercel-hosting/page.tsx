@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Vercel Hosting | Global Edge, Serverless, Instant Deploys | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "Vercel Hosting",
   description:
     "How Vercel hosts this site — Git-connected deployments, a global edge network, HTTPS by default, serverless functions, and instant rollbacks.",
-}
+  path: "/how-we-build/vercel-hosting",
+})
 
 const hostingFeatures = [
   {

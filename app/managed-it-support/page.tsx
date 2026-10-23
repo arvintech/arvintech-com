@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/Footer"
+import { CONCORD, WALLA_WALLA } from "@/lib/locations"
 
 export default function ManagedITSupportPage() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -66,8 +67,8 @@ export default function ManagedITSupportPage() {
               Managed <span className="text-brand-green">IT Support</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-4">
-              Remote IT support, security monitoring, backups, and system maintenance. Your technology infrastructure,
-              professionally managed.
+              Remote IT support, security monitoring, backups, and system maintenance for professional firms in Concord,
+              the Bay Area, Walla Walla, and the Tri-Cities of Washington.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
               <Link href="/support" className="btn-green text-lg px-8 py-4 inline-flex justify-center">
@@ -127,6 +128,39 @@ export default function ManagedITSupportPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-white border-t border-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Where we work</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              One managed IT practice. Two regions. The same security monitoring, backups, and remote support.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="rounded-2xl border-2 border-slate-200 p-8">
+              <p className="text-brand-green text-xs font-bold uppercase tracking-widest mb-3">California</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">{CONCORD.label}</h3>
+              {CONCORD.lines.map((line) => (
+                <p key={line} className="text-slate-600 mb-3">{line}</p>
+              ))}
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Law firms, CPAs, medical offices, and property managers in Concord and the East Bay who need a named technician, not a ticket mill.
+              </p>
+            </div>
+            <div className="rounded-2xl border-2 border-slate-200 p-8">
+              <p className="text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Washington</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">{WALLA_WALLA.label}</h3>
+              {WALLA_WALLA.lines.map((line) => (
+                <p key={line} className="text-slate-600 mb-3">{line}</p>
+              ))}
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Office at 3838 Pranger Road in Walla Walla. We support firms there and across Kennewick, Pasco, and Richland — healthcare, agriculture, logistics, and professional offices.
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "What Your Site Needs | Mission Web Studio | arvintech",
+export const metadata: Metadata = pageMetadata({
+  title: "What Your Site Needs",
   description:
     "A plain-language breakdown of everything that goes into a modern website — hosting, dev stack, dev effort, backups, security, and maintenance.",
-}
+  path: "/how-we-build/your-site-needs",
+})
 
 const stack = [
   {

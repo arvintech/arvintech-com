@@ -1,17 +1,13 @@
 import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Managed IT Support | ArvinTech",
+export const metadata: Metadata = pageMetadata({
+  title: "Managed IT Support",
   description:
-    "Remote IT support, security monitoring, backups, and system maintenance. Your technology infrastructure, professionally managed.",
-  openGraph: {
-    title: "Managed IT Support | ArvinTech",
-    description:
-      "24/7 remote support, security monitoring, automated backups, and system updates for your business.",
-    type: "website",
-  },
-}
+    "Remote IT support, security monitoring, backups, and system maintenance for professional firms in Concord, the Bay Area, Walla Walla, and the Tri-Cities of Washington.",
+  path: "/managed-it-support",
+})
 
 export default function ManagedITSupportLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return children
 }

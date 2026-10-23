@@ -1,11 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: "Websites for Nonprofits | Mission-Focused Next.js Sites | arvintech",
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = pageMetadata({
+  title: "Websites for Nonprofits",
   description:
     "Fast, secure nonprofit sites on Next.js—donor trust, programs, events, and volunteering without a fragile WordPress stack. Built and deployed the same way we describe on How we build.",
-}
+  path: "/non-profits",
+})
 
 const focusAreas = [
   {
