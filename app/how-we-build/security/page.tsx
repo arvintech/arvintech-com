@@ -151,7 +151,13 @@ export default function SecurityPage() {
             Want to explore more about how this site is built?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/how-we-build" className="inline-flex items-center justify-center btn-green text-lg px-8 py-4">
+            <Link href="/wordpress-vulnerabilities" className="inline-flex items-center justify-center btn-green text-lg px-8 py-4">
+              WordPress Vulnerabilities
+            </Link>
+            <Link
+              href="/how-we-build"
+              className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-colors text-lg px-8 py-4"
+            >
               How We Build
             </Link>
             <Link

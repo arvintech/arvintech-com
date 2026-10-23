@@ -412,10 +412,19 @@ export default function HowWeBuildPage() {
                   WordPress powers 43% of the web—and for good reason. It&apos;s proven, familiar, and has a massive
                   ecosystem. <strong className="text-white">We still build WordPress sites when it makes sense.</strong>
                 </p>
-                <p className="text-slate-300">
+                <p className="text-slate-300 mb-6">
                   But for businesses that need <strong className="text-brand-green">speed, security, and AI-ready architecture</strong>,
                   Next.js is the clear choice. Here&apos;s why:
                 </p>
+                <Link
+                  href="/wordpress-vulnerabilities"
+                  className="inline-flex items-center gap-2 text-brand-yellow font-semibold hover:text-white transition-colors"
+                >
+                  WordPress vulnerabilities briefing
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
