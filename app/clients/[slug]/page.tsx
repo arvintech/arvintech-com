@@ -69,7 +69,7 @@ const clientsData: Record<string, {
     logo: "/clients/adonais-mercy-house-logo.png",
     hasLogo: true,
     color: "brand-yellow",
-    website: "https://v0-adonais-mercy-house.vercel.app",
+    website: "https://adonaismercyhouse.org",
     services: [
       "Non-profit website development",
       "Donor portal system",
